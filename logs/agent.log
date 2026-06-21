@@ -719,3 +719,43 @@
 [2026-06-21T19:59:50.350Z] [INFO] Dry run: would generate image for Začátek léta – letní slunovrat at output/2026-W26/images/zacatek-leta-letni-slunovrat.png
 [2026-06-21T19:59:50.351Z] [INFO] Created image manifest: output/2026-W26/images.json
 [2026-06-21T19:59:50.352Z] [INFO] Generate images finished successfully
+[2026-06-21T20:04:27.284Z] [INFO] Weekly agent started
+[2026-06-21T20:04:27.287Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-21T20:04:27.386Z] [INFO] Create weekly overview started
+[2026-06-21T20:04:27.390Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T20:04:27.390Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-06-21T20:04:38.974Z] [INFO] Overview generated_at set by script: 2026-06-21T20:04:38.974Z
+[2026-06-21T20:04:38.977Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T20:04:38.978Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen | Začátek léta – letní slunovrat
+[2026-06-21T20:04:38.979Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T20:04:38.982Z] [INFO] Raw events returned: 8
+[2026-06-21T20:04:38.990Z] [INFO] Events after filtering: 8
+[2026-06-21T20:04:38.990Z] [INFO] Final selected event order: 1. MotoGP Czech Republic Grand Prix 2026 | 1. FIFA World Cup 2026: Czechia vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix 2026 | 3. MotoGP Dutch Grand Prix 2026 | 4. St. John the Baptist's Day | 9. Summer Solstice 2026
+[2026-06-21T20:04:38.991Z] [INFO] Final selected tone values: MotoGP Czech Republic Grand Prix 2026: fan_hype | FIFA World Cup 2026: Czechia vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix 2026: fan_hype | MotoGP Dutch Grand Prix 2026: fan_hype | St. John the Baptist's Day: celebration | Summer Solstice 2026: celebration
+[2026-06-21T20:04:38.991Z] [INFO] Final selected language_policy values: MotoGP Czech Republic Grand Prix 2026: english | FIFA World Cup 2026: Czechia vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix 2026: english | MotoGP Dutch Grand Prix 2026: english | St. John the Baptist's Day: czech | Summer Solstice 2026: bilingual_cs_en
+[2026-06-21T20:04:38.992Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:04:38.992Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T20:04:39.051Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-21T20:04:39.150Z] [INFO] Generate image prompts started
+[2026-06-21T20:04:39.155Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:04:39.156Z] [INFO] Found 8 waiting events with generate_image=true for 2026-W26
+[2026-06-21T20:04:59.628Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "MotoGP Czech Republic Grand Prix 2026", "date": "2026-06-21", "category": "sport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Weekend Racing Spirit", "text_on_image_cs": "", "text_on_image_en": "Weekend Racing Spirit", "image_prompt": "Energetic and symbolic vertical 9:16 social media poster showing a dynamic motorsport track scene inspired by the Brno circuit with subtle
+[2026-06-21T20:04:59.631Z] [INFO] Prompt count after validation: 8
+[2026-06-21T20:04:59.631Z] [INFO] Prompts created_at set by script: 2026-06-21T20:04:59.631Z
+[2026-06-21T20:04:59.632Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:04:59.632Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T20:04:59.703Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-21T20:04:59.801Z] [INFO] Generate images started
+[2026-06-21T20:04:59.805Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:04:59.806Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T20:04:59.806Z] [INFO] Dry run: would generate image for MotoGP Czech Republic Grand Prix 2026 at output/2026-W26/images/motogp-czech-republic-grand-prix-2026.png
+[2026-06-21T20:04:59.807Z] [INFO] Dry run: would generate image for FIFA World Cup 2026: Czechia vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czechia-vs-mexico.png
+[2026-06-21T20:04:59.807Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-2026.png
+[2026-06-21T20:04:59.808Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-victims-communist-regime-2026.png
+[2026-06-21T20:04:59.808Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix 2026 at output/2026-W26/images/formula-1-austrian-grand-prix-2026.png
+[2026-06-21T20:04:59.808Z] [INFO] Dry run: would generate image for MotoGP Dutch Grand Prix 2026 at output/2026-W26/images/motogp-dutch-grand-prix-2026.png
+[2026-06-21T20:04:59.809Z] [INFO] Dry run: would generate image for St. John the Baptist's Day at output/2026-W26/images/st-john-the-baptists-day-2026.png
+[2026-06-21T20:04:59.809Z] [INFO] Dry run: would generate image for Summer Solstice 2026 at output/2026-W26/images/summer-solstice-2026.png
+[2026-06-21T20:04:59.810Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T20:04:59.811Z] [INFO] Generate images finished successfully
+[2026-06-21T20:04:59.815Z] [INFO] Weekly agent finished successfully
