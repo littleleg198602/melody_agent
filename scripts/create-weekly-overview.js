@@ -10,6 +10,8 @@ const ALLOWED_EVENT_ORIGINS = ['international_significant_day', 'czech_significa
 const ALLOWED_LANGUAGE_POLICIES = ['english', 'czech', 'bilingual_cs_en'];
 const SIGNIFICANT_DAYS_FILE = 'data/editorial/significant-days.json';
 const CZECH_FIXTURES_FILE = 'data/editorial/czech-national-team-fixtures.json';
+const PRIORITY_EVENTS_FILE = 'data/editorial/priority-events.json';
+const MAX_SELECTED_EVENTS = 8;
 
 function previewText(value, maxLength = 1000) {
   return String(value ?? '').replace(/\s+/g, ' ').trim().slice(0, maxLength);
@@ -137,7 +139,7 @@ async function calendarSignificantDaysForTarget(target) {
     const monthDay = isoDate.slice(5);
     for (const event of recurring.filter((item) => item.month_day === monthDay)) {
       const { aliases, month_day: monthDayValue, ...eventWithoutCalendarOnlyFields } = event;
-      selected.push({ ...eventWithoutCalendarOnlyFields, date: isoDate, aliases });
+      selected.push({ ...eventWithoutCalendarOnlyFields, date: isoDate, aliases, calendar_significant_day: true });
     }
   }
 
@@ -152,7 +154,7 @@ async function calendarCzechFixturesForTarget(target) {
     .filter((event) => event.date >= target.date_from && event.date <= target.date_to)
     .map((event) => {
       const { aliases, sport, competition, ...eventWithoutCalendarOnlyFields } = event;
-      return { ...eventWithoutCalendarOnlyFields, aliases, sport, competition };
+      return { ...eventWithoutCalendarOnlyFields, aliases, sport, competition, calendar_czech_fixture: true };
     });
 }
 
@@ -164,6 +166,30 @@ async function mergeCalendarCzechFixtures(events, target) {
   }
   if (fixtureEvents.length > 0) {
     await logger.info(`Calendar Czech national-team fixture candidates for ${target.week}: ${fixtureEvents.map((event) => event.title).join(' | ')}`);
+  }
+  return merged;
+}
+
+
+async function calendarPriorityEventsForTarget(target) {
+  const calendar = await readJsonFile(PRIORITY_EVENTS_FILE);
+  const events = Array.isArray(calendar.events) ? calendar.events : [];
+  return events
+    .filter((event) => event.date >= target.date_from && event.date <= target.date_to)
+    .map((event) => {
+      const { aliases, ...eventWithoutCalendarOnlyFields } = event;
+      return { ...eventWithoutCalendarOnlyFields, aliases, calendar_priority_event: true };
+    });
+}
+
+async function mergeCalendarPriorityEvents(events, target) {
+  const priorityEvents = await calendarPriorityEventsForTarget(target);
+  const merged = [...events];
+  for (const event of priorityEvents) {
+    if (!hasEquivalentEvent(merged, event)) merged.push(event);
+  }
+  if (priorityEvents.length > 0) {
+    await logger.info(`Calendar priority-event candidates for ${target.week}: ${priorityEvents.map((event) => event.title).join(' | ')}`);
   }
   return merged;
 }
@@ -228,7 +254,7 @@ function combineCzechTournamentThemes(events) {
   for (let index = 0; index < events.length; index += 1) {
     if (consumed.has(index)) continue;
     const event = events[index];
-    if (!isWorldTournamentEvent(event) || !isFootballOrHockeyEvent(event)) {
+    if (!isWorldTournamentEvent(event) || !isFootballOrHockeyEvent(event) || isCzechTeamEvent(event)) {
       combined.push(event);
       continue;
     }
@@ -285,11 +311,15 @@ function normalizeEditorialPriority(event) {
     normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 2);
     normalized.priority = Math.max(Number(normalized.priority) || 1, 5);
     normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
+  } else if (isSignificantDayEvent(normalized)) {
+    normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 6);
   } else if (isFormulaOneEvent(normalized)) {
     normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 3);
     normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
   } else if (isMotoGpEvent(normalized)) {
-    normalized.source_priority = Math.max(Number(normalized.source_priority) || 4, 4);
+    normalized.source_priority = Math.max(Number(normalized.source_priority) || 8, 8);
+  } else if (!normalized.calendar_priority_event && !normalized.calendar_significant_day && !normalized.calendar_czech_fixture) {
+    normalized.source_priority = Math.max(Number(normalized.source_priority) || 9, 9);
   }
   return normalized;
 }
@@ -342,11 +372,11 @@ async function filterAndRankEvents(events, target) {
 
   const selected = candidates
     .sort((a, b) => a.source_priority - b.source_priority || String(a.date).localeCompare(String(b.date)) || b.priority - a.priority || b.melody4u_score - a.melody4u_score || CZECH_RELEVANCE_WEIGHT[b.czech_relevance] - CZECH_RELEVANCE_WEIGHT[a.czech_relevance])
-    .slice(0, 7);
+    .slice(0, MAX_SELECTED_EVENTS);
 
   const finalEvents = selected.length >= 5 ? selected : normalized
     .sort((a, b) => a.source_priority - b.source_priority || String(a.date).localeCompare(String(b.date)) || b.priority - a.priority || b.melody4u_score - a.melody4u_score || CZECH_RELEVANCE_WEIGHT[b.czech_relevance] - CZECH_RELEVANCE_WEIGHT[a.czech_relevance])
-    .slice(0, 7);
+    .slice(0, MAX_SELECTED_EVENTS);
 
   finalEvents.forEach(validateEvent);
   await logger.info(`Events after filtering: ${finalEvents.length}`);
@@ -365,7 +395,7 @@ async function validateOverview(data, target) {
     date_from: target.date_from,
     date_to: target.date_to,
     generated_at: generatedAt,
-    events: await filterAndRankEvents(await mergeCalendarSignificantDays(await mergeCalendarCzechFixtures(data.events, target), target), target)
+    events: await filterAndRankEvents(await mergeCalendarSignificantDays(await mergeCalendarPriorityEvents(await mergeCalendarCzechFixtures(data.events, target), target), target), target)
   };
 }
 
