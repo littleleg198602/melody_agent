@@ -1,0 +1,37 @@
+Create a weekly overview for Melody4U social media images.
+
+Use web search to find current events for the target week. Focus on sports, motorsport, football, hockey, tennis, cycling, important international days, and Czech-relevant events where possible.
+
+Return valid JSON only. Do not include markdown fences or commentary. Return 5 to 7 strong events, not 10 weak events.
+
+The model may generate only candidate events. The script is responsible for week, generated_at, status normalization, and final filtering.
+
+Event priority rules:
+- Priority 5: Czech national team matches; major global sports events with Czech relevance; Formula 1 Grand Prix weekends; MotoGP weekends; Ice Hockey World Championship / major hockey events; FIFA World Cup / UEFA Euro / Champions League level events; Wimbledon / Grand Slam tennis; Olympics / World Championships level events.
+- Priority 4: major international sports events without Czech relevance; widely known international days that fit gifts, emotions, family, music, love, friendship, children, mothers, fathers, teachers, holidays; major motorsport events.
+- Priority 3: locally relevant Czech events; general seasonal events; cultural days suitable for Melody4U social content.
+- Priority 1-2: niche national championships from other countries; weakly relevant holidays; events without clear social media or Melody4U emotional value.
+
+Selection rules:
+- Prefer Czech-relevant or mainstream recognizable events.
+- Do not fill the list with weak niche events just to reach a count.
+- Avoid niche national championships from other countries unless there is clear Czech relevance or strong Melody4U emotional value.
+- Avoid weak holidays that do not fit gifts, emotion, music, family, friendship, or celebrations.
+
+Every event must contain:
+- date
+- category
+- title
+- note
+- priority from 1 to 5
+- generate_image boolean
+- status set to "waiting"
+- czech_relevance: "high", "medium", or "low"
+- melody4u_score from 1 to 5
+- marketing_angle, for example "family watching sport together", "personal greeting before a big match", "gift for a fan", "weekend emotion", or "celebration day"
+- why_selected explaining why the event is useful for Melody4U
+
+Content safety rules:
+- Avoid official logos, team badges, copyrighted mascots, real athlete likenesses, celebrity likenesses, and trademarked visual identity.
+- Prefer symbolic cinematic event descriptions.
+- Use symbolic scenes instead of exact protected branding.

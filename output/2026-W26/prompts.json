@@ -1,0 +1,91 @@
+{
+  "week": "2026-W26",
+  "created_at": "2026-06-21T16:53:59.899Z",
+  "items": [
+    {
+      "event_title": "Formula 1 Austrian Grand Prix weekend",
+      "date": "2026-06-22",
+      "category": "motorsport",
+      "text_on_image": "Race Weekend Energy",
+      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type motorsport_track: a symbolic racing track scene with generic cars as motion streaks, a fan smartphone in view, warm sunset lighting and no official branding. Theme: Formula 1 Austrian Grand Prix weekend. Marketing angle: gift for a racing fan before the weekend. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
+      "reels_text": "Race Weekend Energy — turn the moment into a personal Melody4U music wish.",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#GiftIdea",
+        "#RaceWeekend",
+        "#PersonalWish"
+      ],
+      "slug": "formula-1-austrian-grand-prix-weekend",
+      "composition_type": "motorsport_track"
+    },
+    {
+      "event_title": "Wimbledon opening week mood",
+      "date": "2026-06-22",
+      "category": "tennis",
+      "text_on_image": "Summer Sport Vibes",
+      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type fan_with_phone: a joyful fan holding a smartphone in the foreground, soft arena lights in the distance, warm cinematic depth of field. Theme: Wimbledon opening week mood. Marketing angle: summer sport vibes for tennis fans. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
+      "reels_text": "Summer Sport Vibes — turn the moment into a personal Melody4U music wish.",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#GiftIdea",
+        "#ForTheFans",
+        "#PersonalWish"
+      ],
+      "slug": "wimbledon-opening-week-mood",
+      "composition_type": "fan_with_phone"
+    },
+    {
+      "event_title": "European football summer night",
+      "date": "2026-06-28",
+      "category": "football",
+      "text_on_image": "Game Night Feeling",
+      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type family_at_home: a family gathered on a cozy sofa at home, a smartphone showing a personal music gift, warm lamp light and soft celebration mood. Theme: European football summer night. Marketing angle: family watching sport together. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
+      "reels_text": "Game Night Feeling — turn the moment into a personal Melody4U music wish.",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#GiftIdea",
+        "#ForTheFans",
+        "#FamilyMoment"
+      ],
+      "slug": "european-football-summer-night",
+      "composition_type": "family_at_home"
+    },
+    {
+      "event_title": "Family celebration day",
+      "date": "2026-06-28",
+      "category": "international-day",
+      "text_on_image": "Family Moment",
+      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type closeup_phone_gift: a close-up of hands presenting a smartphone like a gift, glowing music notes and gentle sound waves around it. Theme: Family celebration day. Marketing angle: celebration day. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
+      "reels_text": "Family Moment — turn the moment into a personal Melody4U music wish.",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#GiftIdea",
+        "#ForTheFans",
+        "#PersonalWish"
+      ],
+      "slug": "family-celebration-day",
+      "composition_type": "closeup_phone_gift"
+    },
+    {
+      "event_title": "Summer cycling weekend",
+      "date": "2026-06-28",
+      "category": "cycling",
+      "text_on_image": "Summer Sport Vibes",
+      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type seasonal_symbolic_scene: a seasonal symbolic outdoor scene with warm light, a smartphone gift moment, subtle music notes, and emotional social poster energy. Theme: Summer cycling weekend. Marketing angle: weekend emotion. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
+      "reels_text": "Summer Sport Vibes — turn the moment into a personal Melody4U music wish.",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#GiftIdea",
+        "#ForTheFans",
+        "#PersonalWish"
+      ],
+      "slug": "summer-cycling-weekend",
+      "composition_type": "seasonal_symbolic_scene"
+    }
+  ]
+}

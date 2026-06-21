@@ -1,0 +1,36 @@
+{
+  "week": "2026-W26",
+  "created_at": "2026-06-21T16:54:00.419Z",
+  "images": [
+    {
+      "event_title": "Formula 1 Austrian Grand Prix weekend",
+      "slug": "formula-1-austrian-grand-prix-weekend",
+      "file": "output/2026-W26/images/formula-1-austrian-grand-prix-weekend.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Wimbledon opening week mood",
+      "slug": "wimbledon-opening-week-mood",
+      "file": "output/2026-W26/images/wimbledon-opening-week-mood.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "European football summer night",
+      "slug": "european-football-summer-night",
+      "file": "output/2026-W26/images/european-football-summer-night.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Family celebration day",
+      "slug": "family-celebration-day",
+      "file": "output/2026-W26/images/family-celebration-day.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Summer cycling weekend",
+      "slug": "summer-cycling-weekend",
+      "file": "output/2026-W26/images/summer-cycling-weekend.png",
+      "status": "skipped"
+    }
+  ]
+}

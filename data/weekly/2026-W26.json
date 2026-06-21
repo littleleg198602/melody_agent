@@ -1,0 +1,73 @@
+{
+  "week": "2026-W26",
+  "date_from": "2026-06-22",
+  "date_to": "2026-06-28",
+  "generated_at": "2026-06-21T16:53:59.374Z",
+  "events": [
+    {
+      "date": "2026-06-22",
+      "category": "motorsport",
+      "title": "Formula 1 Austrian Grand Prix weekend",
+      "note": "Major racing weekend near Czech audiences, described symbolically with no official logos.",
+      "priority": 5,
+      "generate_image": true,
+      "status": "waiting",
+      "czech_relevance": "medium",
+      "melody4u_score": 5,
+      "marketing_angle": "gift for a racing fan before the weekend",
+      "why_selected": "Recognizable mainstream motorsport event with strong social media potential."
+    },
+    {
+      "date": "2026-06-22",
+      "category": "tennis",
+      "title": "Wimbledon opening week mood",
+      "note": "Grand Slam tennis atmosphere with symbolic grass-court visuals and no player likenesses.",
+      "priority": 5,
+      "generate_image": true,
+      "status": "waiting",
+      "czech_relevance": "medium",
+      "melody4u_score": 5,
+      "marketing_angle": "summer sport vibes for tennis fans",
+      "why_selected": "A globally recognized tennis moment that can be turned into emotional fan gifting content."
+    },
+    {
+      "date": "2026-06-28",
+      "category": "football",
+      "title": "European football summer night",
+      "note": "Mainstream football atmosphere for fans, no club badges or official competition identity.",
+      "priority": 4,
+      "generate_image": true,
+      "status": "waiting",
+      "czech_relevance": "medium",
+      "melody4u_score": 4,
+      "marketing_angle": "family watching sport together",
+      "why_selected": "Football is widely recognizable and works well for family and fan greetings."
+    },
+    {
+      "date": "2026-06-28",
+      "category": "international-day",
+      "title": "Family celebration day",
+      "note": "Emotional gift-ready moment for family wishes, music, and personal greetings.",
+      "priority": 4,
+      "generate_image": true,
+      "status": "waiting",
+      "czech_relevance": "low",
+      "melody4u_score": 4,
+      "marketing_angle": "celebration day",
+      "why_selected": "Family and celebration themes match Melody4U gift messaging."
+    },
+    {
+      "date": "2026-06-28",
+      "category": "cycling",
+      "title": "Summer cycling weekend",
+      "note": "Symbolic open-road summer cycling scene with Czech countryside feeling.",
+      "priority": 3,
+      "generate_image": true,
+      "status": "waiting",
+      "czech_relevance": "medium",
+      "melody4u_score": 4,
+      "marketing_angle": "weekend emotion",
+      "why_selected": "Seasonal outdoor sport can support warm, personal Melody4U messages."
+    }
+  ]
+}
