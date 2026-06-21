@@ -2,13 +2,13 @@
   "week": "2026-W26",
   "date_from": "2026-06-22",
   "date_to": "2026-06-28",
-  "generated_at": "2026-06-21T20:27:05.082Z",
+  "generated_at": "2026-06-21T20:32:20.479Z",
   "events": [
     {
       "date": "2026-06-24",
       "category": "sport",
-      "title": "FIFA World Cup 2026 + Czech Republic vs Mexico",
-      "note": "Combined main weekly storyline for Czech audience, no official logos or exact tournament branding in visuals.",
+      "title": "FIFA World Cup 2026: Czechia vs Mexico",
+      "note": "Czechia faces Mexico in a crucial Group A match at the FIFA World Cup 2026 in Mexico City.",
       "priority": 5,
       "source_priority": 1,
       "generate_image": true,
@@ -16,17 +16,17 @@
       "backup_only": false,
       "tone": "fan_hype",
       "event_origin": "sport",
-      "language_policy": "english",
+      "language_policy": "bilingual_cs_en",
       "czech_relevance": "high",
       "melody4u_score": 5,
-      "marketing_angle": "personal greeting before a big Czech World Cup match",
-      "why_selected": "Major world tournament plus Czech national team match is the strongest Czech-relevant social topic of the week."
+      "marketing_angle": "Highlighting Czechia's pivotal World Cup match against Mexico.",
+      "why_selected": "As the host nation, Mexico's match against Czechia is a major event for Czech fans during the World Cup."
     },
     {
       "date": "2026-06-26",
       "category": "international-day",
       "title": "International Day Against Drug Abuse and Illicit Trafficking",
-      "note": "Important international awareness day for thoughtful Melody4U content with no fearmongering.",
+      "note": "Important international awareness day for thoughtful Melody4U content. Use hopeful, supportive language and avoid fearmongering, shock visuals, or graphic imagery.",
       "priority": 5,
       "source_priority": 2,
       "generate_image": true,
@@ -38,13 +38,31 @@
       "czech_relevance": "medium",
       "melody4u_score": 5,
       "marketing_angle": "thoughtful awareness message with hope and support",
-      "why_selected": "A main significant day where a respectful bilingual message can fit Melody4U social content."
+      "why_selected": "A main international significant day in the target week; serious topics should be handled with awareness tone, not skipped."
+    },
+    {
+      "date": "2026-06-26",
+      "category": "motorsport",
+      "title": "Formula 1: Austrian Grand Prix 2026",
+      "note": "The Formula 1 season continues with the Austrian Grand Prix at the Red Bull Ring in Spielberg, Austria.",
+      "priority": 2,
+      "source_priority": 2,
+      "generate_image": true,
+      "status": "waiting",
+      "backup_only": false,
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "czech_relevance": "medium",
+      "melody4u_score": 5,
+      "marketing_angle": "Coverage of the exciting Austrian Grand Prix, a key race in the F1 calendar.",
+      "why_selected": "The Austrian Grand Prix is a significant event in the Formula 1 season, attracting international attention."
     },
     {
       "date": "2026-06-27",
       "category": "czech-significant-day",
       "title": "Memorial Day for Victims of the Communist Regime / Political Prisoners",
-      "note": "Czech memorial day requiring calm, dignified and respectful visual language.",
+      "note": "Czech memorial day requiring calm, dignified and respectful visual language. No hype, no sensationalism, and no disturbing imagery.",
       "priority": 5,
       "source_priority": 2,
       "generate_image": true,
@@ -55,32 +73,14 @@
       "language_policy": "czech",
       "czech_relevance": "high",
       "melody4u_score": 5,
-      "marketing_angle": "respectful remembrance for Czech audience",
-      "why_selected": "A major Czech memorial day that should be included with the right respectful tone."
-    },
-    {
-      "date": "2026-06-26",
-      "category": "motorsport",
-      "title": "Formula 1 Austrian Grand Prix",
-      "note": "Top motorsport priority close to Czech fans, visuals must avoid official F1 branding.",
-      "priority": 5,
-      "source_priority": 3,
-      "generate_image": true,
-      "status": "waiting",
-      "backup_only": false,
-      "tone": "fan_hype",
-      "event_origin": "motorsport",
-      "language_policy": "english",
-      "czech_relevance": "medium",
-      "melody4u_score": 5,
-      "marketing_angle": "gift for a racing fan before the weekend",
-      "why_selected": "Formula 1 is the top motorsport storyline after Czech/world tournament themes and main significant days."
+      "marketing_angle": "respectful remembrance for a Czech audience",
+      "why_selected": "A major Czech memorial day in the target week; it should be included with respectful memorial tone rather than ignored."
     },
     {
       "date": "2026-06-24",
       "category": "seasonal",
       "title": "St. John’s Day / Jan / midsummer mood",
-      "note": "Czech seasonal and name-day friendly moment, useful only as a softer secondary theme.",
+      "note": "Czech seasonal and name-day friendly moment, useful as a softer secondary significant-day theme.",
       "priority": 3,
       "source_priority": 6,
       "generate_image": true,
@@ -115,8 +115,8 @@
     {
       "date": "2026-06-26",
       "category": "motorsport",
-      "title": "MotoGP Dutch TT Assen",
-      "note": "Major motorcycle racing weekend, below Formula 1 in editorial order.",
+      "title": "MotoGP Velká cena Nizozemska – Assen",
+      "note": "Major motorcycle racing weekend at Assen. Keep it below Formula 1 and after higher Czech-relevance items.",
       "priority": 4,
       "source_priority": 8,
       "generate_image": false,
@@ -128,25 +128,7 @@
       "czech_relevance": "medium",
       "melody4u_score": 4,
       "marketing_angle": "weekend racing spirit for motorcycle fans",
-      "why_selected": "MotoGP is an important major sport but ranks below F1 and Czech national tournament themes."
-    },
-    {
-      "date": "2026-06-22",
-      "category": "sport",
-      "title": "Wimbledon qualification",
-      "note": "Recognizable summer tennis storyline with safe symbolic grass-court visuals.",
-      "priority": 4,
-      "source_priority": 9,
-      "generate_image": true,
-      "status": "waiting",
-      "backup_only": false,
-      "tone": "fan_hype",
-      "event_origin": "sport",
-      "language_policy": "english",
-      "czech_relevance": "medium",
-      "melody4u_score": 4,
-      "marketing_angle": "summer sport vibes for tennis fans",
-      "why_selected": "Wimbledon qualification is a recognizable tennis moment if capacity remains after top themes."
+      "why_selected": "MotoGP Assen is an important motorcycle racing weekend, but it should stay near the end of the editorial order. Use as backup only if there are not enough primary image topics."
     }
   ]
 }
