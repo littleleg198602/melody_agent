@@ -1,0 +1,73 @@
+{
+  "recurring": [
+    {
+      "month_day": "06-26",
+      "category": "international-day",
+      "title": "International Day Against Drug Abuse and Illicit Trafficking",
+      "note": "Important international awareness day for thoughtful Melody4U content. Use hopeful, supportive language and avoid fearmongering, shock visuals, or graphic imagery.",
+      "priority": 5,
+      "source_priority": 2,
+      "generate_image": true,
+      "status": "waiting",
+      "tone": "awareness",
+      "event_origin": "international_significant_day",
+      "language_policy": "bilingual_cs_en",
+      "czech_relevance": "medium",
+      "melody4u_score": 5,
+      "marketing_angle": "thoughtful awareness message with hope and support",
+      "why_selected": "A main international significant day in the target week; serious topics should be handled with awareness tone, not skipped.",
+      "aliases": [
+        "drug abuse",
+        "illicit trafficking",
+        "proti drog"
+      ]
+    },
+    {
+      "month_day": "06-27",
+      "category": "czech-significant-day",
+      "title": "Memorial Day for Victims of the Communist Regime / Political Prisoners",
+      "note": "Czech memorial day requiring calm, dignified and respectful visual language. No hype, no sensationalism, and no disturbing imagery.",
+      "priority": 5,
+      "source_priority": 2,
+      "generate_image": true,
+      "status": "waiting",
+      "tone": "respectful_memorial",
+      "event_origin": "czech_significant_day",
+      "language_policy": "czech",
+      "czech_relevance": "high",
+      "melody4u_score": 5,
+      "marketing_angle": "respectful remembrance for a Czech audience",
+      "why_selected": "A major Czech memorial day in the target week; it should be included with respectful memorial tone rather than ignored.",
+      "aliases": [
+        "communist regime",
+        "political prisoners",
+        "obětí komunismu",
+        "komunistického režimu"
+      ]
+    },
+    {
+      "month_day": "06-24",
+      "category": "seasonal",
+      "title": "St. John’s Day / Jan / midsummer mood",
+      "note": "Czech seasonal and name-day friendly moment, useful as a softer secondary significant-day theme.",
+      "priority": 3,
+      "source_priority": 6,
+      "generate_image": true,
+      "status": "waiting",
+      "tone": "celebration",
+      "event_origin": "czech_significant_day",
+      "language_policy": "czech",
+      "czech_relevance": "high",
+      "melody4u_score": 3,
+      "marketing_angle": "warm Czech midsummer greeting",
+      "why_selected": "A Czech tradition and name-day mood can support a warm Melody4U greeting if capacity remains.",
+      "aliases": [
+        "st. john",
+        "st john",
+        "midsummer",
+        "svatoján",
+        "jan / midsummer"
+      ]
+    }
+  ]
+}
