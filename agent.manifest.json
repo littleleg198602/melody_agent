@@ -1,0 +1,15 @@
+{
+  "name": "Melody4U Weekly Image Agent",
+  "version": "v1",
+  "description": "Automated weekly event overview and Melody4U image prompt/image generation agent.",
+  "runtime": { "language": "Node.js", "node_version": "20+", "module_system": "ESM" },
+  "main_scripts": { "weekly": "scripts/run-weekly-agent.js", "overview": "scripts/create-weekly-overview.js", "prompts": "scripts/generate-image-prompts.js", "images": "scripts/generate-images.js" },
+  "folders": { "prompts": "Prompt templates and Melody4U visual style rules.", "data_weekly": "Generated weekly overview JSON files.", "output": "Generated prompt files, image manifests and optional images.", "logs": "Agent runtime logs.", "scripts": "Agent source code.", "github_workflows": "Scheduled and manual GitHub Actions workflows." },
+  "required_secrets": ["OPENAI_API_KEY"],
+  "environment_variables": { "GENERATE_IMAGES": { "default": "false", "description": "If true, the agent generates paid images using the OpenAI Images API. If false, it only creates JSON and prompt files." } },
+  "default_mode": "dry-run",
+  "cost_control": { "image_generation_default": false, "requires_explicit_enable": true },
+  "outputs": ["data/weekly/YYYY-Www.json", "output/YYYY-Www/prompts.json", "output/YYYY-Www/images.json", "output/YYYY-Www/images/*.png", "logs/agent.log"],
+  "content_rules": ["No official logos", "No copyrighted team badges", "No real athlete or celebrity likenesses", "No exact trademarked visual identity", "Use symbolic cinematic scenes", "Use English text on generated images"],
+  "status": "v1-development"
+}
