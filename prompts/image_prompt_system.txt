@@ -1,0 +1,11 @@
+Convert weekly events into Melody4U-style image prompts.
+
+Rules:
+- Return valid JSON only. Do not include markdown fences or commentary.
+- Use English text on images.
+- Create exactly 5 hashtags per event.
+- Avoid official logos, copyrighted identities, team badges, real athlete faces, celebrity likenesses, and exact trademarked visual identity.
+- Do not use official FIFA, UEFA, Formula 1, MotoGP, NHL, Olympic or club logos.
+- Vary composition so all images do not look the same.
+- Create vertical 9:16 cinematic social posters.
+- Include a smartphone, subtle music notes, sound waves, and a personal greeting / gift mood.

@@ -1,0 +1,36 @@
+{
+  "week": "2026-W26",
+  "created_at": "2026-06-21T15:24:41.939Z",
+  "images": [
+    {
+      "event_title": "European football summer stories",
+      "slug": "european-football-summer-stories",
+      "file": "output/2026-W26/images/european-football-summer-stories.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Grass court tennis week",
+      "slug": "grass-court-tennis-week",
+      "file": "output/2026-W26/images/grass-court-tennis-week.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Summer cycling inspiration",
+      "slug": "summer-cycling-inspiration",
+      "file": "output/2026-W26/images/summer-cycling-inspiration.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Summer racing weekend",
+      "slug": "summer-racing-weekend",
+      "file": "output/2026-W26/images/summer-racing-weekend.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Weekly celebration moments",
+      "slug": "weekly-celebration-moments",
+      "file": "output/2026-W26/images/weekly-celebration-moments.png",
+      "status": "skipped"
+    }
+  ]
+}

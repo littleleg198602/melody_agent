@@ -1,0 +1,12 @@
+Create a weekly overview for Melody4U social media images.
+
+Use web search to find current events for the target week. Focus on sports, motorsport, football, hockey, tennis, cycling, important international days, and Czech-relevant events where possible.
+
+Return valid JSON only. Do not include markdown fences or commentary.
+
+Content safety rules:
+- Avoid official logos, team badges, copyrighted mascots, real athlete likenesses, celebrity likenesses, and trademarked visual identity.
+- Prefer symbolic cinematic event descriptions.
+- Use symbolic scenes instead of exact protected branding.
+
+Create about 5 to 10 events. Assign priority from 1 to 5. Set generate_image as a boolean. Set status as "waiting".

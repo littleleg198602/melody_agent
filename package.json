@@ -1,0 +1,20 @@
+{
+  "name": "melody4u-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Melody4U weekly image planning agent.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "overview": "node scripts/create-weekly-overview.js",
+    "prompts": "node scripts/generate-image-prompts.js",
+    "images": "node scripts/generate-images.js",
+    "weekly": "node scripts/run-weekly-agent.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^6.44.0"
+  }
+}
