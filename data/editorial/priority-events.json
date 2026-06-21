@@ -68,29 +68,6 @@
         "assen"
       ],
       "backup_only": true
-    },
-    {
-      "date": "2026-06-22",
-      "category": "seasonal",
-      "title": "Začátek léta – letní slunovrat",
-      "note": "Seasonal summer-solstice mood for warm Czech social content.",
-      "priority": 3,
-      "source_priority": 7,
-      "generate_image": true,
-      "status": "waiting",
-      "tone": "celebration",
-      "event_origin": "seasonal",
-      "language_policy": "czech",
-      "czech_relevance": "medium",
-      "melody4u_score": 3,
-      "marketing_angle": "warm summer greeting",
-      "why_selected": "A soft seasonal theme can support Melody4U content if capacity remains after the main editorial priorities.",
-      "aliases": [
-        "start of summer",
-        "summer solstice",
-        "letní slunovrat",
-        "začátek léta"
-      ]
     }
   ]
 }

@@ -4,6 +4,25 @@ import { resolveTargetWeek } from './utils/dates.js';
 import { readJsonFile, writeBinaryFile, writeJsonFile, ensureDir } from './utils/fs.js';
 import { logger } from './utils/logger.js';
 
+
+function isMotoBackupTopic(item) {
+  return /motogp|moto gp/i.test(`${item.title ?? ''} ${item.event_title ?? ''} ${item.category ?? ''}`);
+}
+
+function isBlockedImageTopic(item) {
+  return /summer solstice|letn[íi] slunovrat|začátek léta|zacatek leta/i.test(`${item.title ?? ''} ${item.event_title ?? ''} ${item.category ?? ''}`);
+}
+
+function filterManifestPromptItems(items) {
+  const primaryItems = items.filter((item) => !isMotoBackupTopic(item) && !isBlockedImageTopic(item));
+  const allowMotoBackup = primaryItems.length < 2;
+  return items.filter((item) => {
+    if (isBlockedImageTopic(item)) return false;
+    if (isMotoBackupTopic(item) && !allowMotoBackup) return false;
+    return true;
+  });
+}
+
 async function main() {
   await logger.info('Generate images started');
   try {
@@ -11,6 +30,7 @@ async function main() {
     const promptsFile = `output/${target.week}/prompts.json`;
     await logger.info(`Reading image prompts: ${promptsFile}`);
     const prompts = await readJsonFile(promptsFile);
+    prompts.items = filterManifestPromptItems(Array.isArray(prompts.items) ? prompts.items : []);
     const imagesDir = `output/${target.week}/images`;
     await ensureDir(imagesDir);
     const manifest = { week: target.week, created_at: new Date().toISOString(), images: [] };

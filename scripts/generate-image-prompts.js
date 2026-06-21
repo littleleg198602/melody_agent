@@ -121,6 +121,35 @@ function normalizeHashtags(hashtags, item) {
   return normalized.slice(0, 5);
 }
 
+
+function isMotoBackupTopic(item) {
+  return /motogp|moto gp/i.test(`${item.title ?? ''} ${item.event_title ?? ''} ${item.category ?? ''}`);
+}
+
+function isBlockedImageTopic(item) {
+  return /summer solstice|letn[íi] slunovrat|začátek léta|zacatek leta/i.test(`${item.title ?? ''} ${item.event_title ?? ''} ${item.category ?? ''}`);
+}
+
+function filterImageEvents(events) {
+  const primaryEvents = events.filter((event) => !isMotoBackupTopic(event) && !isBlockedImageTopic(event));
+  const allowMotoBackup = primaryEvents.length < 2;
+  return events.filter((event) => {
+    if (isBlockedImageTopic(event)) return false;
+    if (isMotoBackupTopic(event) && !allowMotoBackup) return false;
+    return true;
+  });
+}
+
+function filterPromptItems(items) {
+  const primaryItems = items.filter((item) => !isMotoBackupTopic(item) && !isBlockedImageTopic(item));
+  const allowMotoBackup = primaryItems.length < 2;
+  return items.filter((item) => {
+    if (isBlockedImageTopic(item)) return false;
+    if (isMotoBackupTopic(item) && !allowMotoBackup) return false;
+    return true;
+  });
+}
+
 function fallbackPrompts(week, events) {
   return {
     week,
@@ -198,7 +227,7 @@ async function main() {
     const inputFile = `data/weekly/${target.week}.json`;
     await logger.info(`Reading weekly overview: ${inputFile}`);
     const overview = await readJsonFile(inputFile);
-    const events = overview.events.filter((event) => event.generate_image === true && event.status === 'waiting');
+    const events = filterImageEvents(overview.events.filter((event) => event.generate_image === true && event.status === 'waiting'));
     await logger.info(`Found ${events.length} waiting events with generate_image=true for ${target.week}`);
     const style = await readTextFile('prompts/melody4u_style.txt');
     const system = await readTextFile('prompts/image_prompt_system.txt');
@@ -224,7 +253,8 @@ async function main() {
       prompts = validatePrompts(extractJson(rawResponseText), target.week);
     }
     prompts = validatePrompts(prompts, target.week);
-    await logger.info(`Prompt count after validation: ${prompts.items.length}`);
+    prompts.items = filterPromptItems(prompts.items);
+    await logger.info(`Prompt count after validation and image-topic filtering: ${prompts.items.length}`);
     await logger.info(`Prompts created_at set by script: ${prompts.created_at}`);
     const out = `output/${target.week}/prompts.json`;
     await writeJsonFile(out, prompts);
