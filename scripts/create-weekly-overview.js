@@ -1,13 +1,17 @@
 import 'dotenv/config';
 import OpenAI from 'openai';
 import { resolveTargetWeek } from './utils/dates.js';
-import { readTextFile, writeJsonFile } from './utils/fs.js';
+import { readJsonFile, readTextFile, writeJsonFile } from './utils/fs.js';
 import { logger } from './utils/logger.js';
 
 const CZECH_RELEVANCE_WEIGHT = { high: 3, medium: 2, low: 1 };
 const ALLOWED_TONES = ['fan_hype', 'celebration', 'respectful_memorial', 'awareness'];
 const ALLOWED_EVENT_ORIGINS = ['international_significant_day', 'czech_significant_day', 'sport', 'motorsport', 'seasonal', 'other'];
 const ALLOWED_LANGUAGE_POLICIES = ['english', 'czech', 'bilingual_cs_en'];
+const SIGNIFICANT_DAYS_FILE = 'data/editorial/significant-days.json';
+const CZECH_FIXTURES_FILE = 'data/editorial/czech-national-team-fixtures.json';
+const PRIORITY_EVENTS_FILE = 'data/editorial/priority-events.json';
+const MAX_SELECTED_EVENTS = 8;
 
 function previewText(value, maxLength = 1000) {
   return String(value ?? '').replace(/\s+/g, ' ').trim().slice(0, maxLength);
@@ -99,6 +103,244 @@ function normalizeEvent(event) {
   };
 }
 
+
+
+function dateToYearMonthDay(date) {
+  return date.toISOString().slice(0, 10);
+}
+
+function addDays(date, days) {
+  const next = new Date(date);
+  next.setUTCDate(next.getUTCDate() + days);
+  return next;
+}
+
+function hasEquivalentEvent(events, candidate) {
+  const candidateTitle = String(candidate.title ?? '').toLowerCase();
+  const aliases = [candidateTitle, ...(Array.isArray(candidate.aliases) ? candidate.aliases : [])]
+    .map((alias) => String(alias).toLowerCase())
+    .filter(Boolean);
+
+  return events.some((event) => {
+    const title = String(event.title ?? '').toLowerCase();
+    return aliases.some((alias) => title === alias || title.includes(alias) || alias.includes(title));
+  });
+}
+
+async function calendarSignificantDaysForTarget(target) {
+  const calendar = await readJsonFile(SIGNIFICANT_DAYS_FILE);
+  const recurring = Array.isArray(calendar.recurring) ? calendar.recurring : [];
+  const start = new Date(`${target.date_from}T00:00:00Z`);
+  const end = new Date(`${target.date_to}T00:00:00Z`);
+  const selected = [];
+
+  for (let day = start; day <= end; day = addDays(day, 1)) {
+    const isoDate = dateToYearMonthDay(day);
+    const monthDay = isoDate.slice(5);
+    for (const event of recurring.filter((item) => item.month_day === monthDay)) {
+      const { aliases, month_day: monthDayValue, ...eventWithoutCalendarOnlyFields } = event;
+      selected.push({ ...eventWithoutCalendarOnlyFields, date: isoDate, aliases, calendar_significant_day: true });
+    }
+  }
+
+  return selected;
+}
+
+
+async function calendarCzechFixturesForTarget(target) {
+  const calendar = await readJsonFile(CZECH_FIXTURES_FILE);
+  const fixtures = Array.isArray(calendar.fixtures) ? calendar.fixtures : [];
+  return fixtures
+    .filter((event) => event.date >= target.date_from && event.date <= target.date_to)
+    .map((event) => {
+      const { aliases, sport, competition, ...eventWithoutCalendarOnlyFields } = event;
+      return { ...eventWithoutCalendarOnlyFields, aliases, sport, competition, calendar_czech_fixture: true };
+    });
+}
+
+async function mergeCalendarCzechFixtures(events, target) {
+  const fixtureEvents = await calendarCzechFixturesForTarget(target);
+  const merged = [...events];
+  for (const event of fixtureEvents) {
+    if (!hasEquivalentEvent(merged, event)) merged.push(event);
+  }
+  if (fixtureEvents.length > 0) {
+    await logger.info(`Calendar Czech national-team fixture candidates for ${target.week}: ${fixtureEvents.map((event) => event.title).join(' | ')}`);
+  }
+  return merged;
+}
+
+
+async function calendarPriorityEventsForTarget(target) {
+  const calendar = await readJsonFile(PRIORITY_EVENTS_FILE);
+  const events = Array.isArray(calendar.events) ? calendar.events : [];
+  return events
+    .filter((event) => event.date >= target.date_from && event.date <= target.date_to)
+    .map((event) => {
+      const { aliases, ...eventWithoutCalendarOnlyFields } = event;
+      return { ...eventWithoutCalendarOnlyFields, aliases, calendar_priority_event: true };
+    });
+}
+
+async function mergeCalendarPriorityEvents(events, target) {
+  const priorityEvents = await calendarPriorityEventsForTarget(target);
+  const merged = [...events];
+  for (const event of priorityEvents) {
+    if (!hasEquivalentEvent(merged, event)) merged.push(event);
+  }
+  if (priorityEvents.length > 0) {
+    await logger.info(`Calendar priority-event candidates for ${target.week}: ${priorityEvents.map((event) => event.title).join(' | ')}`);
+  }
+  return merged;
+}
+
+async function mergeCalendarSignificantDays(events, target) {
+  const calendarEvents = await calendarSignificantDaysForTarget(target);
+  const merged = [...events];
+  for (const event of calendarEvents) {
+    if (!hasEquivalentEvent(merged, event)) merged.push(event);
+  }
+  if (calendarEvents.length > 0) {
+    await logger.info(`Calendar significant-day candidates for ${target.week}: ${calendarEvents.map((event) => event.title).join(' | ')}`);
+  }
+  return merged;
+}
+
+function includesAny(text, patterns) {
+  return patterns.some((pattern) => pattern.test(text));
+}
+
+function eventText(event) {
+  return `${event.title ?? ''} ${event.category ?? ''} ${event.note ?? ''}`.toLowerCase();
+}
+
+function eventHeadlineText(event) {
+  return `${event.title ?? ''} ${event.category ?? ''}`.toLowerCase();
+}
+
+function isWorldTournamentEvent(event) {
+  return includesAny(eventText(event), [/world cup/, /fifa/, /uefa euro/, /euro \d{4}/, /world championship/, /mistrovstv[íi] světa/, /mistrovstv[íi] evropy/]);
+}
+
+function isCzechTeamEvent(event) {
+  return includesAny(eventText(event), [/czech republic/, /czechia/, /česko/, /česk[áy]\s+reprezentace/, /czech national/]);
+}
+
+function isFootballOrHockeyEvent(event) {
+  return includesAny(eventText(event), [/football/, /soccer/, /fotbal/, /hockey/, /hokej/, /fifa/, /uefa/]);
+}
+
+function isSignificantDayEvent(event) {
+  const origin = event.event_origin;
+  return origin === 'international_significant_day' || origin === 'czech_significant_day' || includesAny(eventText(event), [/significant day/, /international day/, /memorial day/, /awareness day/, /významn[ýy] den/, /památn[ýy] den/]);
+}
+
+function isSeriousSignificantDay(event) {
+  return isSignificantDayEvent(event) && (event.tone === 'respectful_memorial' || event.tone === 'awareness' || includesAny(eventText(event), [/victim/, /obět/, /communist/, /komunist/, /political prisoner/, /drug/, /trafficking/, /abuse/, /awareness/]));
+}
+
+function isFormulaOneEvent(event) {
+  return includesAny(eventHeadlineText(event), [/formula 1/, /\bf1\b/, /grand prix/]);
+}
+
+function isMotoGpEvent(event) {
+  return includesAny(eventHeadlineText(event), [/motogp/, /moto gp/, /motorcycle racing/]);
+}
+
+function combineCzechTournamentThemes(events) {
+  const combined = [];
+  const consumed = new Set();
+
+  for (let index = 0; index < events.length; index += 1) {
+    if (consumed.has(index)) continue;
+    const event = events[index];
+    if (!isWorldTournamentEvent(event) || !isFootballOrHockeyEvent(event) || isCzechTeamEvent(event)) {
+      combined.push(event);
+      continue;
+    }
+
+    const czechMatchIndex = events.findIndex((candidate, candidateIndex) => (
+      candidateIndex !== index
+      && !consumed.has(candidateIndex)
+      && isCzechTeamEvent(candidate)
+      && isFootballOrHockeyEvent(candidate)
+      && String(candidate.date ?? '') >= String(event.date ?? '').slice(0, 10)
+    ));
+
+    if (czechMatchIndex === -1) {
+      combined.push(event);
+      continue;
+    }
+
+    const czechMatch = events[czechMatchIndex];
+    consumed.add(index);
+    consumed.add(czechMatchIndex);
+    combined.push({
+      ...event,
+      date: czechMatch.date || event.date,
+      title: `${event.title} + ${czechMatch.title}`,
+      note: `${event.note || 'Major world tournament.'} Combined with Czech national team match: ${czechMatch.title}. ${czechMatch.note || ''}`.trim(),
+      priority: Math.max(Number(event.priority) || 1, Number(czechMatch.priority) || 1, 5),
+      source_priority: 1,
+      generate_image: true,
+      tone: 'fan_hype',
+      event_origin: 'sport',
+      language_policy: 'english',
+      czech_relevance: 'high',
+      melody4u_score: 5,
+      marketing_angle: czechMatch.marketing_angle || event.marketing_angle || 'personal greeting before a big Czech national team match',
+      why_selected: 'Major world tournament combined with a Czech national team match so the topic is not split into duplicate generic and Czech-match entries.'
+    });
+  }
+
+  events.forEach((event, index) => {
+    if (!consumed.has(index) && !combined.includes(event)) combined.push(event);
+  });
+
+  return combined;
+}
+
+function normalizeEditorialPriority(event) {
+  const normalized = { ...event };
+  if (isWorldTournamentEvent(normalized) && isCzechTeamEvent(normalized)) {
+    normalized.source_priority = 1;
+    normalized.priority = Math.max(Number(normalized.priority) || 1, 5);
+    normalized.czech_relevance = 'high';
+    normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
+  } else if (isSeriousSignificantDay(normalized)) {
+    normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 2);
+    normalized.priority = Math.max(Number(normalized.priority) || 1, 5);
+    normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
+  } else if (isSignificantDayEvent(normalized)) {
+    normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 6);
+  } else if (isFormulaOneEvent(normalized)) {
+    normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 3);
+    normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
+  } else if (isMotoGpEvent(normalized)) {
+    normalized.source_priority = Math.max(Number(normalized.source_priority) || 8, 8);
+  } else if (!normalized.calendar_priority_event && !normalized.calendar_significant_day && !normalized.calendar_czech_fixture) {
+    normalized.source_priority = Math.max(Number(normalized.source_priority) || 9, 9);
+  }
+  return normalized;
+}
+
+function removeDuplicateEditorialEvents(events) {
+  const selected = [];
+  const hasCombinedCzechTournament = events.some((event) => isWorldTournamentEvent(event) && isCzechTeamEvent(event));
+
+  for (const event of events) {
+    const title = String(event.title ?? '').toLowerCase();
+    if (hasCombinedCzechTournament && isWorldTournamentEvent(event) && !isCzechTeamEvent(event)) continue;
+    if (selected.some((item) => String(item.title ?? '').toLowerCase() === title)) continue;
+    selected.push(event);
+  }
+  return selected;
+}
+
+function applyEditorialRules(events) {
+  return removeDuplicateEditorialEvents(combineCzechTournamentThemes(events).map(normalizeEditorialPriority));
+}
+
 function validateEvent(event, index) {
   for (const key of ['date', 'category', 'title', 'note', 'source_priority', 'tone', 'event_origin', 'language_policy', 'marketing_angle', 'why_selected']) {
     if (!event[key]) throw new Error(`Weekly event ${index} missing required field: ${key}`);
@@ -112,8 +354,8 @@ function validateEvent(event, index) {
   if (typeof event.generate_image !== 'boolean') throw new Error(`Weekly event ${index} generate_image must be boolean.`);
 }
 
-async function filterAndRankEvents(events) {
-  const normalized = events.map(normalizeEvent);
+async function filterAndRankEvents(events, target) {
+  const normalized = applyEditorialRules(events).map(normalizeEvent);
   await logger.info(`Raw events returned: ${normalized.length}`);
 
   const strong = normalized.filter((event) => event.melody4u_score >= 3);
@@ -130,11 +372,11 @@ async function filterAndRankEvents(events) {
 
   const selected = candidates
     .sort((a, b) => a.source_priority - b.source_priority || String(a.date).localeCompare(String(b.date)) || b.priority - a.priority || b.melody4u_score - a.melody4u_score || CZECH_RELEVANCE_WEIGHT[b.czech_relevance] - CZECH_RELEVANCE_WEIGHT[a.czech_relevance])
-    .slice(0, 7);
+    .slice(0, MAX_SELECTED_EVENTS);
 
   const finalEvents = selected.length >= 5 ? selected : normalized
     .sort((a, b) => a.source_priority - b.source_priority || String(a.date).localeCompare(String(b.date)) || b.priority - a.priority || b.melody4u_score - a.melody4u_score || CZECH_RELEVANCE_WEIGHT[b.czech_relevance] - CZECH_RELEVANCE_WEIGHT[a.czech_relevance])
-    .slice(0, 7);
+    .slice(0, MAX_SELECTED_EVENTS);
 
   finalEvents.forEach(validateEvent);
   await logger.info(`Events after filtering: ${finalEvents.length}`);
@@ -153,7 +395,7 @@ async function validateOverview(data, target) {
     date_from: target.date_from,
     date_to: target.date_to,
     generated_at: generatedAt,
-    events: await filterAndRankEvents(data.events)
+    events: await filterAndRankEvents(await mergeCalendarSignificantDays(await mergeCalendarPriorityEvents(await mergeCalendarCzechFixtures(data.events, target), target), target), target)
   };
 }
 
