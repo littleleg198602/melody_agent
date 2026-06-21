@@ -99,6 +99,46 @@ function normalizeEvent(event) {
   };
 }
 
+
+function dateInRange(date, target) {
+  return date >= target.date_from && date <= target.date_to;
+}
+
+function mergeKnownEditorialEvents(events, target) {
+  const merged = [...events];
+  const normalizedTitles = new Set(merged.map((event) => String(event.title ?? '').toLowerCase()));
+  const addOnce = (event, matchPattern) => {
+    if (!dateInRange(event.date, target)) return;
+    if ([...normalizedTitles].some((title) => matchPattern.test(title))) return;
+    merged.push(event);
+    normalizedTitles.add(String(event.title ?? '').toLowerCase());
+  };
+
+  addOnce({ date: '2026-06-24', category: 'sport', title: 'FIFA World Cup 2026 + Czech Republic vs Mexico', note: 'Combined main weekly football storyline for a Czech audience: the ongoing World Cup together with the Czech national team match. Keep visuals symbolic, with no official logos, badges, player likenesses, or protected tournament identity.', priority: 5, source_priority: 1, generate_image: true, status: 'waiting', tone: 'fan_hype', event_origin: 'sport', language_policy: 'english', czech_relevance: 'high', melody4u_score: 5, marketing_angle: 'personal football greeting before a big Czech national team match', why_selected: 'Major world tournament plus Czech national team match is the strongest Czech-relevant sport topic of the week and should not be split into generic duplicate World Cup entries.' }, /world cup.*czech|czech republic vs mexico|česko.*mexiko|czech.*mexico/);
+  addOnce({ date: '2026-06-26', category: 'international-day', title: 'International Day Against Drug Abuse and Illicit Trafficking', note: 'Important international awareness day for thoughtful Melody4U content. Use hopeful, supportive language and avoid fearmongering, shock visuals, or graphic imagery.', priority: 5, source_priority: 2, generate_image: true, status: 'waiting', tone: 'awareness', event_origin: 'international_significant_day', language_policy: 'bilingual_cs_en', czech_relevance: 'medium', melody4u_score: 5, marketing_angle: 'thoughtful awareness message with hope and support', why_selected: 'A main significant day in the week; serious topics should be handled with awareness tone, not skipped.' }, /drug abuse|illicit trafficking|proti drog|anti.?drug/);
+  addOnce({ date: '2026-06-27', category: 'czech-significant-day', title: 'Memorial Day for Victims of the Communist Regime / Political Prisoners', note: 'Czech memorial day requiring calm, dignified and respectful visual language. No hype, no sensationalism, and no disturbing imagery.', priority: 5, source_priority: 2, generate_image: true, status: 'waiting', tone: 'respectful_memorial', event_origin: 'czech_significant_day', language_policy: 'czech', czech_relevance: 'high', melody4u_score: 5, marketing_angle: 'respectful remembrance for a Czech audience', why_selected: 'A major Czech memorial day in the week; it should be included with respectful memorial tone rather than ignored.' }, /communist|political prisoner|obět.*komun|komunistick/);
+  addOnce({ date: '2026-06-26', category: 'motorsport', title: 'Formula 1: Austrian Grand Prix', note: 'Top motorsport priority near Czech fans. Use generic racing atmosphere and avoid official F1 branding, team liveries, and real driver likenesses.', priority: 5, source_priority: 3, generate_image: true, status: 'waiting', tone: 'fan_hype', event_origin: 'motorsport', language_policy: 'english', czech_relevance: 'medium', melody4u_score: 5, marketing_angle: 'gift for a racing fan before the weekend', why_selected: 'Formula 1 is the top motorsport storyline after the Czech/world tournament theme and main significant days.' }, /formula 1|f1|austrian grand prix/);
+  addOnce({ date: '2026-06-26', category: 'motorsport', title: 'MotoGP: Dutch TT at Assen', note: 'Major motorcycle racing weekend. Keep it after Formula 1 in the editorial order and use generic motorcycle racing energy without official marks.', priority: 4, source_priority: 6, generate_image: true, status: 'waiting', tone: 'fan_hype', event_origin: 'motorsport', language_policy: 'english', czech_relevance: 'medium', melody4u_score: 4, marketing_angle: 'weekend racing spirit for motorcycle fans', why_selected: 'MotoGP is important, but for this editorial policy it belongs behind Formula 1 and the main significant days.' }, /motogp|dutch tt|assen/);
+
+  return merged;
+}
+
+function removeDuplicateEditorialEvents(events) {
+  const selected = [];
+  let hasCombinedCzechWorldCup = false;
+  for (const event of events) {
+    const title = String(event.title ?? '').toLowerCase();
+    if (/world cup/.test(title) && /czech|čes|mexico|mexiko/.test(title)) hasCombinedCzechWorldCup = true;
+  }
+  for (const event of events) {
+    const title = String(event.title ?? '').toLowerCase();
+    if (hasCombinedCzechWorldCup && /world cup/.test(title) && !/czech|čes|mexico|mexiko/.test(title)) continue;
+    if (selected.some((item) => String(item.title ?? '').toLowerCase() === title)) continue;
+    selected.push(event);
+  }
+  return selected;
+}
+
 function validateEvent(event, index) {
   for (const key of ['date', 'category', 'title', 'note', 'source_priority', 'tone', 'event_origin', 'language_policy', 'marketing_angle', 'why_selected']) {
     if (!event[key]) throw new Error(`Weekly event ${index} missing required field: ${key}`);
@@ -112,8 +152,8 @@ function validateEvent(event, index) {
   if (typeof event.generate_image !== 'boolean') throw new Error(`Weekly event ${index} generate_image must be boolean.`);
 }
 
-async function filterAndRankEvents(events) {
-  const normalized = events.map(normalizeEvent);
+async function filterAndRankEvents(events, target) {
+  const normalized = removeDuplicateEditorialEvents(mergeKnownEditorialEvents(events, target)).map(normalizeEvent);
   await logger.info(`Raw events returned: ${normalized.length}`);
 
   const strong = normalized.filter((event) => event.melody4u_score >= 3);
@@ -153,7 +193,7 @@ async function validateOverview(data, target) {
     date_from: target.date_from,
     date_to: target.date_to,
     generated_at: generatedAt,
-    events: await filterAndRankEvents(data.events)
+    events: await filterAndRankEvents(data.events, target)
   };
 }
 
