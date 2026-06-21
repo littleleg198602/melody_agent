@@ -122,6 +122,27 @@ function normalizeHashtags(hashtags, item) {
 }
 
 
+
+function thirdSundayOfJune(year) {
+  const date = new Date(Date.UTC(year, 5, 1));
+  const daysUntilSunday = (7 - date.getUTCDay()) % 7;
+  date.setUTCDate(1 + daysUntilSunday + 14);
+  return date.toISOString().slice(0, 10);
+}
+
+function dateIsInTarget(date, target) {
+  return date >= target.date_from && date <= target.date_to;
+}
+
+function isKnownOutOfWeekHoliday(item, target) {
+  const text = `${item.title ?? ''} ${item.event_title ?? ''} ${item.category ?? ''}`;
+  if (/father'?s day|fathers day|den otc[uů]/i.test(text)) {
+    const year = Number(String(target.date_from).slice(0, 4));
+    return !dateIsInTarget(thirdSundayOfJune(year), target);
+  }
+  return false;
+}
+
 function isMotoBackupTopic(item) {
   return /motogp|moto gp/i.test(`${item.title ?? ''} ${item.event_title ?? ''} ${item.category ?? ''}`);
 }
@@ -130,21 +151,21 @@ function isBlockedImageTopic(item) {
   return /summer solstice|letn[íi] slunovrat|začátek léta|zacatek leta/i.test(`${item.title ?? ''} ${item.event_title ?? ''} ${item.category ?? ''}`);
 }
 
-function filterImageEvents(events) {
-  const primaryEvents = events.filter((event) => !isMotoBackupTopic(event) && !isBlockedImageTopic(event));
+function filterImageEvents(events, target) {
+  const primaryEvents = events.filter((event) => !isMotoBackupTopic(event) && !isBlockedImageTopic(event) && !isKnownOutOfWeekHoliday(event, target));
   const allowMotoBackup = primaryEvents.length < 2;
   return events.filter((event) => {
-    if (isBlockedImageTopic(event)) return false;
+    if (isBlockedImageTopic(event) || isKnownOutOfWeekHoliday(event, target)) return false;
     if (isMotoBackupTopic(event) && !allowMotoBackup) return false;
     return true;
   });
 }
 
-function filterPromptItems(items) {
-  const primaryItems = items.filter((item) => !isMotoBackupTopic(item) && !isBlockedImageTopic(item));
+function filterPromptItems(items, target) {
+  const primaryItems = items.filter((item) => !isMotoBackupTopic(item) && !isBlockedImageTopic(item) && !isKnownOutOfWeekHoliday(item, target));
   const allowMotoBackup = primaryItems.length < 2;
   return items.filter((item) => {
-    if (isBlockedImageTopic(item)) return false;
+    if (isBlockedImageTopic(item) || isKnownOutOfWeekHoliday(item, target)) return false;
     if (isMotoBackupTopic(item) && !allowMotoBackup) return false;
     return true;
   });
@@ -227,7 +248,7 @@ async function main() {
     const inputFile = `data/weekly/${target.week}.json`;
     await logger.info(`Reading weekly overview: ${inputFile}`);
     const overview = await readJsonFile(inputFile);
-    const events = filterImageEvents(overview.events.filter((event) => event.generate_image === true && event.status === 'waiting'));
+    const events = filterImageEvents(overview.events.filter((event) => event.generate_image === true && event.status === 'waiting'), target);
     await logger.info(`Found ${events.length} waiting events with generate_image=true for ${target.week}`);
     const style = await readTextFile('prompts/melody4u_style.txt');
     const system = await readTextFile('prompts/image_prompt_system.txt');
@@ -253,7 +274,7 @@ async function main() {
       prompts = validatePrompts(extractJson(rawResponseText), target.week);
     }
     prompts = validatePrompts(prompts, target.week);
-    prompts.items = filterPromptItems(prompts.items);
+    prompts.items = filterPromptItems(prompts.items, target);
     await logger.info(`Prompt count after validation and image-topic filtering: ${prompts.items.length}`);
     await logger.info(`Prompts created_at set by script: ${prompts.created_at}`);
     const out = `output/${target.week}/prompts.json`;

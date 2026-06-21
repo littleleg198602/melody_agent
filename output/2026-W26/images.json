@@ -1,41 +1,41 @@
 {
   "week": "2026-W26",
-  "created_at": "2026-06-21T20:17:58.931Z",
+  "created_at": "2026-06-21T20:27:05.963Z",
   "images": [
     {
-      "event_title": "FIFA World Cup 2026: Czechia vs Mexico",
-      "slug": "fifa-world-cup-2026-czechia-vs-mexico",
-      "file": "output/2026-W26/images/fifa-world-cup-2026-czechia-vs-mexico.png",
+      "event_title": "FIFA World Cup 2026 + Czech Republic vs Mexico",
+      "slug": "fifa-world-cup-2026-czech-republic-vs-mexico",
+      "file": "output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png",
       "status": "skipped"
     },
     {
       "event_title": "International Day Against Drug Abuse and Illicit Trafficking",
-      "slug": "international-day-against-drug-abuse-2026",
-      "file": "output/2026-W26/images/international-day-against-drug-abuse-2026.png",
+      "slug": "international-day-against-drug-abuse-and-illicit-trafficking",
+      "file": "output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png",
       "status": "skipped"
     },
     {
       "event_title": "Memorial Day for Victims of the Communist Regime / Political Prisoners",
-      "slug": "memorial-day-victims-communist-regime-2026",
-      "file": "output/2026-W26/images/memorial-day-victims-communist-regime-2026.png",
+      "slug": "memorial-day-for-victims-of-the-communist-regime-political-prisoners",
+      "file": "output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png",
       "status": "skipped"
     },
     {
-      "event_title": "Father's Day 2026",
-      "slug": "fathers-day-2026-czechia",
-      "file": "output/2026-W26/images/fathers-day-2026-czechia.png",
-      "status": "skipped"
-    },
-    {
-      "event_title": "Formula 1 Austrian Grand Prix 2026",
-      "slug": "formula-1-austrian-grand-prix-2026",
-      "file": "output/2026-W26/images/formula-1-austrian-grand-prix-2026.png",
+      "event_title": "Formula 1 Austrian Grand Prix",
+      "slug": "formula-1-austrian-grand-prix",
+      "file": "output/2026-W26/images/formula-1-austrian-grand-prix.png",
       "status": "skipped"
     },
     {
       "event_title": "St. John’s Day / Jan / midsummer mood",
-      "slug": "st-johns-day-jan-midsummer-2026",
-      "file": "output/2026-W26/images/st-johns-day-jan-midsummer-2026.png",
+      "slug": "st-john-s-day-jan-midsummer-mood",
+      "file": "output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Wimbledon qualification",
+      "slug": "wimbledon-qualification",
+      "file": "output/2026-W26/images/wimbledon-qualification.png",
       "status": "skipped"
     }
   ]

@@ -136,6 +136,27 @@ function hasEquivalentEvent(events, candidate) {
   });
 }
 
+
+function thirdSundayOfJune(year) {
+  const date = new Date(Date.UTC(year, 5, 1));
+  const daysUntilSunday = (7 - date.getUTCDay()) % 7;
+  date.setUTCDate(1 + daysUntilSunday + 14);
+  return dateToYearMonthDay(date);
+}
+
+function dateIsInTarget(date, target) {
+  return date >= target.date_from && date <= target.date_to;
+}
+
+function isKnownOutOfWeekHoliday(event, target) {
+  const text = canonicalText(`${event.title ?? ''} ${event.category ?? ''} ${event.note ?? ''}`);
+  if (/father s day|fathers day|den otcu/.test(text)) {
+    const year = Number(String(target.date_from).slice(0, 4));
+    return !dateIsInTarget(thirdSundayOfJune(year), target);
+  }
+  return false;
+}
+
 async function calendarSignificantDaysForTarget(target) {
   const calendar = await readJsonFile(SIGNIFICANT_DAYS_FILE);
   const recurring = Array.isArray(calendar.recurring) ? calendar.recurring : [];
@@ -395,7 +416,7 @@ function validateEvent(event, index) {
 }
 
 async function filterAndRankEvents(events, target) {
-  const normalized = applyEditorialRules(events).map(normalizeEvent);
+  const normalized = applyEditorialRules(events.filter((event) => !isKnownOutOfWeekHoliday(event, target))).map(normalizeEvent);
   await logger.info(`Raw events returned: ${normalized.length}`);
 
   const strong = normalized.filter((event) => event.melody4u_score >= 3);
