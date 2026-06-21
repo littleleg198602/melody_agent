@@ -1,0 +1,53 @@
+{
+  "week": "2026-W26",
+  "date_from": "2026-06-22",
+  "date_to": "2026-06-28",
+  "generated_at": "2026-06-21T15:24:41.317Z",
+  "events": [
+    {
+      "date": "2026-06-22",
+      "category": "football",
+      "title": "European football summer stories",
+      "note": "Symbolic stadium lights, summer fan mood, no club badges or official logos",
+      "priority": 4,
+      "generate_image": true,
+      "status": "waiting"
+    },
+    {
+      "date": "2026-06-22",
+      "category": "tennis",
+      "title": "Grass court tennis week",
+      "note": "Cinematic grass court atmosphere, symbolic racket and ball, no player likenesses",
+      "priority": 4,
+      "generate_image": true,
+      "status": "waiting"
+    },
+    {
+      "date": "2026-06-28",
+      "category": "cycling",
+      "title": "Summer cycling inspiration",
+      "note": "Open-road cycling scene with Czech countryside feeling, no official race branding",
+      "priority": 3,
+      "generate_image": true,
+      "status": "waiting"
+    },
+    {
+      "date": "2026-06-28",
+      "category": "motorsport",
+      "title": "Summer racing weekend",
+      "note": "Warm racing atmosphere with generic cars and helmets, no Formula 1 or MotoGP identity",
+      "priority": 3,
+      "generate_image": true,
+      "status": "waiting"
+    },
+    {
+      "date": "2026-06-28",
+      "category": "international-day",
+      "title": "Weekly celebration moments",
+      "note": "Gift-like social poster for personal wishes and shared memories",
+      "priority": 2,
+      "generate_image": true,
+      "status": "waiting"
+    }
+  ]
+}

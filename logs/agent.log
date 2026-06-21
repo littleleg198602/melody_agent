@@ -1,0 +1,52 @@
+[2026-06-21T15:10:15.275Z] [INFO] Weekly agent started
+[2026-06-21T15:10:15.282Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-21T15:10:15.620Z] [INFO] Create weekly overview started
+[2026-06-21T15:10:15.648Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T15:10:15.650Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback overview for testing.
+[2026-06-21T15:10:15.651Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T15:10:15.652Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T15:10:15.671Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-21T15:10:15.999Z] [INFO] Generate image prompts started
+[2026-06-21T15:10:16.007Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T15:10:16.011Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W26
+[2026-06-21T15:10:16.012Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T15:10:16.014Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T15:10:16.015Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T15:10:16.047Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-21T15:10:16.382Z] [INFO] Generate images started
+[2026-06-21T15:10:16.390Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T15:10:16.392Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T15:10:16.392Z] [INFO] Dry run: would generate image for European football summer stories at output/2026-W26/images/european-football-summer-stories.png
+[2026-06-21T15:10:16.393Z] [INFO] Dry run: would generate image for Grass court tennis week at output/2026-W26/images/grass-court-tennis-week.png
+[2026-06-21T15:10:16.393Z] [INFO] Dry run: would generate image for Summer cycling inspiration at output/2026-W26/images/summer-cycling-inspiration.png
+[2026-06-21T15:10:16.394Z] [INFO] Dry run: would generate image for Summer racing weekend at output/2026-W26/images/summer-racing-weekend.png
+[2026-06-21T15:10:16.394Z] [INFO] Dry run: would generate image for Weekly celebration moments at output/2026-W26/images/weekly-celebration-moments.png
+[2026-06-21T15:10:16.395Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T15:10:16.396Z] [INFO] Generate images finished successfully
+[2026-06-21T15:10:16.414Z] [INFO] Weekly agent finished successfully
+[2026-06-21T15:24:41.018Z] [INFO] Weekly agent started
+[2026-06-21T15:24:41.024Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-21T15:24:41.304Z] [INFO] Create weekly overview started
+[2026-06-21T15:24:41.315Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T15:24:41.316Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback overview for testing.
+[2026-06-21T15:24:41.318Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T15:24:41.319Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T15:24:41.335Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-21T15:24:41.612Z] [INFO] Generate image prompts started
+[2026-06-21T15:24:41.622Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T15:24:41.624Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W26
+[2026-06-21T15:24:41.625Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T15:24:41.628Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T15:24:41.629Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T15:24:41.646Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-21T15:24:41.927Z] [INFO] Generate images started
+[2026-06-21T15:24:41.937Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T15:24:41.939Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T15:24:41.940Z] [INFO] Dry run: would generate image for European football summer stories at output/2026-W26/images/european-football-summer-stories.png
+[2026-06-21T15:24:41.941Z] [INFO] Dry run: would generate image for Grass court tennis week at output/2026-W26/images/grass-court-tennis-week.png
+[2026-06-21T15:24:41.944Z] [INFO] Dry run: would generate image for Summer cycling inspiration at output/2026-W26/images/summer-cycling-inspiration.png
+[2026-06-21T15:24:41.945Z] [INFO] Dry run: would generate image for Summer racing weekend at output/2026-W26/images/summer-racing-weekend.png
+[2026-06-21T15:24:41.946Z] [INFO] Dry run: would generate image for Weekly celebration moments at output/2026-W26/images/weekly-celebration-moments.png
+[2026-06-21T15:24:41.948Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T15:24:41.949Z] [INFO] Generate images finished successfully
+[2026-06-21T15:24:41.968Z] [INFO] Weekly agent finished successfully

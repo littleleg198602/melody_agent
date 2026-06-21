@@ -1,0 +1,34 @@
+name: Melody4U Weekly Agent
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * 0"
+
+permissions:
+  contents: write
+
+jobs:
+  weekly-agent:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      GENERATE_IMAGES: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run weekly
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/weekly/*.json output/** logs/agent.log PROJECT_STRUCTURE.md AGENT_MANIFEST.md agent.manifest.json README.md package.json package-lock.json prompts scripts .env.example .gitignore .github/workflows/weekly-agent.yml
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "chore: update weekly agent outputs"
+            git push
+          fi
