@@ -1,10 +1,8 @@
 {
-  "week": "2026-W26",
-  "created_at": "2026-06-21T17:41:58.598Z",
   "items": [
     {
-      "event_title": "FIFA World Cup 2026 + Czech Republic vs Mexico",
-      "date": "2026-06-24",
+      "event_title": "FIFA World Cup 2026: England vs Ghana",
+      "date": "2026-06-23",
       "category": "sport",
       "tone": "fan_hype",
       "event_origin": "sport",
@@ -13,63 +11,63 @@
       "text_on_image": "World Football Night",
       "text_on_image_cs": "",
       "text_on_image_en": "World Football Night",
-      "image_prompt": "Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: \"World Football Night\". Visible text language: English-only visible text. Tone: fan_hype (energetic, exciting, vivid, social-media friendly, symbolic fan atmosphere). Composition type fan_with_phone: a Czech fan with a smartphone in the foreground, energetic but symbolic stadium atmosphere, no team marks. Theme: FIFA World Cup 2026 + Czech Republic vs Mexico. Marketing angle: personal greeting before a big Czech World Cup match. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.",
-      "reels_text": "World Football Night — create a personal Melody4U music wish for this moment.",
+      "image_prompt": "An emotional cinematic social media poster showing a fan holding a smartphone with subtle glowing music notes and sound waves around. The visible text on the image says 'World Football Night' in English. The tone is energetic and symbolic of fan atmosphere without official logos, badges, real player faces, or trademarked branding. Suitable for TikTok, Instagram Reels, and Facebook vertical 9:16 social poster. No official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.",
+      "reels_text": "Get ready for the thrilling England vs Ghana match in the FIFA World Cup 2026! Feel the fan hype and celebrate the beautiful game.",
       "hashtags": [
         "#Melody4U",
         "#MusicGift",
-        "#GiftIdea",
-        "#ForTheFans",
-        "#PersonalWish"
-      ],
-      "slug": "fifa-world-cup-2026-czech-republic-vs-mexico"
-    },
-    {
-      "event_title": "International Day Against Drug Abuse and Illicit Trafficking",
-      "date": "2026-06-26",
-      "category": "international-day",
-      "tone": "awareness",
-      "event_origin": "international_significant_day",
-      "language_policy": "bilingual_cs_en",
-      "composition_type": "awareness_symbolic_scene",
-      "text_on_image": "Choose Hope / Volíme naději",
-      "text_on_image_cs": "Volíme naději",
-      "text_on_image_en": "Choose Hope",
-      "image_prompt": "Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: \"Choose Hope / Volíme naději\". Visible text language: Czech and English bilingual visible text. Tone: awareness (thoughtful, human, socially aware, hopeful, no fearmongering). Composition type awareness_symbolic_scene: thoughtful human awareness scene with hopeful light, supportive mood, smartphone message, no fear or shock visuals. Theme: International Day Against Drug Abuse and Illicit Trafficking. Marketing angle: thoughtful awareness message with hope and support. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.",
-      "reels_text": "Choose Hope / Volíme naději — create a personal Melody4U music wish for this moment.",
-      "hashtags": [
-        "#Melody4U",
-        "#ThoughtfulMoment",
         "#PersonalWish",
-        "#MusicGift",
-        "#GiftIdea"
+        "#ForTheFans",
+        "#GameNight"
       ],
-      "slug": "international-day-against-drug-abuse-and-illicit-trafficking"
+      "slug": "fifa-world-cup-2026-england-vs-ghana"
     },
     {
-      "event_title": "Memorial Day for Victims of the Communist Regime / Political Prisoners",
-      "date": "2026-06-27",
-      "category": "czech-significant-day",
-      "tone": "respectful_memorial",
-      "event_origin": "czech_significant_day",
-      "language_policy": "czech",
-      "composition_type": "respectful_memorial_scene",
-      "text_on_image": "Nikdy nezapomeneme",
-      "text_on_image_cs": "Nikdy nezapomeneme",
-      "text_on_image_en": "",
-      "image_prompt": "Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: \"Nikdy nezapomeneme\". Visible text language: Czech-only visible text. Tone: respectful_memorial (calm, dignified, serious, subtle, respectful, no hype). Composition type respectful_memorial_scene: calm dignified memorial scene with candlelight, subtle Czech atmosphere, smartphone with respectful message, no hype. Theme: Memorial Day for Victims of the Communist Regime / Political Prisoners. Marketing angle: respectful remembrance for Czech audience. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.",
-      "reels_text": "Nikdy nezapomeneme — create a personal Melody4U music wish for this moment.",
+      "event_title": "FIFA World Cup 2026: Round of 32 Begins",
+      "date": "2026-06-28",
+      "category": "sport",
+      "tone": "fan_hype",
+      "event_origin": "sport",
+      "language_policy": "english",
+      "composition_type": "stadium_atmosphere",
+      "text_on_image": "Game Night Feeling",
+      "text_on_image_cs": "",
+      "text_on_image_en": "Game Night Feeling",
+      "image_prompt": "A modern warm atmosphere cinematic social media poster showing a stadium atmosphere with fans holding smartphones, subtle glowing music notes and sound waves. The visible text on the image says 'Game Night Feeling' in English. The tone is energetic and symbolic of fan excitement without official logos, badges, real player faces, or trademarked branding. Suitable for TikTok, Instagram Reels, and Facebook vertical 9:16 social poster. No official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.",
+      "reels_text": "The FIFA World Cup 2026 Round of 32 kicks off! Feel the excitement and join the global football celebration.",
       "hashtags": [
         "#Melody4U",
-        "#NeverForgotten",
-        "#ThoughtfulMoment",
         "#MusicGift",
-        "#PersonalWish"
+        "#PersonalWish",
+        "#ForTheFans",
+        "#GameNight"
       ],
-      "slug": "memorial-day-for-victims-of-the-communist-regime-political-prisoners"
+      "slug": "fifa-world-cup-2026-round-of-32-begins"
     },
     {
-      "event_title": "Formula 1 Austrian Grand Prix",
+      "event_title": "FIFA World Cup 2026: Round of 32 Matches",
+      "date": "2026-06-28",
+      "category": "sport",
+      "tone": "fan_hype",
+      "event_origin": "sport",
+      "language_policy": "english",
+      "composition_type": "stadium_atmosphere",
+      "text_on_image": "For the Biggest Fan",
+      "text_on_image_cs": "",
+      "text_on_image_en": "For the Biggest Fan",
+      "image_prompt": "A warm, emotional cinematic social media poster showing a diverse crowd in a stadium with smartphones visible, subtle glowing music notes and sound waves. The visible text on the image says 'For the Biggest Fan' in English. The tone is energetic and symbolic of fan passion without official logos, badges, real player faces, or trademarked branding. Suitable for TikTok, Instagram Reels, and Facebook vertical 9:16 social poster. No official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.",
+      "reels_text": "Celebrate the global thrill of the FIFA World Cup 2026 Round of 32 matches. For the biggest fans everywhere!",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#PersonalWish",
+        "#ForTheFans",
+        "#GameNight"
+      ],
+      "slug": "fifa-world-cup-2026-round-of-32-matches"
+    },
+    {
+      "event_title": "Formula 1: Austrian Grand Prix",
       "date": "2026-06-26",
       "category": "motorsport",
       "tone": "fan_hype",
@@ -79,19 +77,19 @@
       "text_on_image": "Race Weekend Energy",
       "text_on_image_cs": "",
       "text_on_image_en": "Race Weekend Energy",
-      "image_prompt": "Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: \"Race Weekend Energy\". Visible text language: English-only visible text. Tone: fan_hype (energetic, exciting, vivid, social-media friendly, symbolic fan atmosphere). Composition type motorsport_track: symbolic racing track energy with generic vehicles as motion streaks, smartphone visible, no official racing identity. Theme: Formula 1 Austrian Grand Prix. Marketing angle: gift for a racing fan before the weekend. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.",
-      "reels_text": "Race Weekend Energy — create a personal Melody4U music wish for this moment.",
+      "image_prompt": "An emotional cinematic social media poster showing a symbolic motorsport track scene with a smartphone visible, subtle glowing music notes and sound waves. The visible text on the image says 'Race Weekend Energy' in English. The tone is energetic and symbolic of motorsport fan excitement without official logos, badges, real driver faces, or trademarked branding. Suitable for TikTok, Instagram Reels, and Facebook vertical 9:16 social poster. No official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.",
+      "reels_text": "Feel the adrenaline and excitement of the Formula 1 Austrian Grand Prix. Race weekend energy is here!",
       "hashtags": [
         "#Melody4U",
-        "#RaceWeekend",
-        "#ForTheFans",
         "#MusicGift",
-        "#PersonalWish"
+        "#PersonalWish",
+        "#RaceWeekend",
+        "#ForTheFans"
       ],
-      "slug": "formula-1-austrian-grand-prix"
+      "slug": "formula-1-austrian-grand-prix-2026"
     },
     {
-      "event_title": "MotoGP Dutch TT Assen",
+      "event_title": "MotoGP: Dutch TT at Assen",
       "date": "2026-06-26",
       "category": "motorsport",
       "tone": "fan_hype",
@@ -101,60 +99,18 @@
       "text_on_image": "Weekend Racing Spirit",
       "text_on_image_cs": "",
       "text_on_image_en": "Weekend Racing Spirit",
-      "image_prompt": "Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: \"Weekend Racing Spirit\". Visible text language: English-only visible text. Tone: fan_hype (energetic, exciting, vivid, social-media friendly, symbolic fan atmosphere). Composition type motorsport_track: symbolic racing track energy with generic vehicles as motion streaks, smartphone visible, no official racing identity. Theme: MotoGP Dutch TT Assen. Marketing angle: weekend racing spirit for motorcycle fans. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.",
-      "reels_text": "Weekend Racing Spirit — create a personal Melody4U music wish for this moment.",
+      "image_prompt": "A modern warm atmosphere cinematic social media poster showing a symbolic motorcycle racing track scene with a smartphone visible, subtle glowing music notes and sound waves. The visible text on the image says 'Weekend Racing Spirit' in English. The tone is energetic and symbolic of MotoGP fan excitement without official logos, badges, real rider faces, or trademarked branding. Suitable for TikTok, Instagram Reels, and Facebook vertical 9:16 social poster. No official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.",
+      "reels_text": "Experience the thrill of the MotoGP Dutch TT at Assen. Embrace the weekend racing spirit!",
       "hashtags": [
         "#Melody4U",
+        "#MusicGift",
+        "#PersonalWish",
         "#RaceWeekend",
-        "#ForTheFans",
-        "#MusicGift",
-        "#PersonalWish"
+        "#ForTheFans"
       ],
-      "slug": "motogp-dutch-tt-assen"
-    },
-    {
-      "event_title": "Wimbledon qualification",
-      "date": "2026-06-22",
-      "category": "sport",
-      "tone": "fan_hype",
-      "event_origin": "sport",
-      "language_policy": "english",
-      "composition_type": "stadium_atmosphere",
-      "text_on_image": "Summer Sport Vibes",
-      "text_on_image_cs": "",
-      "text_on_image_en": "Summer Sport Vibes",
-      "image_prompt": "Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: \"Summer Sport Vibes\". Visible text language: English-only visible text. Tone: fan_hype (energetic, exciting, vivid, social-media friendly, symbolic fan atmosphere). Composition type stadium_atmosphere: generic stadium lights, abstract crowd silhouettes, smartphone in the foreground, no official competition branding. Theme: Wimbledon qualification. Marketing angle: summer sport vibes for tennis fans. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.",
-      "reels_text": "Summer Sport Vibes — create a personal Melody4U music wish for this moment.",
-      "hashtags": [
-        "#Melody4U",
-        "#MusicGift",
-        "#GiftIdea",
-        "#ForTheFans",
-        "#PersonalWish"
-      ],
-      "slug": "wimbledon-qualification"
-    },
-    {
-      "event_title": "St. John’s Day / Jan / midsummer mood",
-      "date": "2026-06-24",
-      "category": "seasonal",
-      "tone": "celebration",
-      "event_origin": "czech_significant_day",
-      "language_policy": "czech",
-      "composition_type": "child_or_family_moment",
-      "text_on_image": "Svatojánská noc",
-      "text_on_image_cs": "Svatojánská noc",
-      "text_on_image_en": "",
-      "image_prompt": "Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: \"Svatojánská noc\". Visible text language: Czech-only visible text. Tone: celebration (warm, festive, emotional, family-friendly). Composition type child_or_family_moment: tender family-friendly celebration moment with smartphone greeting, soft lights and music notes. Theme: St. John’s Day / Jan / midsummer mood. Marketing angle: warm Czech midsummer greeting. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.",
-      "reels_text": "Svatojánská noc — create a personal Melody4U music wish for this moment.",
-      "hashtags": [
-        "#Melody4U",
-        "#MusicGift",
-        "#GiftIdea",
-        "#ForTheFans",
-        "#PersonalWish"
-      ],
-      "slug": "st-john-s-day-jan-midsummer-mood"
+      "slug": "motogp-dutch-tt-assen-2026"
     }
-  ]
+  ],
+  "week": "2026-W26",
+  "created_at": "2026-06-21T17:50:43.688Z"
 }
