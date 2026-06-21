@@ -1,0 +1,78 @@
+Convert weekly events into Melody4U-style image prompts.
+
+Output contract:
+- Return one JSON object only.
+- The root object must contain items.
+- The items property must be an array.
+- The model may generate only items; the script is responsible for week and created_at.
+- Do not return a raw array.
+- Do not wrap the JSON in markdown.
+- Do not add explanation.
+
+Each item in items must contain:
+- event_title
+- date
+- category
+- tone
+- event_origin
+- language_policy
+- composition_type
+- text_on_image
+- text_on_image_cs when useful
+- text_on_image_en when useful
+- image_prompt
+- reels_text
+- hashtags
+- slug
+
+Allowed composition_type values:
+- "fan_with_phone"
+- "family_at_home"
+- "stadium_atmosphere"
+- "closeup_phone_gift"
+- "city_event_mood"
+- "motorsport_track"
+- "child_or_family_moment"
+- "seasonal_symbolic_scene"
+- "respectful_memorial_scene"
+- "awareness_symbolic_scene"
+
+Composition mapping:
+- fan_hype + football => fan_with_phone, family_at_home, stadium_atmosphere
+- fan_hype + hockey => fan_with_phone, family_at_home, stadium_atmosphere
+- fan_hype + Formula 1 => motorsport_track
+- fan_hype + MotoGP => motorsport_track
+- celebration => child_or_family_moment, seasonal_symbolic_scene, closeup_phone_gift
+- respectful_memorial => respectful_memorial_scene
+- awareness => awareness_symbolic_scene
+
+Language policy:
+- bilingual_cs_en: text_on_image must include both Czech and English; text_on_image_cs and text_on_image_en must exist.
+- czech: text_on_image must be Czech; text_on_image_cs must exist; text_on_image_en can be empty.
+- english: text_on_image must be English; text_on_image_en must exist; text_on_image_cs can be empty.
+
+Text examples:
+- World Cup + Czech match: "World Football Night", "A Wish Before Kickoff", "For the Biggest Fan", "Game Night Feeling".
+- Ice Hockey World Championship + Czech match: "Hockey Night Feeling", "For Czech Fans", "Game Night On Ice", "A Wish Before Faceoff".
+- International awareness day: "Choose Hope / Volíme naději", "Hope Over Harm / Naděje místo závislosti".
+- Czech memorial day: "Nikdy nezapomeneme", "S úctou vzpomínáme".
+- Czech tradition / Jan / midsummer: "Svatojánská noc", "Janův den".
+- Formula 1: "Race Weekend Energy".
+- MotoGP: "Weekend Racing Spirit".
+- Wimbledon: "Summer Sport Vibes".
+
+Image prompt rules:
+- Every image_prompt must explicitly say what visible text to use.
+- Every image_prompt must explicitly say what language the visible text must be in.
+- Every image_prompt must explicitly say what tone to use.
+- Every image_prompt must include: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.
+- Every image_prompt must say it is suitable for TikTok / Instagram Reels / Facebook and vertical 9:16 social poster.
+- Serious topics: no fearmongering, no graphic imagery, no sensationalism, respectful human visual language.
+- Sports: energetic but symbolic, fan atmosphere allowed, no official team logos, no real player faces, no exact official competition branding.
+
+Hashtags:
+- Exactly 5 hashtags per item.
+- Always include #Melody4U.
+- Prefer safe emotional/product hashtags: #MusicGift, #PersonalWish, #GiftIdea, #ForTheFans, #GameNight, #RaceWeekend, #FamilyMoment, #ThoughtfulMoment, #NeverForgotten, #HockeyNight.
+- Use at most one official event hashtag per item.
+- Avoid overusing official competition hashtags.

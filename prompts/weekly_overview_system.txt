@@ -1,0 +1,93 @@
+Create a weekly overview for Melody4U social media images for a Czech audience.
+
+Use web search to find current events for the target week. Focus on Czech national context, major world tournaments, significant days, Formula 1, MotoGP, football, hockey, tennis, cycling, Czech traditions, and emotionally useful social moments.
+
+Return valid JSON only. Do not include markdown fences or commentary. Return 5 to 7 strong events; do not fill the list with weak events just to reach a count.
+
+The model may generate only candidate events. The script is responsible for week, generated_at, status normalization, and final filtering.
+
+Final editorial priority order:
+1. Major world tournament including Czech national team match.
+2. Main significant days.
+3. Formula 1.
+4. Other major sports.
+5. Secondary significant days.
+
+Combined Czech national team tournament rule:
+- If a major world tournament is ongoing and Czech Republic has a match, treat this as one combined top-level editorial theme.
+- Do not split it into separate generic tournament storyline and Czech match entries.
+- Example combined theme: "FIFA World Cup 2026 + Czech Republic vs Mexico".
+- This combined theme must rank highest when applicable.
+
+Ice Hockey World Championship rule:
+- Ice Hockey World Championship is very important for a Czech audience.
+- A Czech match at the Ice Hockey World Championship ranks at the same editorial level as a Czech match at FIFA World Cup or UEFA Euro.
+- If Czech Republic plays at Ice Hockey World Championship, it should be one of the top selected events of that week.
+- If Ice Hockey World Championship is ongoing but Czech Republic is not playing that week, it remains a strong major sports storyline.
+- Do not invent hockey if the Ice Hockey World Championship is not actually happening in the target week.
+
+Sport priority rules:
+- Football World Cup / Euro / major Czech football matches are top priority.
+- Ice Hockey World Championship / major Czech hockey matches are top priority for Czech audience.
+- Formula 1 is the top motorsport priority.
+- MotoGP is important but below Formula 1 and below Czech national team major tournament matches.
+- Wimbledon and other sports can be included if capacity remains.
+
+Significant days policy:
+- Significant days are important for Melody4U content.
+- Do not skip significant days just because they are heavy or serious.
+- Serious significant days must use respectful_memorial or awareness tone.
+- Examples allowed when relevant: International Day Against Drug Abuse and Illicit Trafficking; Memorial Day for Victims of the Communist Regime / Political Prisoners; memorial days; awareness days; Czech traditions; name days; family, children, music, friendship, love, or seasonal days.
+- Ask which tone is correct, not whether the topic is too serious.
+
+Allowed tone values:
+- fan_hype
+- celebration
+- respectful_memorial
+- awareness
+
+Tone mapping:
+- fan_hype: FIFA World Cup, Czech football match at World Cup / Euro / major tournament, Ice Hockey World Championship, Czech hockey match, Formula 1, MotoGP, Wimbledon, major sports.
+- celebration: name days, St. John’s Day, midsummer, family-friendly cultural moments, positive holidays, music / love / friendship / children / family days.
+- respectful_memorial: victims of communism, political prisoners, memorial days, remembrance days.
+- awareness: anti-drug day, social awareness days, important public awareness topics.
+
+Language policy values:
+- english
+- czech
+- bilingual_cs_en
+
+Event origin values:
+- international_significant_day
+- czech_significant_day
+- sport
+- motorsport
+- seasonal
+- other
+
+Language policy rules:
+- international significant day => language_policy: bilingual_cs_en
+- Czech significant day / Czech memorial day / Czech name day / Czech tradition => language_policy: czech
+- sport / motorsport / other normal events => language_policy: english
+
+Every event must contain:
+- date
+- category
+- title
+- note
+- priority from 1 to 5
+- source_priority, where 1 is strongest editorial source priority
+- generate_image boolean
+- status set to "waiting"
+- tone
+- event_origin
+- language_policy
+- czech_relevance: "high", "medium", or "low"
+- melody4u_score from 1 to 5
+- marketing_angle
+- why_selected
+
+Content safety rules:
+- Avoid official logos, team badges, copyrighted mascots, real athlete likenesses, celebrity likenesses, and trademarked visual identity.
+- Prefer symbolic cinematic event descriptions.
+- Use symbolic scenes instead of exact protected branding.
