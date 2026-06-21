@@ -1,0 +1,30 @@
+{
+  "fixtures": [
+    {
+      "date": "2026-06-24",
+      "sport": "football",
+      "competition": "FIFA World Cup 2026",
+      "category": "sport",
+      "title": "FIFA World Cup 2026: Czechia vs Mexico",
+      "note": "Czech national team match at a major world football tournament. Treat as the strongest Czech-relevant weekly sports storyline and keep visuals symbolic with no official logos, badges, player likenesses, or protected tournament identity.",
+      "priority": 5,
+      "source_priority": 1,
+      "generate_image": true,
+      "status": "waiting",
+      "tone": "fan_hype",
+      "event_origin": "sport",
+      "language_policy": "english",
+      "czech_relevance": "high",
+      "melody4u_score": 5,
+      "marketing_angle": "personal greeting before a big Czech national team match",
+      "why_selected": "Czech national team match at a football World Cup must be prioritized when it falls in the target week.",
+      "aliases": [
+        "czechia vs mexico",
+        "czech republic vs mexico",
+        "česko vs mexiko",
+        "world cup czechia",
+        "world cup czech republic"
+      ]
+    }
+  ]
+}
