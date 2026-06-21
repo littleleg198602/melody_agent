@@ -1,35 +1,35 @@
 {
   "week": "2026-W26",
-  "created_at": "2026-06-21T16:26:45.055Z",
+  "created_at": "2026-06-21T16:54:00.419Z",
   "images": [
     {
-      "event_title": "FIFA World Cup 2026: Group Stage Matches",
-      "slug": "fifa-world-cup-2026-group-stage",
-      "file": "output/2026-W26/images/fifa-world-cup-2026-group-stage.png",
+      "event_title": "Formula 1 Austrian Grand Prix weekend",
+      "slug": "formula-1-austrian-grand-prix-weekend",
+      "file": "output/2026-W26/images/formula-1-austrian-grand-prix-weekend.png",
       "status": "skipped"
     },
     {
-      "event_title": "British National Road Championships",
-      "slug": "british-national-road-championships-2026",
-      "file": "output/2026-W26/images/british-national-road-championships-2026.png",
+      "event_title": "Wimbledon opening week mood",
+      "slug": "wimbledon-opening-week-mood",
+      "file": "output/2026-W26/images/wimbledon-opening-week-mood.png",
       "status": "skipped"
     },
     {
-      "event_title": "Formula 1: Austrian Grand Prix",
-      "slug": "formula-1-austrian-grand-prix-2026",
-      "file": "output/2026-W26/images/formula-1-austrian-grand-prix-2026.png",
+      "event_title": "European football summer night",
+      "slug": "european-football-summer-night",
+      "file": "output/2026-W26/images/european-football-summer-night.png",
       "status": "skipped"
     },
     {
-      "event_title": "UEFA European Under-19 Championship",
-      "slug": "uefa-european-under-19-championship-2026",
-      "file": "output/2026-W26/images/uefa-european-under-19-championship-2026.png",
+      "event_title": "Family celebration day",
+      "slug": "family-celebration-day",
+      "file": "output/2026-W26/images/family-celebration-day.png",
       "status": "skipped"
     },
     {
-      "event_title": "Constitution Day in Ukraine",
-      "slug": "constitution-day-ukraine-2026",
-      "file": "output/2026-W26/images/constitution-day-ukraine-2026.png",
+      "event_title": "Summer cycling weekend",
+      "slug": "summer-cycling-weekend",
+      "file": "output/2026-W26/images/summer-cycling-weekend.png",
       "status": "skipped"
     }
   ]

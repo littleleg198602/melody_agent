@@ -2,11 +2,9 @@ Convert weekly events into Melody4U-style image prompts.
 
 Output contract:
 - Return one JSON object only.
-- The root object must contain:
-  - week
-  - created_at
-  - items
+- The root object must contain items.
 - The items property must be an array.
+- The model may generate only items; the script is responsible for week and created_at.
 - Do not return a raw array.
 - Do not wrap the JSON in markdown.
 - Do not add explanation.
@@ -20,13 +18,46 @@ Each item in items must contain:
 - reels_text
 - hashtags
 - slug
+- composition_type
+
+Allowed composition_type values:
+- "fan_with_phone"
+- "family_at_home"
+- "stadium_atmosphere"
+- "closeup_phone_gift"
+- "city_event_mood"
+- "motorsport_track"
+- "child_or_family_moment"
+- "seasonal_symbolic_scene"
+
+Composition rules:
+- Do not use the same composition_type for every item.
+- Use the event category and marketing_angle to choose composition.
+- Vary camera angle, setting, lighting, subject distance, and emotional mood.
+- Every image_prompt must be detailed enough for image generation.
+- Every image_prompt must explicitly say: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces.
+- For protected brands/events, avoid exact official visual identity.
+- It is okay to mention the event in metadata, but image text should be safer and more generic when needed.
+
+Safer text_on_image examples:
+- "Race Weekend Energy"
+- "World Football Night"
+- "For the Biggest Fan"
+- "Make the Moment Sing"
+- "Game Night Feeling"
+- "Summer Sport Vibes"
+- "A Wish Before Kickoff"
 
 Rules:
 - Return valid JSON only. Do not include markdown fences or commentary.
 - Use English text on images.
+- Keep text_on_image short, emotional, readable, English-only, and preferably under 45 characters.
+- Avoid long official event names, exact protected visual identity wording, too many line breaks, and complicated date text.
 - Create exactly 5 hashtags per event.
+- Always include "#Melody4U".
+- Prefer emotional/product hashtags such as #MusicGift, #PersonalWish, #GiftIdea, #ForTheFans, #GameNight, #RaceWeekend, #FamilyMoment.
+- Use at most one official event hashtag per item.
 - Avoid official logos, copyrighted identities, team badges, real athlete faces, celebrity likenesses, and exact trademarked visual identity.
 - Do not use official FIFA, UEFA, Formula 1, MotoGP, NHL, Olympic or club logos.
-- Vary composition so all images do not look the same.
 - Create vertical 9:16 cinematic social posters.
-- Include a smartphone, subtle music notes, sound waves, and a personal greeting / gift mood.
+- Include a smartphone, subtle music notes, sound waves, and a personal greeting / gift mood, but vary how these elements appear.
