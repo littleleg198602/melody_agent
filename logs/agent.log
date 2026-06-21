@@ -546,3 +546,41 @@
 [2026-06-21T19:29:55.676Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
 [2026-06-21T19:29:55.677Z] [INFO] Created image manifest: output/2026-W26/images.json
 [2026-06-21T19:29:55.678Z] [INFO] Generate images finished successfully
+[2026-06-21T19:35:03.828Z] [INFO] Weekly agent started
+[2026-06-21T19:35:03.831Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-21T19:35:03.939Z] [INFO] Create weekly overview started
+[2026-06-21T19:35:03.944Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:35:03.945Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-06-21T19:35:13.833Z] [INFO] Overview generated_at set by script: 2026-06-21T19:35:13.832Z
+[2026-06-21T19:35:13.834Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T19:35:13.835Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:35:13.838Z] [INFO] Raw events returned: 8
+[2026-06-21T19:35:13.846Z] [INFO] Events after filtering: 7
+[2026-06-21T19:35:13.846Z] [INFO] Final selected event order: 1. FIFA World Cup 2026: Round of 32 Begins + FIFA World Cup 2026: Czechia vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Mystic Sk8 Cup 2026 | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Ignis Brunensis Fireworks Festival | 4. Ladies European Tour: Czech Ladies Open | 5. Mighty Sounds Festival: Vosto5 Performance
+[2026-06-21T19:35:13.846Z] [INFO] Final selected tone values: FIFA World Cup 2026: Round of 32 Begins + FIFA World Cup 2026: Czechia vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Mystic Sk8 Cup 2026: fan_hype | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Ignis Brunensis Fireworks Festival: celebration | Ladies European Tour: Czech Ladies Open: fan_hype | Mighty Sounds Festival: Vosto5 Performance: celebration
+[2026-06-21T19:35:13.847Z] [INFO] Final selected language_policy values: FIFA World Cup 2026: Round of 32 Begins + FIFA World Cup 2026: Czechia vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Mystic Sk8 Cup 2026: english | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Ignis Brunensis Fireworks Festival: czech | Ladies European Tour: Czech Ladies Open: english | Mighty Sounds Festival: Vosto5 Performance: czech
+[2026-06-21T19:35:13.848Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:35:13.848Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:35:13.903Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-21T19:35:14.002Z] [INFO] Generate image prompts started
+[2026-06-21T19:35:14.007Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:35:14.008Z] [INFO] Found 7 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:35:38.363Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "FIFA World Cup 2026: Round of 32 Begins + Czechia vs Mexico", "date": "2026-06-24", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "english", "composition_type": "stadium_atmosphere", "text_on_image": "Game Night Feeling", "text_on_image_cs": "", "text_on_image_en": "Game Night Feeling", "image_prompt": "Energetic symbolic football stadium atmosphere with fans holding smartphones showing the text 'Game Night Feeling' in English
+[2026-06-21T19:35:38.365Z] [INFO] Prompt count after validation: 7
+[2026-06-21T19:35:38.365Z] [INFO] Prompts created_at set by script: 2026-06-21T19:35:38.365Z
+[2026-06-21T19:35:38.366Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:35:38.366Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:35:38.434Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-21T19:35:38.534Z] [INFO] Generate images started
+[2026-06-21T19:35:38.539Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:35:38.540Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:35:38.540Z] [INFO] Dry run: would generate image for FIFA World Cup 2026: Round of 32 Begins + Czechia vs Mexico at output/2026-W26/images/fifa-world-cup-2026-round-of-32-czechia-mexico.png
+[2026-06-21T19:35:38.540Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-2026.png
+[2026-06-21T19:35:38.541Z] [INFO] Dry run: would generate image for Mystic Sk8 Cup 2026 at output/2026-W26/images/mystic-sk8-cup-2026.png
+[2026-06-21T19:35:38.541Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-victims-communist-regime-2026.png
+[2026-06-21T19:35:38.542Z] [INFO] Dry run: would generate image for Ignis Brunensis Fireworks Festival at output/2026-W26/images/ignis-brunensis-fireworks-festival-2026.png
+[2026-06-21T19:35:38.542Z] [INFO] Dry run: would generate image for Ladies European Tour: Czech Ladies Open at output/2026-W26/images/czech-ladies-open-2026.png
+[2026-06-21T19:35:38.542Z] [INFO] Dry run: would generate image for Mighty Sounds Festival: Vosto5 Performance at output/2026-W26/images/mighty-sounds-festival-vosto5-2026.png
+[2026-06-21T19:35:38.543Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:35:38.544Z] [INFO] Generate images finished successfully
+[2026-06-21T19:35:38.548Z] [INFO] Weekly agent finished successfully
