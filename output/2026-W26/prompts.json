@@ -1,91 +1,91 @@
 {
-  "week": "2026-W26",
-  "created_at": "2026-06-21T16:53:59.899Z",
   "items": [
     {
-      "event_title": "Formula 1 Austrian Grand Prix weekend",
-      "date": "2026-06-22",
-      "category": "motorsport",
+      "event_title": "Formula 1 Austrian Grand Prix 2026",
+      "date": "2026-06-26",
+      "category": "Formula 1",
       "text_on_image": "Race Weekend Energy",
-      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type motorsport_track: a symbolic racing track scene with generic cars as motion streaks, a fan smartphone in view, warm sunset lighting and no official branding. Theme: Formula 1 Austrian Grand Prix weekend. Marketing angle: gift for a racing fan before the weekend. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
-      "reels_text": "Race Weekend Energy — turn the moment into a personal Melody4U music wish.",
+      "image_prompt": "Vertical 9:16 cinematic social poster of a family at home watching a Formula 1 race on TV, warm modern atmosphere, smartphone in hand showing a music greeting app, subtle glowing music notes and sound waves around the phone, cozy living room with soft lighting, no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, symbolic motorsport elements like racing helmets and checkered flags subtly in background",
+      "reels_text": "Feel the thrill of the Austrian Grand Prix with your loved ones. Share the excitement and make it personal with Melody4U!",
       "hashtags": [
-        "#Melody4U",
-        "#MusicGift",
-        "#GiftIdea",
         "#RaceWeekend",
-        "#PersonalWish"
-      ],
-      "slug": "formula-1-austrian-grand-prix-weekend",
-      "composition_type": "motorsport_track"
-    },
-    {
-      "event_title": "Wimbledon opening week mood",
-      "date": "2026-06-22",
-      "category": "tennis",
-      "text_on_image": "Summer Sport Vibes",
-      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type fan_with_phone: a joyful fan holding a smartphone in the foreground, soft arena lights in the distance, warm cinematic depth of field. Theme: Wimbledon opening week mood. Marketing angle: summer sport vibes for tennis fans. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
-      "reels_text": "Summer Sport Vibes — turn the moment into a personal Melody4U music wish.",
-      "hashtags": [
-        "#Melody4U",
+        "#FamilyMoment",
         "#MusicGift",
-        "#GiftIdea",
         "#ForTheFans",
-        "#PersonalWish"
+        "#Melody4U"
       ],
-      "slug": "wimbledon-opening-week-mood",
-      "composition_type": "fan_with_phone"
-    },
-    {
-      "event_title": "European football summer night",
-      "date": "2026-06-28",
-      "category": "football",
-      "text_on_image": "Game Night Feeling",
-      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type family_at_home: a family gathered on a cozy sofa at home, a smartphone showing a personal music gift, warm lamp light and soft celebration mood. Theme: European football summer night. Marketing angle: family watching sport together. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
-      "reels_text": "Game Night Feeling — turn the moment into a personal Melody4U music wish.",
-      "hashtags": [
-        "#Melody4U",
-        "#MusicGift",
-        "#GiftIdea",
-        "#ForTheFans",
-        "#FamilyMoment"
-      ],
-      "slug": "european-football-summer-night",
+      "slug": "formula-1-austrian-grand-prix-2026",
       "composition_type": "family_at_home"
     },
     {
-      "event_title": "Family celebration day",
-      "date": "2026-06-28",
-      "category": "international-day",
-      "text_on_image": "Family Moment",
-      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type closeup_phone_gift: a close-up of hands presenting a smartphone like a gift, glowing music notes and gentle sound waves around it. Theme: Family celebration day. Marketing angle: celebration day. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
-      "reels_text": "Family Moment — turn the moment into a personal Melody4U music wish.",
+      "event_title": "MotoGP Dutch TT 2026",
+      "date": "2026-06-26",
+      "category": "MotoGP",
+      "text_on_image": "Weekend Sport Vibes",
+      "image_prompt": "Vertical 9:16 cinematic social poster showing a close-up of a smartphone held by a fan at a motorsport track, with blurred racing motorcycles in the background, warm natural lighting at sunset, subtle glowing music notes and sound waves emanating from the phone, no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, energetic and festive atmosphere",
+      "reels_text": "Catch the speed and spirit of the Dutch TT weekend. Celebrate the race with a personal musical wish from Melody4U!",
       "hashtags": [
-        "#Melody4U",
+        "#RaceWeekend",
         "#MusicGift",
-        "#GiftIdea",
+        "#GameNight",
         "#ForTheFans",
-        "#PersonalWish"
+        "#Melody4U"
       ],
-      "slug": "family-celebration-day",
+      "slug": "motogp-dutch-tt-2026",
+      "composition_type": "motorsport_track"
+    },
+    {
+      "event_title": "International Day Against Drug Abuse and Illicit Trafficking",
+      "date": "2026-06-26",
+      "category": "International Day",
+      "text_on_image": "Make the Moment Sing",
+      "image_prompt": "Vertical 9:16 cinematic social poster with a closeup of a smartphone displaying a heartfelt personal greeting about health and well-being, warm soft lighting, subtle glowing music notes and sound waves around the phone, symbolic scene with a peaceful home background, no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, calm and hopeful mood",
+      "reels_text": "Raise awareness and spread hope with a personal musical message. Together we can make a difference with Melody4U.",
+      "hashtags": [
+        "#PersonalWish",
+        "#MusicGift",
+        "#HealthAwareness",
+        "#ForTheFans",
+        "#Melody4U"
+      ],
+      "slug": "international-day-against-drug-abuse-2026",
       "composition_type": "closeup_phone_gift"
     },
     {
-      "event_title": "Summer cycling weekend",
-      "date": "2026-06-28",
-      "category": "cycling",
-      "text_on_image": "Summer Sport Vibes",
-      "image_prompt": "Create a vertical 9:16 cinematic Melody4U social media poster using composition_type seasonal_symbolic_scene: a seasonal symbolic outdoor scene with warm light, a smartphone gift moment, subtle music notes, and emotional social poster energy. Theme: Summer cycling weekend. Marketing angle: weekend emotion. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.",
-      "reels_text": "Summer Sport Vibes — turn the moment into a personal Melody4U music wish.",
+      "event_title": "Micro-, Small and Medium-sized Enterprises Day",
+      "date": "2026-06-27",
+      "category": "International Day",
+      "text_on_image": "For the Biggest Fan",
+      "image_prompt": "Vertical 9:16 cinematic social poster showing a small business owner family moment in a cozy shop, smartphone on the counter with a music greeting app open, warm inviting lighting, subtle glowing music notes and sound waves around the phone, no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, atmosphere of support and community",
+      "reels_text": "Celebrate the spirit of entrepreneurship with a special musical gift. Support local dreams with Melody4U.",
       "hashtags": [
-        "#Melody4U",
-        "#MusicGift",
         "#GiftIdea",
+        "#FamilyMoment",
+        "#MusicGift",
         "#ForTheFans",
-        "#PersonalWish"
+        "#Melody4U"
       ],
-      "slug": "summer-cycling-weekend",
-      "composition_type": "seasonal_symbolic_scene"
+      "slug": "msme-day-2026",
+      "composition_type": "child_or_family_moment"
+    },
+    {
+      "event_title": "International Day in Support of Victims of Torture",
+      "date": "2026-06-28",
+      "category": "International Day",
+      "text_on_image": "A Wish Before Kickoff",
+      "image_prompt": "Vertical 9:16 cinematic social poster with a symbolic city event mood, smartphone held gently in hands showing a personal message of support and dignity, warm soft evening lighting, subtle glowing music notes and sound waves around the phone, no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, calm and respectful atmosphere",
+      "reels_text": "Honor dignity and hope with a personal musical message. Stand together with Melody4U.",
+      "hashtags": [
+        "#PersonalWish",
+        "#MusicGift",
+        "#HumanRights",
+        "#ForTheFans",
+        "#Melody4U"
+      ],
+      "slug": "support-victims-of-torture-day-2026",
+      "composition_type": "city_event_mood"
     }
-  ]
+  ],
+  "week": "2026-W26",
+  "created_at": "2026-06-21T17:03:56.713Z"
 }
