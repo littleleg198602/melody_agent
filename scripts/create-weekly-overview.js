@@ -92,7 +92,8 @@ function normalizeEvent(event) {
     priority,
     source_priority: sourcePriority,
     generate_image: tooWeak ? false : Boolean(event.generate_image ?? true),
-    status: 'waiting',
+    status: event.status || 'waiting',
+    backup_only: Boolean(event.backup_only),
     tone,
     event_origin: eventOrigin,
     language_policy: languagePolicy,
@@ -115,14 +116,22 @@ function addDays(date, days) {
   return next;
 }
 
+function canonicalText(value) {
+  return String(value ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
 function hasEquivalentEvent(events, candidate) {
-  const candidateTitle = String(candidate.title ?? '').toLowerCase();
-  const aliases = [candidateTitle, ...(Array.isArray(candidate.aliases) ? candidate.aliases : [])]
-    .map((alias) => String(alias).toLowerCase())
+  const candidateTitle = canonicalText(candidate.title);
+  const aliases = [candidateTitle, ...(Array.isArray(candidate.aliases) ? candidate.aliases.map(canonicalText) : [])]
     .filter(Boolean);
 
   return events.some((event) => {
-    const title = String(event.title ?? '').toLowerCase();
+    const title = canonicalText(event.title);
     return aliases.some((alias) => title === alias || title.includes(alias) || alias.includes(title));
   });
 }
@@ -318,27 +327,58 @@ function normalizeEditorialPriority(event) {
     normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
   } else if (isMotoGpEvent(normalized)) {
     normalized.source_priority = Math.max(Number(normalized.source_priority) || 8, 8);
+    normalized.backup_only = true;
+    normalized.generate_image = false;
+    normalized.status = 'backup';
   } else if (!normalized.calendar_priority_event && !normalized.calendar_significant_day && !normalized.calendar_czech_fixture) {
     normalized.source_priority = Math.max(Number(normalized.source_priority) || 9, 9);
   }
   return normalized;
 }
 
+
+function editorialTopicKey(event) {
+  const text = canonicalText(`${event.title ?? ''} ${event.category ?? ''} ${event.note ?? ''}`);
+  if (/world cup|fifa|mistrovstvi sveta/.test(text) && /czech|czechia|cesko|ceska/.test(text) && /mexico|mexiko/.test(text)) return 'czech-world-cup-mexico';
+  if (/(formula 1|f1|grand prix|velka cena)/.test(text) && /(austrian|rakouska|spielberg)/.test(text)) return 'f1-austrian-grand-prix';
+  if (/motogp/.test(text) && /(assen|netherlands|nizozemska|dutch tt)/.test(text)) return 'motogp-assen';
+  if (/motogp/.test(text) && /(brno|ceske republiky|czech grand prix)/.test(text)) return 'motogp-brno';
+  if (/(st john|midsummer|svatojan|jan)/.test(text) && /(day|mood|noc|midsummer)/.test(text)) return 'st-john-midsummer';
+  if (/(summer solstice|letni slunovrat|zacatek leta)/.test(text)) return 'summer-solstice';
+  return canonicalText(event.title);
+}
+
 function removeDuplicateEditorialEvents(events) {
   const selected = [];
-  const hasCombinedCzechTournament = events.some((event) => isWorldTournamentEvent(event) && isCzechTeamEvent(event));
+  const selectedTopics = new Set();
+  const hasCzechWorldTournament = events.some((event) => isWorldTournamentEvent(event) && isCzechTeamEvent(event));
 
   for (const event of events) {
-    const title = String(event.title ?? '').toLowerCase();
-    if (hasCombinedCzechTournament && isWorldTournamentEvent(event) && !isCzechTeamEvent(event)) continue;
-    if (selected.some((item) => String(item.title ?? '').toLowerCase() === title)) continue;
+    if (hasCzechWorldTournament && isWorldTournamentEvent(event) && !isCzechTeamEvent(event)) continue;
+    const topicKey = editorialTopicKey(event);
+    if (selectedTopics.has(topicKey)) continue;
     selected.push(event);
+    selectedTopics.add(topicKey);
   }
   return selected;
 }
 
 function applyEditorialRules(events) {
   return removeDuplicateEditorialEvents(combineCzechTournamentThemes(events).map(normalizeEditorialPriority));
+}
+
+
+function applyBackupImagePolicy(events) {
+  const primaryImageCount = events.filter((event) => event.generate_image === true && event.backup_only !== true).length;
+  if (primaryImageCount >= 2) {
+    for (const event of events) {
+      if (event.backup_only === true) {
+        event.generate_image = false;
+        event.status = 'backup';
+      }
+    }
+  }
+  return events;
 }
 
 function validateEvent(event, index) {
@@ -378,6 +418,7 @@ async function filterAndRankEvents(events, target) {
     .sort((a, b) => a.source_priority - b.source_priority || String(a.date).localeCompare(String(b.date)) || b.priority - a.priority || b.melody4u_score - a.melody4u_score || CZECH_RELEVANCE_WEIGHT[b.czech_relevance] - CZECH_RELEVANCE_WEIGHT[a.czech_relevance])
     .slice(0, MAX_SELECTED_EVENTS);
 
+  applyBackupImagePolicy(finalEvents);
   finalEvents.forEach(validateEvent);
   await logger.info(`Events after filtering: ${finalEvents.length}`);
   await logger.info(`Final selected event order: ${finalEvents.map((event) => `${event.source_priority}. ${event.title}`).join(' | ')}`);
