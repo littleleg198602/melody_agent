@@ -9,6 +9,7 @@ const ALLOWED_TONES = ['fan_hype', 'celebration', 'respectful_memorial', 'awaren
 const ALLOWED_EVENT_ORIGINS = ['international_significant_day', 'czech_significant_day', 'sport', 'motorsport', 'seasonal', 'other'];
 const ALLOWED_LANGUAGE_POLICIES = ['english', 'czech', 'bilingual_cs_en'];
 const SIGNIFICANT_DAYS_FILE = 'data/editorial/significant-days.json';
+const CZECH_FIXTURES_FILE = 'data/editorial/czech-national-team-fixtures.json';
 
 function previewText(value, maxLength = 1000) {
   return String(value ?? '').replace(/\s+/g, ' ').trim().slice(0, maxLength);
@@ -141,6 +142,30 @@ async function calendarSignificantDaysForTarget(target) {
   }
 
   return selected;
+}
+
+
+async function calendarCzechFixturesForTarget(target) {
+  const calendar = await readJsonFile(CZECH_FIXTURES_FILE);
+  const fixtures = Array.isArray(calendar.fixtures) ? calendar.fixtures : [];
+  return fixtures
+    .filter((event) => event.date >= target.date_from && event.date <= target.date_to)
+    .map((event) => {
+      const { aliases, sport, competition, ...eventWithoutCalendarOnlyFields } = event;
+      return { ...eventWithoutCalendarOnlyFields, aliases, sport, competition };
+    });
+}
+
+async function mergeCalendarCzechFixtures(events, target) {
+  const fixtureEvents = await calendarCzechFixturesForTarget(target);
+  const merged = [...events];
+  for (const event of fixtureEvents) {
+    if (!hasEquivalentEvent(merged, event)) merged.push(event);
+  }
+  if (fixtureEvents.length > 0) {
+    await logger.info(`Calendar Czech national-team fixture candidates for ${target.week}: ${fixtureEvents.map((event) => event.title).join(' | ')}`);
+  }
+  return merged;
 }
 
 async function mergeCalendarSignificantDays(events, target) {
@@ -340,7 +365,7 @@ async function validateOverview(data, target) {
     date_from: target.date_from,
     date_to: target.date_to,
     generated_at: generatedAt,
-    events: await filterAndRankEvents(await mergeCalendarSignificantDays(data.events, target), target)
+    events: await filterAndRankEvents(await mergeCalendarSignificantDays(await mergeCalendarCzechFixtures(data.events, target), target), target)
   };
 }
 
