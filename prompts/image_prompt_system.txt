@@ -1,5 +1,26 @@
 Convert weekly events into Melody4U-style image prompts.
 
+Output contract:
+- Return one JSON object only.
+- The root object must contain:
+  - week
+  - created_at
+  - items
+- The items property must be an array.
+- Do not return a raw array.
+- Do not wrap the JSON in markdown.
+- Do not add explanation.
+
+Each item in items must contain:
+- event_title
+- date
+- category
+- text_on_image
+- image_prompt
+- reels_text
+- hashtags
+- slug
+
 Rules:
 - Return valid JSON only. Do not include markdown fences or commentary.
 - Use English text on images.
