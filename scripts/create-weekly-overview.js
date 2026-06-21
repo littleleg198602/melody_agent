@@ -1,13 +1,14 @@
 import 'dotenv/config';
 import OpenAI from 'openai';
 import { resolveTargetWeek } from './utils/dates.js';
-import { readTextFile, writeJsonFile } from './utils/fs.js';
+import { readJsonFile, readTextFile, writeJsonFile } from './utils/fs.js';
 import { logger } from './utils/logger.js';
 
 const CZECH_RELEVANCE_WEIGHT = { high: 3, medium: 2, low: 1 };
 const ALLOWED_TONES = ['fan_hype', 'celebration', 'respectful_memorial', 'awareness'];
 const ALLOWED_EVENT_ORIGINS = ['international_significant_day', 'czech_significant_day', 'sport', 'motorsport', 'seasonal', 'other'];
 const ALLOWED_LANGUAGE_POLICIES = ['english', 'czech', 'bilingual_cs_en'];
+const SIGNIFICANT_DAYS_FILE = 'data/editorial/significant-days.json';
 
 function previewText(value, maxLength = 1000) {
   return String(value ?? '').replace(/\s+/g, ' ').trim().slice(0, maxLength);
@@ -99,6 +100,60 @@ function normalizeEvent(event) {
   };
 }
 
+
+
+function dateToYearMonthDay(date) {
+  return date.toISOString().slice(0, 10);
+}
+
+function addDays(date, days) {
+  const next = new Date(date);
+  next.setUTCDate(next.getUTCDate() + days);
+  return next;
+}
+
+function hasEquivalentEvent(events, candidate) {
+  const candidateTitle = String(candidate.title ?? '').toLowerCase();
+  const aliases = [candidateTitle, ...(Array.isArray(candidate.aliases) ? candidate.aliases : [])]
+    .map((alias) => String(alias).toLowerCase())
+    .filter(Boolean);
+
+  return events.some((event) => {
+    const title = String(event.title ?? '').toLowerCase();
+    return aliases.some((alias) => title === alias || title.includes(alias) || alias.includes(title));
+  });
+}
+
+async function calendarSignificantDaysForTarget(target) {
+  const calendar = await readJsonFile(SIGNIFICANT_DAYS_FILE);
+  const recurring = Array.isArray(calendar.recurring) ? calendar.recurring : [];
+  const start = new Date(`${target.date_from}T00:00:00Z`);
+  const end = new Date(`${target.date_to}T00:00:00Z`);
+  const selected = [];
+
+  for (let day = start; day <= end; day = addDays(day, 1)) {
+    const isoDate = dateToYearMonthDay(day);
+    const monthDay = isoDate.slice(5);
+    for (const event of recurring.filter((item) => item.month_day === monthDay)) {
+      const { aliases, month_day: monthDayValue, ...eventWithoutCalendarOnlyFields } = event;
+      selected.push({ ...eventWithoutCalendarOnlyFields, date: isoDate, aliases });
+    }
+  }
+
+  return selected;
+}
+
+async function mergeCalendarSignificantDays(events, target) {
+  const calendarEvents = await calendarSignificantDaysForTarget(target);
+  const merged = [...events];
+  for (const event of calendarEvents) {
+    if (!hasEquivalentEvent(merged, event)) merged.push(event);
+  }
+  if (calendarEvents.length > 0) {
+    await logger.info(`Calendar significant-day candidates for ${target.week}: ${calendarEvents.map((event) => event.title).join(' | ')}`);
+  }
+  return merged;
+}
 
 function includesAny(text, patterns) {
   return patterns.some((pattern) => pattern.test(text));
@@ -285,7 +340,7 @@ async function validateOverview(data, target) {
     date_from: target.date_from,
     date_to: target.date_to,
     generated_at: generatedAt,
-    events: await filterAndRankEvents(data.events, target)
+    events: await filterAndRankEvents(await mergeCalendarSignificantDays(data.events, target), target)
   };
 }
 
