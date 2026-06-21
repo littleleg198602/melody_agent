@@ -99,6 +99,138 @@ function normalizeEvent(event) {
   };
 }
 
+
+function includesAny(text, patterns) {
+  return patterns.some((pattern) => pattern.test(text));
+}
+
+function eventText(event) {
+  return `${event.title ?? ''} ${event.category ?? ''} ${event.note ?? ''}`.toLowerCase();
+}
+
+function eventHeadlineText(event) {
+  return `${event.title ?? ''} ${event.category ?? ''}`.toLowerCase();
+}
+
+function isWorldTournamentEvent(event) {
+  return includesAny(eventText(event), [/world cup/, /fifa/, /uefa euro/, /euro \d{4}/, /world championship/, /mistrovstv[íi] světa/, /mistrovstv[íi] evropy/]);
+}
+
+function isCzechTeamEvent(event) {
+  return includesAny(eventText(event), [/czech republic/, /czechia/, /česko/, /česk[áy]\s+reprezentace/, /czech national/]);
+}
+
+function isFootballOrHockeyEvent(event) {
+  return includesAny(eventText(event), [/football/, /soccer/, /fotbal/, /hockey/, /hokej/, /fifa/, /uefa/]);
+}
+
+function isSignificantDayEvent(event) {
+  const origin = event.event_origin;
+  return origin === 'international_significant_day' || origin === 'czech_significant_day' || includesAny(eventText(event), [/significant day/, /international day/, /memorial day/, /awareness day/, /významn[ýy] den/, /památn[ýy] den/]);
+}
+
+function isSeriousSignificantDay(event) {
+  return isSignificantDayEvent(event) && (event.tone === 'respectful_memorial' || event.tone === 'awareness' || includesAny(eventText(event), [/victim/, /obět/, /communist/, /komunist/, /political prisoner/, /drug/, /trafficking/, /abuse/, /awareness/]));
+}
+
+function isFormulaOneEvent(event) {
+  return includesAny(eventHeadlineText(event), [/formula 1/, /\bf1\b/, /grand prix/]);
+}
+
+function isMotoGpEvent(event) {
+  return includesAny(eventHeadlineText(event), [/motogp/, /moto gp/, /motorcycle racing/]);
+}
+
+function combineCzechTournamentThemes(events) {
+  const combined = [];
+  const consumed = new Set();
+
+  for (let index = 0; index < events.length; index += 1) {
+    if (consumed.has(index)) continue;
+    const event = events[index];
+    if (!isWorldTournamentEvent(event) || !isFootballOrHockeyEvent(event)) {
+      combined.push(event);
+      continue;
+    }
+
+    const czechMatchIndex = events.findIndex((candidate, candidateIndex) => (
+      candidateIndex !== index
+      && !consumed.has(candidateIndex)
+      && isCzechTeamEvent(candidate)
+      && isFootballOrHockeyEvent(candidate)
+      && String(candidate.date ?? '') >= String(event.date ?? '').slice(0, 10)
+    ));
+
+    if (czechMatchIndex === -1) {
+      combined.push(event);
+      continue;
+    }
+
+    const czechMatch = events[czechMatchIndex];
+    consumed.add(index);
+    consumed.add(czechMatchIndex);
+    combined.push({
+      ...event,
+      date: czechMatch.date || event.date,
+      title: `${event.title} + ${czechMatch.title}`,
+      note: `${event.note || 'Major world tournament.'} Combined with Czech national team match: ${czechMatch.title}. ${czechMatch.note || ''}`.trim(),
+      priority: Math.max(Number(event.priority) || 1, Number(czechMatch.priority) || 1, 5),
+      source_priority: 1,
+      generate_image: true,
+      tone: 'fan_hype',
+      event_origin: 'sport',
+      language_policy: 'english',
+      czech_relevance: 'high',
+      melody4u_score: 5,
+      marketing_angle: czechMatch.marketing_angle || event.marketing_angle || 'personal greeting before a big Czech national team match',
+      why_selected: 'Major world tournament combined with a Czech national team match so the topic is not split into duplicate generic and Czech-match entries.'
+    });
+  }
+
+  events.forEach((event, index) => {
+    if (!consumed.has(index) && !combined.includes(event)) combined.push(event);
+  });
+
+  return combined;
+}
+
+function normalizeEditorialPriority(event) {
+  const normalized = { ...event };
+  if (isWorldTournamentEvent(normalized) && isCzechTeamEvent(normalized)) {
+    normalized.source_priority = 1;
+    normalized.priority = Math.max(Number(normalized.priority) || 1, 5);
+    normalized.czech_relevance = 'high';
+    normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
+  } else if (isSeriousSignificantDay(normalized)) {
+    normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 2);
+    normalized.priority = Math.max(Number(normalized.priority) || 1, 5);
+    normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
+  } else if (isFormulaOneEvent(normalized)) {
+    normalized.source_priority = Math.min(Number(normalized.source_priority) || 9, 3);
+    normalized.melody4u_score = Math.max(Number(normalized.melody4u_score) || 1, 5);
+  } else if (isMotoGpEvent(normalized)) {
+    normalized.source_priority = Math.max(Number(normalized.source_priority) || 4, 4);
+  }
+  return normalized;
+}
+
+function removeDuplicateEditorialEvents(events) {
+  const selected = [];
+  const hasCombinedCzechTournament = events.some((event) => isWorldTournamentEvent(event) && isCzechTeamEvent(event));
+
+  for (const event of events) {
+    const title = String(event.title ?? '').toLowerCase();
+    if (hasCombinedCzechTournament && isWorldTournamentEvent(event) && !isCzechTeamEvent(event)) continue;
+    if (selected.some((item) => String(item.title ?? '').toLowerCase() === title)) continue;
+    selected.push(event);
+  }
+  return selected;
+}
+
+function applyEditorialRules(events) {
+  return removeDuplicateEditorialEvents(combineCzechTournamentThemes(events).map(normalizeEditorialPriority));
+}
+
 function validateEvent(event, index) {
   for (const key of ['date', 'category', 'title', 'note', 'source_priority', 'tone', 'event_origin', 'language_policy', 'marketing_angle', 'why_selected']) {
     if (!event[key]) throw new Error(`Weekly event ${index} missing required field: ${key}`);
@@ -112,8 +244,8 @@ function validateEvent(event, index) {
   if (typeof event.generate_image !== 'boolean') throw new Error(`Weekly event ${index} generate_image must be boolean.`);
 }
 
-async function filterAndRankEvents(events) {
-  const normalized = events.map(normalizeEvent);
+async function filterAndRankEvents(events, target) {
+  const normalized = applyEditorialRules(events).map(normalizeEvent);
   await logger.info(`Raw events returned: ${normalized.length}`);
 
   const strong = normalized.filter((event) => event.melody4u_score >= 3);
@@ -153,7 +285,7 @@ async function validateOverview(data, target) {
     date_from: target.date_from,
     date_to: target.date_to,
     generated_at: generatedAt,
-    events: await filterAndRankEvents(data.events)
+    events: await filterAndRankEvents(data.events, target)
   };
 }
 
