@@ -5,8 +5,11 @@ import { readJsonFile, readTextFile, writeJsonFile } from './utils/fs.js';
 import { slugify } from './utils/slug.js';
 import { logger } from './utils/logger.js';
 
-const FALLBACK_HASHTAGS = ['#Melody4U', '#MusicGift', '#PersonalWish', '#GiftIdea', '#ForTheFans', '#GameNight', '#RaceWeekend', '#FamilyMoment', '#SocialPost'];
-const ALLOWED_COMPOSITION_TYPES = ['fan_with_phone', 'family_at_home', 'stadium_atmosphere', 'closeup_phone_gift', 'city_event_mood', 'motorsport_track', 'child_or_family_moment', 'seasonal_symbolic_scene'];
+const FALLBACK_HASHTAGS = ['#Melody4U', '#MusicGift', '#PersonalWish', '#GiftIdea', '#ForTheFans', '#GameNight', '#RaceWeekend', '#FamilyMoment', '#ThoughtfulMoment', '#NeverForgotten', '#HockeyNight'];
+const ALLOWED_COMPOSITION_TYPES = ['fan_with_phone', 'family_at_home', 'stadium_atmosphere', 'closeup_phone_gift', 'city_event_mood', 'motorsport_track', 'child_or_family_moment', 'seasonal_symbolic_scene', 'respectful_memorial_scene', 'awareness_symbolic_scene'];
+const ALLOWED_TONES = ['fan_hype', 'celebration', 'respectful_memorial', 'awareness'];
+const ALLOWED_EVENT_ORIGINS = ['international_significant_day', 'czech_significant_day', 'sport', 'motorsport', 'seasonal', 'other'];
+const ALLOWED_LANGUAGE_POLICIES = ['english', 'czech', 'bilingual_cs_en'];
 
 function previewText(value, maxLength = 1000) {
   return String(value ?? '').replace(/\s+/g, ' ').trim().slice(0, maxLength);
@@ -14,81 +17,108 @@ function previewText(value, maxLength = 1000) {
 
 function extractJson(rawText) {
   const text = String(rawText ?? '').trim();
-  try {
-    return JSON.parse(text);
-  } catch {
+  try { return JSON.parse(text); } catch {
     const fenced = text.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
     if (fenced) return JSON.parse(fenced[1]);
-
     const objectStart = text.indexOf('{');
     const objectEnd = text.lastIndexOf('}');
-    if (objectStart !== -1 && objectEnd > objectStart) {
-      return JSON.parse(text.slice(objectStart, objectEnd + 1));
-    }
-
+    if (objectStart !== -1 && objectEnd > objectStart) return JSON.parse(text.slice(objectStart, objectEnd + 1));
     const arrayStart = text.indexOf('[');
     const arrayEnd = text.lastIndexOf(']');
-    if (arrayStart !== -1 && arrayEnd > arrayStart) {
-      return JSON.parse(text.slice(arrayStart, arrayEnd + 1));
-    }
-
+    if (arrayStart !== -1 && arrayEnd > arrayStart) return JSON.parse(text.slice(arrayStart, arrayEnd + 1));
     throw new Error(`Response was not parseable JSON. First 1000 chars: ${previewText(text)}`);
   }
 }
 
 function chooseCompositionType(event, index) {
   const category = String(event.category ?? '').toLowerCase();
-  const angle = String(event.marketing_angle ?? '').toLowerCase();
-  if (category.includes('motor') || category.includes('racing')) return 'motorsport_track';
-  if (angle.includes('family') || angle.includes('watching')) return 'family_at_home';
-  if (angle.includes('child') || category.includes('children')) return 'child_or_family_moment';
-  if (category.includes('day') || angle.includes('celebration')) return 'closeup_phone_gift';
-  if (category.includes('football') || category.includes('hockey') || category.includes('tennis')) return index % 2 === 0 ? 'stadium_atmosphere' : 'fan_with_phone';
-  if (category.includes('cycling') || angle.includes('season')) return 'seasonal_symbolic_scene';
+  const title = String(event.title ?? event.event_title ?? '').toLowerCase();
+  const tone = event.tone;
+  if (tone === 'respectful_memorial') return 'respectful_memorial_scene';
+  if (tone === 'awareness') return 'awareness_symbolic_scene';
+  if (tone === 'celebration') return ['child_or_family_moment', 'seasonal_symbolic_scene', 'closeup_phone_gift'][index % 3];
+  if (category.includes('motor') || title.includes('formula') || title.includes('motogp')) return 'motorsport_track';
+  if (title.includes('hockey') || title.includes('football') || category.includes('sport')) return ['fan_with_phone', 'family_at_home', 'stadium_atmosphere'][index % 3];
   return ALLOWED_COMPOSITION_TYPES[index % ALLOWED_COMPOSITION_TYPES.length];
 }
 
-function sanitizeTextOnImage(value, event = {}) {
-  const title = String(value || event.title || event.event_title || 'Make the Moment Sing');
-  const category = String(event.category ?? '').toLowerCase();
-  const angle = String(event.marketing_angle ?? '').toLowerCase();
-  const protectedPattern = /\b(formula\s*1|fifa|uefa|motogp|nhl|olympic|olympics|champions league|world cup|grand prix|wimbledon)\b/i;
-
-  let safe = title.replace(/\s+/g, ' ').replace(/[\r\n]+/g, ' ').trim();
-  if (category.includes('football') && /european|world|cup|league|championship/i.test(safe)) safe = 'Game Night Feeling';
-  if (category.includes('cycling') && /summer|weekend/i.test(safe)) safe = 'Summer Sport Vibes';
-  if (category.includes('day') && /family|celebration/i.test(safe)) safe = 'Family Moment';
-  if (protectedPattern.test(safe)) {
-    if (category.includes('motor') || /formula|grand prix|motogp/i.test(safe)) safe = 'Race Weekend Energy';
-    else if (category.includes('football') || /fifa|uefa|world cup|champions league/i.test(safe)) safe = angle.includes('kickoff') ? 'A Wish Before Kickoff' : 'World Football Night';
-    else if (category.includes('tennis') || /wimbledon/i.test(safe)) safe = 'Summer Sport Vibes';
-    else if (/olympic/i.test(safe)) safe = 'For the Biggest Fan';
+function safeTextForEvent(event) {
+  const title = String(event.title ?? event.event_title ?? 'Make the Moment Sing').toLowerCase();
+  if (event.language_policy === 'bilingual_cs_en') return { text_on_image: 'Choose Hope / Volíme naději', text_on_image_en: 'Choose Hope', text_on_image_cs: 'Volíme naději' };
+  if (event.language_policy === 'czech') {
+    if (title.includes('communist') || title.includes('political prisoner') || title.includes('victim')) return { text_on_image: 'Nikdy nezapomeneme', text_on_image_cs: 'Nikdy nezapomeneme', text_on_image_en: '' };
+    if (title.includes('john') || title.includes('jan') || title.includes('midsummer')) return { text_on_image: 'Svatojánská noc', text_on_image_cs: 'Svatojánská noc', text_on_image_en: '' };
+    return { text_on_image: 'S úctou vzpomínáme', text_on_image_cs: 'S úctou vzpomínáme', text_on_image_en: '' };
   }
-
-  if (safe.length > 45) {
-    if (category.includes('motor')) safe = 'Race Weekend Energy';
-    else if (category.includes('football')) safe = 'Game Night Feeling';
-    else if (angle.includes('fan')) safe = 'For the Biggest Fan';
-    else if (angle.includes('family')) safe = 'Family Moment';
-    else safe = 'Make the Moment Sing';
-  }
-
-  return safe.replace(/[^\x20-\x7E]/g, '').slice(0, 45).trim() || 'Make the Moment Sing';
+  if (title.includes('world cup') || title.includes('czech republic vs')) return { text_on_image: 'World Football Night', text_on_image_en: 'World Football Night', text_on_image_cs: '' };
+  if (title.includes('ice hockey')) return { text_on_image: 'Hockey Night Feeling', text_on_image_en: 'Hockey Night Feeling', text_on_image_cs: '' };
+  if (title.includes('formula') || title.includes('grand prix')) return { text_on_image: 'Race Weekend Energy', text_on_image_en: 'Race Weekend Energy', text_on_image_cs: '' };
+  if (title.includes('motogp')) return { text_on_image: 'Weekend Racing Spirit', text_on_image_en: 'Weekend Racing Spirit', text_on_image_cs: '' };
+  if (title.includes('wimbledon')) return { text_on_image: 'Summer Sport Vibes', text_on_image_en: 'Summer Sport Vibes', text_on_image_cs: '' };
+  return { text_on_image: 'Make the Moment Sing', text_on_image_en: 'Make the Moment Sing', text_on_image_cs: '' };
 }
 
-function buildImagePrompt(event, compositionType) {
-  const compositionDescriptions = {
-    fan_with_phone: 'a joyful fan holding a smartphone in the foreground, soft arena lights in the distance, warm cinematic depth of field',
-    family_at_home: 'a family gathered on a cozy sofa at home, a smartphone showing a personal music gift, warm lamp light and soft celebration mood',
-    stadium_atmosphere: 'a symbolic stadium atmosphere with blurred crowd silhouettes, dramatic lights, no identifiable teams, and a smartphone in the lower foreground',
-    closeup_phone_gift: 'a close-up of hands presenting a smartphone like a gift, glowing music notes and gentle sound waves around it',
-    city_event_mood: 'a warm evening city scene with people celebrating together, a smartphone visible, posters and lights kept generic',
-    motorsport_track: 'a symbolic racing track scene with generic cars as motion streaks, a fan smartphone in view, warm sunset lighting and no official branding',
-    child_or_family_moment: 'a tender child or family celebration moment with a smartphone greeting, glowing notes, and soft playful colors',
-    seasonal_symbolic_scene: 'a seasonal symbolic outdoor scene with warm light, a smartphone gift moment, subtle music notes, and emotional social poster energy'
-  };
+function sanitizeTextFields(item) {
+  const languagePolicy = item.language_policy;
+  const generated = safeTextForEvent(item);
+  const text = String(item.text_on_image || generated.text_on_image).replace(/[\r\n]+/g, ' ').trim().slice(0, 60);
+  const textCs = String(item.text_on_image_cs ?? generated.text_on_image_cs ?? '').trim();
+  const textEn = String(item.text_on_image_en ?? generated.text_on_image_en ?? '').trim();
 
-  return `Create a vertical 9:16 cinematic Melody4U social media poster using composition_type ${compositionType}: ${compositionDescriptions[compositionType]}. Theme: ${event.title}. Marketing angle: ${event.marketing_angle || 'personal music gift'}. Add subtle glowing music notes, gentle sound waves, a personal greeting and gift feeling, clean composition, strong central subject, modern warm atmosphere, and English poster text. Explicit restrictions: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces, no copyrighted mascots, no team badges. For protected sports or events, use symbolic generic visuals instead of exact official identity.`;
+  if (languagePolicy === 'bilingual_cs_en') {
+    return { text_on_image: text.includes('/') ? text : generated.text_on_image, text_on_image_cs: textCs || generated.text_on_image_cs, text_on_image_en: textEn || generated.text_on_image_en };
+  }
+  if (languagePolicy === 'czech') {
+    return { text_on_image: textCs || text || generated.text_on_image, text_on_image_cs: textCs || text || generated.text_on_image_cs, text_on_image_en: '' };
+  }
+  return { text_on_image: textEn || text || generated.text_on_image, text_on_image_cs: '', text_on_image_en: textEn || text || generated.text_on_image_en };
+}
+
+function buildImagePrompt(event, compositionType, textFields) {
+  const compositionDescriptions = {
+    fan_with_phone: 'a Czech fan with a smartphone in the foreground, energetic but symbolic stadium atmosphere, no team marks',
+    family_at_home: 'a family at home watching a big match together, smartphone visible as a personal music gift, warm living-room light',
+    stadium_atmosphere: 'generic stadium lights, abstract crowd silhouettes, smartphone in the foreground, no official competition branding',
+    closeup_phone_gift: 'close-up hands presenting a smartphone like a personal gift, gentle glow, music notes and sound waves',
+    city_event_mood: 'warm city evening mood with people sharing a thoughtful greeting on a smartphone',
+    motorsport_track: 'symbolic racing track energy with generic vehicles as motion streaks, smartphone visible, no official racing identity',
+    child_or_family_moment: 'tender family-friendly celebration moment with smartphone greeting, soft lights and music notes',
+    seasonal_symbolic_scene: 'seasonal Czech summer mood, lantern-like warm lights, smartphone greeting, subtle sound waves',
+    respectful_memorial_scene: 'calm dignified memorial scene with candlelight, subtle Czech atmosphere, smartphone with respectful message, no hype',
+    awareness_symbolic_scene: 'thoughtful human awareness scene with hopeful light, supportive mood, smartphone message, no fear or shock visuals'
+  };
+  const toneGuidance = {
+    fan_hype: 'energetic, exciting, vivid, social-media friendly, symbolic fan atmosphere',
+    celebration: 'warm, festive, emotional, family-friendly',
+    respectful_memorial: 'calm, dignified, serious, subtle, respectful, no hype',
+    awareness: 'thoughtful, human, socially aware, hopeful, no fearmongering'
+  }[event.tone] || 'warm and social-media friendly';
+  const languageDescription = event.language_policy === 'bilingual_cs_en' ? 'Czech and English bilingual visible text' : event.language_policy === 'czech' ? 'Czech-only visible text' : 'English-only visible text';
+
+  return `Create a vertical 9:16 social poster suitable for TikTok, Instagram Reels and Facebook. Use visible text: "${textFields.text_on_image}". Visible text language: ${languageDescription}. Tone: ${event.tone} (${toneGuidance}). Composition type ${compositionType}: ${compositionDescriptions[compositionType]}. Theme: ${event.title}. Marketing angle: ${event.marketing_angle || 'personal Melody4U greeting'}. Include a visible smartphone, subtle music notes, gentle sound waves, a personal greeting / gift feeling, clean composition and strong central subject. Restrictions: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery, no sensationalism. For sports use energetic symbolic fan atmosphere only; for serious topics use respectful human visual language with no fearmongering.`;
+}
+
+function normalizePromptResponse(parsed, week) {
+  if (Array.isArray(parsed)) return { week, created_at: new Date().toISOString(), items: parsed };
+  if (!parsed || typeof parsed !== 'object') throw new Error('Prompt JSON must be an object or an array that can be normalized.');
+  if (Array.isArray(parsed.items)) return { ...parsed, week, created_at: new Date().toISOString() };
+  for (const key of ['prompts', 'events', 'results']) {
+    if (Array.isArray(parsed[key])) return { week, created_at: new Date().toISOString(), items: parsed[key] };
+  }
+  throw new Error('Prompt JSON must include an items array, or a normalizable prompts/events/results array.');
+}
+
+function normalizeHashtags(hashtags, item) {
+  const normalized = Array.isArray(hashtags)
+    ? hashtags.filter((hashtag) => typeof hashtag === 'string' && hashtag.trim()).map((hashtag) => hashtag.trim())
+    : [];
+  if (!normalized.includes('#Melody4U')) normalized.unshift('#Melody4U');
+  const toneTags = item.tone === 'respectful_memorial' ? ['#NeverForgotten', '#ThoughtfulMoment'] : item.tone === 'awareness' ? ['#ThoughtfulMoment', '#PersonalWish'] : item.event_origin === 'motorsport' ? ['#RaceWeekend', '#ForTheFans'] : ['#MusicGift', '#GiftIdea', '#ForTheFans'];
+  for (const hashtag of [...toneTags, ...FALLBACK_HASHTAGS]) {
+    if (normalized.length >= 5) break;
+    if (!normalized.includes(hashtag)) normalized.push(hashtag);
+  }
+  return normalized.slice(0, 5);
 }
 
 function fallbackPrompts(week, events) {
@@ -97,102 +127,63 @@ function fallbackPrompts(week, events) {
     created_at: new Date().toISOString(),
     items: events.map((event, index) => {
       const compositionType = chooseCompositionType(event, index);
-      const textOnImage = sanitizeTextOnImage(event.title, event);
+      const textFields = safeTextForEvent(event);
       return {
         event_title: event.title,
         date: event.date,
         category: event.category,
-        text_on_image: textOnImage,
-        image_prompt: buildImagePrompt(event, compositionType),
-        reels_text: `${textOnImage} — turn the moment into a personal Melody4U music wish.`,
-        hashtags: normalizeHashtags(['#Melody4U', '#MusicGift', '#GiftIdea', compositionType === 'motorsport_track' ? '#RaceWeekend' : '#ForTheFans', compositionType === 'family_at_home' ? '#FamilyMoment' : '#PersonalWish']),
-        slug: slugify(event.title),
-        composition_type: compositionType
+        tone: event.tone,
+        event_origin: event.event_origin,
+        language_policy: event.language_policy,
+        composition_type: compositionType,
+        ...textFields,
+        image_prompt: buildImagePrompt(event, compositionType, textFields),
+        reels_text: `${textFields.text_on_image} — create a personal Melody4U music wish for this moment.`,
+        hashtags: normalizeHashtags([], event),
+        slug: slugify(event.title)
       };
     })
   };
-}
-
-function normalizePromptResponse(parsed, week) {
-  if (Array.isArray(parsed)) {
-    return { week, created_at: new Date().toISOString(), items: parsed };
-  }
-
-  if (!parsed || typeof parsed !== 'object') {
-    throw new Error('Prompt JSON must be an object or an array that can be normalized.');
-  }
-
-  if (Array.isArray(parsed.items)) {
-    return { ...parsed, week, created_at: new Date().toISOString() };
-  }
-
-  for (const key of ['prompts', 'events', 'results']) {
-    if (Array.isArray(parsed[key])) {
-      return {
-        week,
-        created_at: new Date().toISOString(),
-        items: parsed[key]
-      };
-    }
-  }
-
-  throw new Error('Prompt JSON must include an items array, or a normalizable prompts/events/results array.');
-}
-
-function normalizeHashtags(hashtags) {
-  const normalized = Array.isArray(hashtags)
-    ? hashtags.filter((hashtag) => typeof hashtag === 'string' && hashtag.trim()).map((hashtag) => hashtag.trim())
-    : [];
-
-  if (!normalized.includes('#Melody4U')) normalized.unshift('#Melody4U');
-
-  for (const hashtag of FALLBACK_HASHTAGS) {
-    if (normalized.length >= 5) break;
-    if (!normalized.includes(hashtag)) normalized.push(hashtag);
-  }
-
-  return normalized.slice(0, 5);
 }
 
 function validatePrompts(data, week) {
   const normalized = normalizePromptResponse(data, week);
   normalized.items = normalized.items.map((item, index) => {
     const eventTitle = item.event_title || item.title;
-    const eventForSanitizing = { title: eventTitle, category: item.category, marketing_angle: item.marketing_angle };
-    const compositionType = ALLOWED_COMPOSITION_TYPES.includes(item.composition_type) ? item.composition_type : chooseCompositionType(item, index);
+    const tone = ALLOWED_TONES.includes(item.tone) ? item.tone : 'fan_hype';
+    const eventOrigin = ALLOWED_EVENT_ORIGINS.includes(item.event_origin) ? item.event_origin : 'other';
+    const languagePolicy = ALLOWED_LANGUAGE_POLICIES.includes(item.language_policy) ? item.language_policy : 'english';
+    const baseItem = { ...item, event_title: eventTitle, title: eventTitle, tone, event_origin: eventOrigin, language_policy: languagePolicy };
+    const compositionType = ALLOWED_COMPOSITION_TYPES.includes(item.composition_type) ? item.composition_type : chooseCompositionType(baseItem, index);
+    const textFields = sanitizeTextFields(baseItem);
     const promptItem = {
       event_title: eventTitle,
       date: item.date,
       category: item.category,
-      text_on_image: sanitizeTextOnImage(item.text_on_image, eventForSanitizing),
-      image_prompt: item.image_prompt || item.prompt || buildImagePrompt(eventForSanitizing, compositionType),
-      reels_text: item.reels_text,
-      hashtags: normalizeHashtags(item.hashtags),
-      slug: item.slug || slugify(eventTitle),
-      composition_type: compositionType
+      tone,
+      event_origin: eventOrigin,
+      language_policy: languagePolicy,
+      composition_type: compositionType,
+      ...textFields,
+      image_prompt: item.image_prompt || item.prompt || buildImagePrompt(baseItem, compositionType, textFields),
+      reels_text: item.reels_text || `${textFields.text_on_image} — create a personal Melody4U music wish for this moment.`,
+      hashtags: normalizeHashtags(item.hashtags, { ...baseItem, composition_type: compositionType }),
+      slug: item.slug || slugify(eventTitle)
     };
 
     if (!/no official logos/i.test(promptItem.image_prompt)) {
-      promptItem.image_prompt += ' No official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces.';
+      promptItem.image_prompt += ' No official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.';
     }
 
-    for (const key of ['event_title', 'date', 'category', 'text_on_image', 'image_prompt', 'reels_text', 'slug', 'composition_type']) {
+    for (const key of ['event_title', 'date', 'category', 'tone', 'event_origin', 'language_policy', 'composition_type', 'text_on_image', 'image_prompt', 'reels_text', 'slug']) {
       if (!promptItem[key]) throw new Error(`Prompt item ${index} missing required field: ${key}`);
     }
-
-    if (!Array.isArray(promptItem.hashtags) || promptItem.hashtags.length !== 5 || !promptItem.hashtags.every((hashtag) => typeof hashtag === 'string')) {
-      throw new Error(`Prompt item ${index} must include exactly 5 string hashtags.`);
-    }
-
+    if (promptItem.language_policy === 'bilingual_cs_en' && (!promptItem.text_on_image_cs || !promptItem.text_on_image_en || !promptItem.text_on_image.includes('/'))) throw new Error(`Prompt item ${index} must include bilingual Czech and English text fields.`);
+    if (promptItem.language_policy === 'czech' && !promptItem.text_on_image_cs) throw new Error(`Prompt item ${index} must include Czech text field.`);
+    if (promptItem.language_policy === 'english' && !promptItem.text_on_image_en) throw new Error(`Prompt item ${index} must include English text field.`);
+    if (!Array.isArray(promptItem.hashtags) || promptItem.hashtags.length !== 5 || !promptItem.hashtags.includes('#Melody4U')) throw new Error(`Prompt item ${index} must include exactly 5 hashtags including #Melody4U.`);
     return promptItem;
   });
-
-  if (normalized.items.length > 1 && new Set(normalized.items.map((item) => item.composition_type)).size === 1) {
-    normalized.items = normalized.items.map((item, index) => ({
-      ...item,
-      composition_type: ALLOWED_COMPOSITION_TYPES[index % ALLOWED_COMPOSITION_TYPES.length]
-    }));
-  }
 
   normalized.week = week;
   normalized.created_at = new Date().toISOString();
@@ -202,7 +193,6 @@ function validatePrompts(data, week) {
 async function main() {
   await logger.info('Generate image prompts started');
   let rawResponseText = '';
-
   try {
     const target = resolveTargetWeek();
     const inputFile = `data/weekly/${target.week}.json`;
@@ -213,7 +203,6 @@ async function main() {
     const style = await readTextFile('prompts/melody4u_style.txt');
     const system = await readTextFile('prompts/image_prompt_system.txt');
     let prompts;
-
     if (events.length === 0) {
       prompts = { week: target.week, created_at: new Date().toISOString(), items: [] };
       await logger.info('No waiting image events found; writing empty prompts array.');
@@ -234,7 +223,6 @@ async function main() {
       await logger.info(`Raw OpenAI prompt response preview: ${previewText(rawResponseText, 500)}`);
       prompts = validatePrompts(extractJson(rawResponseText), target.week);
     }
-
     prompts = validatePrompts(prompts, target.week);
     await logger.info(`Prompt count after validation: ${prompts.items.length}`);
     await logger.info(`Prompts created_at set by script: ${prompts.created_at}`);

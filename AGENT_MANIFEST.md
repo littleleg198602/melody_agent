@@ -70,3 +70,9 @@ Automatically create a weekly overview of important social and sport events, con
 - Add weekly reporting.
 - Add better event source configuration.
 - Add Czech-localized event filtering.
+
+## v1.2 editorial policy
+
+The agent is tuned for a Czech audience. Combined major world tournament themes with a Czech national team match rank highest, followed by main significant days, Formula 1, other major sports, and secondary significant days. Ice Hockey World Championship Czech matches are treated at the same top editorial level as Czech football matches at World Cup or Euro when they are actually relevant; hockey must not be invented for unrelated weeks.
+
+Prompt outputs include `tone`, `event_origin`, `language_policy`, and `composition_type`. International significant days are bilingual Czech/English, Czech significant days are Czech-only, and sports/motorsport are English-only. Serious topics use respectful_memorial or awareness tone and avoid fearmongering, graphic imagery, and sensationalism.

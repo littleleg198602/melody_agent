@@ -74,3 +74,9 @@ The log file is append-only and is committed back to the repository together wit
 - See `PROJECT_STRUCTURE.md` for the full project tree.
 - See `AGENT_MANIFEST.md` for the human-readable agent manifest.
 - See `agent.manifest.json` for machine-readable metadata.
+
+## Editorial and language policy
+
+The v1.2 editorial rules prioritize Czech-audience relevance: combined Czech national team world-tournament themes first, then main significant days, Formula 1, other major sports, and secondary significant days. Serious significant days are allowed and should use respectful or awareness tone rather than being skipped.
+
+Generated prompt items include `tone`, `event_origin`, `language_policy`, and `composition_type`. International significant days use bilingual Czech/English image text, Czech significant days use Czech text, and sport or motorsport content uses English text. Image generation remains disabled by default with `GENERATE_IMAGES=false`.

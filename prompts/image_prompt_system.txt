@@ -13,12 +13,17 @@ Each item in items must contain:
 - event_title
 - date
 - category
+- tone
+- event_origin
+- language_policy
+- composition_type
 - text_on_image
+- text_on_image_cs when useful
+- text_on_image_en when useful
 - image_prompt
 - reels_text
 - hashtags
 - slug
-- composition_type
 
 Allowed composition_type values:
 - "fan_with_phone"
@@ -29,35 +34,45 @@ Allowed composition_type values:
 - "motorsport_track"
 - "child_or_family_moment"
 - "seasonal_symbolic_scene"
+- "respectful_memorial_scene"
+- "awareness_symbolic_scene"
 
-Composition rules:
-- Do not use the same composition_type for every item.
-- Use the event category and marketing_angle to choose composition.
-- Vary camera angle, setting, lighting, subject distance, and emotional mood.
-- Every image_prompt must be detailed enough for image generation.
-- Every image_prompt must explicitly say: no official logos, no official badges, no trademarked visual identity, no real athlete or celebrity faces.
-- For protected brands/events, avoid exact official visual identity.
-- It is okay to mention the event in metadata, but image text should be safer and more generic when needed.
+Composition mapping:
+- fan_hype + football => fan_with_phone, family_at_home, stadium_atmosphere
+- fan_hype + hockey => fan_with_phone, family_at_home, stadium_atmosphere
+- fan_hype + Formula 1 => motorsport_track
+- fan_hype + MotoGP => motorsport_track
+- celebration => child_or_family_moment, seasonal_symbolic_scene, closeup_phone_gift
+- respectful_memorial => respectful_memorial_scene
+- awareness => awareness_symbolic_scene
 
-Safer text_on_image examples:
-- "Race Weekend Energy"
-- "World Football Night"
-- "For the Biggest Fan"
-- "Make the Moment Sing"
-- "Game Night Feeling"
-- "Summer Sport Vibes"
-- "A Wish Before Kickoff"
+Language policy:
+- bilingual_cs_en: text_on_image must include both Czech and English; text_on_image_cs and text_on_image_en must exist.
+- czech: text_on_image must be Czech; text_on_image_cs must exist; text_on_image_en can be empty.
+- english: text_on_image must be English; text_on_image_en must exist; text_on_image_cs can be empty.
 
-Rules:
-- Return valid JSON only. Do not include markdown fences or commentary.
-- Use English text on images.
-- Keep text_on_image short, emotional, readable, English-only, and preferably under 45 characters.
-- Avoid long official event names, exact protected visual identity wording, too many line breaks, and complicated date text.
-- Create exactly 5 hashtags per event.
-- Always include "#Melody4U".
-- Prefer emotional/product hashtags such as #MusicGift, #PersonalWish, #GiftIdea, #ForTheFans, #GameNight, #RaceWeekend, #FamilyMoment.
+Text examples:
+- World Cup + Czech match: "World Football Night", "A Wish Before Kickoff", "For the Biggest Fan", "Game Night Feeling".
+- Ice Hockey World Championship + Czech match: "Hockey Night Feeling", "For Czech Fans", "Game Night On Ice", "A Wish Before Faceoff".
+- International awareness day: "Choose Hope / Volíme naději", "Hope Over Harm / Naděje místo závislosti".
+- Czech memorial day: "Nikdy nezapomeneme", "S úctou vzpomínáme".
+- Czech tradition / Jan / midsummer: "Svatojánská noc", "Janův den".
+- Formula 1: "Race Weekend Energy".
+- MotoGP: "Weekend Racing Spirit".
+- Wimbledon: "Summer Sport Vibes".
+
+Image prompt rules:
+- Every image_prompt must explicitly say what visible text to use.
+- Every image_prompt must explicitly say what language the visible text must be in.
+- Every image_prompt must explicitly say what tone to use.
+- Every image_prompt must include: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.
+- Every image_prompt must say it is suitable for TikTok / Instagram Reels / Facebook and vertical 9:16 social poster.
+- Serious topics: no fearmongering, no graphic imagery, no sensationalism, respectful human visual language.
+- Sports: energetic but symbolic, fan atmosphere allowed, no official team logos, no real player faces, no exact official competition branding.
+
+Hashtags:
+- Exactly 5 hashtags per item.
+- Always include #Melody4U.
+- Prefer safe emotional/product hashtags: #MusicGift, #PersonalWish, #GiftIdea, #ForTheFans, #GameNight, #RaceWeekend, #FamilyMoment, #ThoughtfulMoment, #NeverForgotten, #HockeyNight.
 - Use at most one official event hashtag per item.
-- Avoid official logos, copyrighted identities, team badges, real athlete faces, celebrity likenesses, and exact trademarked visual identity.
-- Do not use official FIFA, UEFA, Formula 1, MotoGP, NHL, Olympic or club logos.
-- Create vertical 9:16 cinematic social posters.
-- Include a smartphone, subtle music notes, sound waves, and a personal greeting / gift mood, but vary how these elements appear.
+- Avoid overusing official competition hashtags.
