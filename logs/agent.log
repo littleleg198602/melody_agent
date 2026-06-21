@@ -79,3 +79,28 @@
 [2026-06-21T16:01:15.688Z] [INFO] Created image manifest: output/2026-W26/images.json
 [2026-06-21T16:01:15.689Z] [INFO] Generate images finished successfully
 [2026-06-21T16:01:15.708Z] [INFO] Weekly agent finished successfully
+[2026-06-21T16:26:23.835Z] [INFO] Weekly agent started
+[2026-06-21T16:26:23.838Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-21T16:26:23.926Z] [INFO] Create weekly overview started
+[2026-06-21T16:26:23.930Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T16:26:35.522Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T16:26:35.523Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T16:26:35.586Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-21T16:26:35.674Z] [INFO] Generate image prompts started
+[2026-06-21T16:26:35.678Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T16:26:35.679Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W26
+[2026-06-21T16:26:44.900Z] [INFO] Raw OpenAI prompt response preview: { "week": "2026-W26", "created_at": "2024-04-27T12:00:00Z", "items": [ { "event_title": "FIFA World Cup 2026: Group Stage Matches", "date": "2026-06-22", "category": "Sports - Soccer", "text_on_image": "FIFA World Cup 2026\nGroup Stage Matches\nJune 22", "image_prompt": "emotional cinematic social media poster, vertical 9:16, modern warm atmosphere, central smartphone showing a glowing soccer ball, subtle glowing music notes floating around, subtle sound waves, symbolic soccer field background w
+[2026-06-21T16:26:44.902Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T16:26:44.903Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T16:26:44.961Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-21T16:26:45.050Z] [INFO] Generate images started
+[2026-06-21T16:26:45.054Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T16:26:45.055Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T16:26:45.055Z] [INFO] Dry run: would generate image for FIFA World Cup 2026: Group Stage Matches at output/2026-W26/images/fifa-world-cup-2026-group-stage.png
+[2026-06-21T16:26:45.055Z] [INFO] Dry run: would generate image for British National Road Championships at output/2026-W26/images/british-national-road-championships-2026.png
+[2026-06-21T16:26:45.056Z] [INFO] Dry run: would generate image for Formula 1: Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix-2026.png
+[2026-06-21T16:26:45.056Z] [INFO] Dry run: would generate image for UEFA European Under-19 Championship at output/2026-W26/images/uefa-european-under-19-championship-2026.png
+[2026-06-21T16:26:45.056Z] [INFO] Dry run: would generate image for Constitution Day in Ukraine at output/2026-W26/images/constitution-day-ukraine-2026.png
+[2026-06-21T16:26:45.057Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T16:26:45.057Z] [INFO] Generate images finished successfully
+[2026-06-21T16:26:45.063Z] [INFO] Weekly agent finished successfully

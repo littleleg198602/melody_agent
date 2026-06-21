@@ -1,86 +1,86 @@
 {
   "week": "2026-W26",
-  "created_at": "2026-06-21T16:01:15.352Z",
+  "created_at": "2024-04-27T12:00:00Z",
   "items": [
     {
-      "event_title": "European football summer stories",
+      "event_title": "FIFA World Cup 2026: Group Stage Matches",
       "date": "2026-06-22",
-      "category": "football",
-      "text_on_image": "European Football Summer Stories",
-      "image_prompt": "Create a vertical 9:16 cinematic social media poster for European football summer stories. Use a close-up smartphone foreground with a strong central subject, visible smartphone, subtle glowing music notes, soft sound waves, personal greeting and gift mood. Avoid logos, badges, real athlete faces, celebrity likenesses, and trademarked identities. English text only.",
-      "reels_text": "European football summer stories is coming. Turn it into a personal Melody4U wish.",
+      "category": "Sports - Soccer",
+      "text_on_image": "FIFA World Cup 2026\nGroup Stage Matches\nJune 22",
+      "image_prompt": "emotional cinematic social media poster, vertical 9:16, modern warm atmosphere, central smartphone showing a glowing soccer ball, subtle glowing music notes floating around, subtle sound waves, symbolic soccer field background with abstract players, personal greeting and gift mood, clean composition",
+      "reels_text": "Kick off the excitement! FIFA World Cup 2026 group stage matches start June 22. Feel the passion and rhythm of the game!",
       "hashtags": [
-        "#Melody4U",
-        "#GiftIdea",
-        "#football",
-        "#SocialPost",
-        "#MusicGift"
+        "#WorldCup2026",
+        "#SoccerVibes",
+        "#GroupStage",
+        "#FootballFever",
+        "#Melody4U"
       ],
-      "slug": "european-football-summer-stories"
+      "slug": "fifa-world-cup-2026-group-stage"
     },
     {
-      "event_title": "Grass court tennis week",
-      "date": "2026-06-22",
-      "category": "tennis",
-      "text_on_image": "Grass Court Tennis Week",
-      "image_prompt": "Create a vertical 9:16 cinematic social media poster for Grass court tennis week. Use a wide warm sunset scene with a strong central subject, visible smartphone, subtle glowing music notes, soft sound waves, personal greeting and gift mood. Avoid logos, badges, real athlete faces, celebrity likenesses, and trademarked identities. English text only.",
-      "reels_text": "Grass court tennis week is coming. Turn it into a personal Melody4U wish.",
+      "event_title": "British National Road Championships",
+      "date": "2026-06-25",
+      "category": "Sports - Cycling",
+      "text_on_image": "British National Road Championships\nJune 25",
+      "image_prompt": "emotional cinematic social media poster, vertical 9:16, warm modern tones, smartphone displaying a glowing bicycle wheel, subtle glowing music notes and sound waves around, symbolic open road with cyclists in silhouette, personal greeting and gift feeling, clean and strong central subject",
+      "reels_text": "Ride the rhythm of the road! British National Road Championships on June 25. Join the journey and feel the beat!",
       "hashtags": [
-        "#Melody4U",
-        "#GiftIdea",
-        "#tennis",
-        "#SocialPost",
-        "#MusicGift"
+        "#RoadChampionships",
+        "#CyclingLife",
+        "#BritishCycling",
+        "#RideTheBeat",
+        "#Melody4U"
       ],
-      "slug": "grass-court-tennis-week"
+      "slug": "british-national-road-championships-2026"
     },
     {
-      "event_title": "Summer cycling inspiration",
+      "event_title": "Formula 1: Austrian Grand Prix",
+      "date": "2026-06-26",
+      "category": "Sports - Motorsport",
+      "text_on_image": "Formula 1 Austrian Grand Prix\nJune 26",
+      "image_prompt": "emotional cinematic social media poster, vertical 9:16, warm modern atmosphere, smartphone showing a glowing racing helmet, subtle glowing music notes and sound waves, symbolic race track with blurred speed lines, personal greeting and gift mood, clean composition with strong central subject",
+      "reels_text": "Feel the speed and sound! Formula 1 Austrian Grand Prix on June 26. Let the race ignite your spirit!",
+      "hashtags": [
+        "#F1AustrianGP",
+        "#Formula1",
+        "#RacingVibes",
+        "#SpeedAndSound",
+        "#Melody4U"
+      ],
+      "slug": "formula-1-austrian-grand-prix-2026"
+    },
+    {
+      "event_title": "UEFA European Under-19 Championship",
+      "date": "2026-06-27",
+      "category": "Sports - Soccer",
+      "text_on_image": "UEFA European Under-19 Championship\nJune 27",
+      "image_prompt": "emotional cinematic social media poster, vertical 9:16, warm modern tones, smartphone displaying a glowing soccer ball with youthful energy, subtle glowing music notes and sound waves, symbolic stadium with cheering abstract crowd, personal greeting and gift feeling, clean composition",
+      "reels_text": "Future stars shine bright! UEFA European Under-19 Championship starts June 27. Celebrate the young talents!",
+      "hashtags": [
+        "#UEFAU19",
+        "#FutureStars",
+        "#SoccerYouth",
+        "#EuropeanChampionship",
+        "#Melody4U"
+      ],
+      "slug": "uefa-european-under-19-championship-2026"
+    },
+    {
+      "event_title": "Constitution Day in Ukraine",
       "date": "2026-06-28",
-      "category": "cycling",
-      "text_on_image": "Summer Cycling Inspiration",
-      "image_prompt": "Create a vertical 9:16 cinematic social media poster for Summer cycling inspiration. Use a overhead gift-table composition with a strong central subject, visible smartphone, subtle glowing music notes, soft sound waves, personal greeting and gift mood. Avoid logos, badges, real athlete faces, celebrity likenesses, and trademarked identities. English text only.",
-      "reels_text": "Summer cycling inspiration is coming. Turn it into a personal Melody4U wish.",
+      "category": "Holiday",
+      "text_on_image": "Constitution Day in Ukraine\nJune 28",
+      "image_prompt": "emotional cinematic social media poster, vertical 9:16, warm modern atmosphere, smartphone showing a glowing symbolic book, subtle glowing music notes and sound waves, symbolic peaceful landscape with soft light, personal greeting and gift mood, clean composition with strong central subject",
+      "reels_text": "Honoring freedom and unity. Celebrate Constitution Day in Ukraine on June 28 with warmth and harmony!",
       "hashtags": [
-        "#Melody4U",
-        "#GiftIdea",
-        "#cycling",
-        "#SocialPost",
-        "#MusicGift"
+        "#ConstitutionDay",
+        "#Ukraine",
+        "#FreedomAndUnity",
+        "#CelebrateTogether",
+        "#Melody4U"
       ],
-      "slug": "summer-cycling-inspiration"
-    },
-    {
-      "event_title": "Summer racing weekend",
-      "date": "2026-06-28",
-      "category": "motorsport",
-      "text_on_image": "Summer Racing Weekend",
-      "image_prompt": "Create a vertical 9:16 cinematic social media poster for Summer racing weekend. Use a dramatic arena light composition with a strong central subject, visible smartphone, subtle glowing music notes, soft sound waves, personal greeting and gift mood. Avoid logos, badges, real athlete faces, celebrity likenesses, and trademarked identities. English text only.",
-      "reels_text": "Summer racing weekend is coming. Turn it into a personal Melody4U wish.",
-      "hashtags": [
-        "#Melody4U",
-        "#GiftIdea",
-        "#motorsport",
-        "#SocialPost",
-        "#MusicGift"
-      ],
-      "slug": "summer-racing-weekend"
-    },
-    {
-      "event_title": "Weekly celebration moments",
-      "date": "2026-06-28",
-      "category": "international-day",
-      "text_on_image": "Weekly Celebration Moments",
-      "image_prompt": "Create a vertical 9:16 cinematic social media poster for Weekly celebration moments. Use a cozy home celebration scene with a strong central subject, visible smartphone, subtle glowing music notes, soft sound waves, personal greeting and gift mood. Avoid logos, badges, real athlete faces, celebrity likenesses, and trademarked identities. English text only.",
-      "reels_text": "Weekly celebration moments is coming. Turn it into a personal Melody4U wish.",
-      "hashtags": [
-        "#Melody4U",
-        "#GiftIdea",
-        "#internationalday",
-        "#SocialPost",
-        "#MusicGift"
-      ],
-      "slug": "weekly-celebration-moments"
+      "slug": "constitution-day-ukraine-2026"
     }
   ]
 }
