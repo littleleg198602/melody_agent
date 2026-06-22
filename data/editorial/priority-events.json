@@ -1,0 +1,73 @@
+{
+  "events": [
+    {
+      "date": "2026-06-26",
+      "category": "motorsport",
+      "title": "F1 Velká cena Rakouska – Spielberg",
+      "note": "Top motorsport priority close to Czech fans. Use generic racing atmosphere and avoid official F1 branding, team liveries, and real driver likenesses.",
+      "priority": 5,
+      "source_priority": 3,
+      "generate_image": true,
+      "status": "waiting",
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "czech_relevance": "medium",
+      "melody4u_score": 5,
+      "marketing_angle": "gift for a racing fan before the weekend",
+      "why_selected": "Formula 1 is the top motorsport storyline after Czech/world tournament themes and main significant days.",
+      "aliases": [
+        "formula 1 austrian grand prix",
+        "f1 austrian grand prix",
+        "velká cena rakouska",
+        "spielberg"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "category": "motorsport",
+      "title": "MotoGP Velká cena České republiky – Brno",
+      "note": "Czech motorcycle racing theme for local fans. Keep it below Formula 1 and below Czech national team world-tournament matches.",
+      "priority": 4,
+      "source_priority": 6,
+      "generate_image": false,
+      "status": "backup",
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "czech_relevance": "high",
+      "melody4u_score": 4,
+      "marketing_angle": "weekend racing spirit for Czech motorcycle fans",
+      "why_selected": "MotoGP is relevant for Czech motorsport fans, but belongs after football, significant days, and Formula 1. Use as backup only if there are not enough primary image topics.",
+      "aliases": [
+        "motogp czech grand prix",
+        "motogp velká cena české republiky",
+        "brno"
+      ],
+      "backup_only": true
+    },
+    {
+      "date": "2026-06-26",
+      "category": "motorsport",
+      "title": "MotoGP Velká cena Nizozemska – Assen",
+      "note": "Major motorcycle racing weekend at Assen. Keep it below Formula 1 and after higher Czech-relevance items.",
+      "priority": 4,
+      "source_priority": 7,
+      "generate_image": false,
+      "status": "backup",
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "czech_relevance": "medium",
+      "melody4u_score": 4,
+      "marketing_angle": "weekend racing spirit for motorcycle fans",
+      "why_selected": "MotoGP Assen is an important motorcycle racing weekend, but it should stay near the end of the editorial order. Use as backup only if there are not enough primary image topics.",
+      "aliases": [
+        "motogp dutch tt",
+        "motogp netherlands grand prix",
+        "assen"
+      ],
+      "backup_only": true
+    }
+  ]
+}

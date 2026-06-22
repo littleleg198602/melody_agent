@@ -1,3 +1,6 @@
 .env
 node_modules/
 .DS_Store
+
+# Generated image binaries are uploaded as GitHub Actions artifacts, not committed.
+output/**/images/*.png

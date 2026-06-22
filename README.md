@@ -2,7 +2,7 @@
 
 A simple v1 Node.js agent that creates a weekly overview of social and sport events, converts those events into Melody4U-style image prompts, and optionally generates images for social media.
 
-The agent is local-to-repo: weekly JSON, prompt output, optional image manifests, optional PNG images, and logs are saved directly in this repository.
+The agent is local-to-repo for JSON/log outputs: weekly JSON, prompt output, image manifests, and logs are saved directly in this repository. Generated PNG image binaries are not committed; GitHub Actions uploads them as short-lived artifacts.
 
 ## Requirements
 
@@ -46,20 +46,27 @@ Image generation is disabled by default to control costs. The default is:
 GENERATE_IMAGES=false
 ```
 
-To generate paid images with the OpenAI Images API, set:
+To generate a paid test image with the OpenAI Images API, run the GitHub Action manually with:
 
-```env
-GENERATE_IMAGES=true
+```text
+generate_images=true
+max_images=1
+target_slug=fifa-world-cup-2026-czechia-vs-mexico
 ```
 
-Generated images must be reviewed before publishing. The v1 agent does not publish to TikTok, Instagram, Facebook, Google Sheets, Backblaze B2, Cloudflare R2, or any external storage.
+The scripts also support these environment variables locally: `GENERATE_IMAGES`, `MAX_IMAGES`, and `TARGET_SLUG`. If `TARGET_SLUG` is provided and no prompt item matches, the image step fails clearly. Generated images must be reviewed before publishing. The v1 agent does not publish to TikTok, Instagram, Facebook, Google Sheets, Backblaze B2, Cloudflare R2, or any external storage.
+
+
+## Melody4U visual style
+
+Generated prompts target a premium cinematic vertical social poster style, not a flat illustration. The desired look is a high-impact Facebook / TikTok / Instagram Reels campaign poster with neon purple, magenta and blue Melody4U energy, dramatic lighting, layered depth, bold mobile-readable typography, visible smartphone product/action anchor, and glowing music notes or sound waves. Prompts must avoid official logos, badges, real athlete faces, celebrity likenesses, exact trademarked identities, fake official branding, excessive text, and generic flat orange/vector poster styling.
 
 ## Output folders
 
 - `data/weekly/YYYY-Www.json` contains weekly overview data.
 - `output/YYYY-Www/prompts.json` contains generated image prompts.
 - `output/YYYY-Www/images.json` contains image-generation status.
-- `output/YYYY-Www/images/*.png` contains optional generated PNG files.
+- `output/YYYY-Www/images/*.png` contains optional generated PNG files locally during a run; PNG files are git-ignored and uploaded from GitHub Actions as artifacts named `melody4u-images-YYYY-Www` with 7-day retention.
 
 ## Logs
 
@@ -78,5 +85,7 @@ The log file is append-only and is committed back to the repository together wit
 ## Editorial and language policy
 
 The v1.2 editorial rules prioritize Czech-audience relevance: combined Czech national team world-tournament themes first, then main significant days, Formula 1, other major sports, and secondary significant days. Serious significant days are allowed and should use respectful or awareness tone rather than being skipped.
+
+In GitHub Actions, download generated PNG files from the completed workflow run page under **Artifacts**. JSON outputs remain committed to the repository; PNG files do not.
 
 Generated prompt items include `tone`, `event_origin`, `language_policy`, and `composition_type`. International significant days use bilingual Czech/English image text, Czech significant days use Czech text, and sport or motorsport content uses English text. Image generation remains disabled by default with `GENERATE_IMAGES=false`.
