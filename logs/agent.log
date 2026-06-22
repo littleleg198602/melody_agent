@@ -882,3 +882,37 @@
 [2026-06-22T13:56:55.368Z] [INFO] Created image manifest: output/2026-W26/images.json
 [2026-06-22T13:56:55.370Z] [INFO] Generate images finished successfully
 [2026-06-22T13:56:55.390Z] [INFO] Weekly agent finished successfully
+[2026-06-22T14:07:41.298Z] [INFO] Weekly agent started
+[2026-06-22T14:07:41.301Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-22T14:07:41.401Z] [INFO] Create weekly overview started
+[2026-06-22T14:07:41.405Z] [INFO] Calculated target week: 2026-W27, from 2026-06-29 to 2026-07-05
+[2026-06-22T14:07:41.406Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-06-22T14:07:53.975Z] [INFO] Overview generated_at set by script: 2026-06-22T14:07:53.974Z
+[2026-06-22T14:07:53.981Z] [INFO] Raw events returned: 4
+[2026-06-22T14:07:53.993Z] [INFO] Events after filtering: 4
+[2026-06-22T14:07:53.994Z] [INFO] Final selected event order: 1. Den slovanských věrozvěstů Cyrila a Metoděje | 1. Den upálení mistra Jana Husa | 3. British Grand Prix 2026 | 9. FIFA World Cup 2026 | Čtvrtfinále
+[2026-06-22T14:07:53.995Z] [INFO] Final selected tone values: Den slovanských věrozvěstů Cyrila a Metoděje: celebration | Den upálení mistra Jana Husa: respectful_memorial | British Grand Prix 2026: fan_hype | FIFA World Cup 2026 | Čtvrtfinále: fan_hype
+[2026-06-22T14:07:53.995Z] [INFO] Final selected language_policy values: Den slovanských věrozvěstů Cyrila a Metoděje: czech | Den upálení mistra Jana Husa: czech | British Grand Prix 2026: english | FIFA World Cup 2026 | Čtvrtfinále: english
+[2026-06-22T14:07:53.996Z] [INFO] Created weekly overview: data/weekly/2026-W27.json
+[2026-06-22T14:07:53.996Z] [INFO] Create weekly overview finished successfully
+[2026-06-22T14:07:54.050Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-22T14:07:54.147Z] [INFO] Generate image prompts started
+[2026-06-22T14:07:54.151Z] [INFO] Reading weekly overview: data/weekly/2026-W27.json
+[2026-06-22T14:07:54.153Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W27
+[2026-06-22T14:08:25.405Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Den slovanských věrozvěstů Cyrila a Metoděje", "date": "2026-07-05", "category": "significant_day", "tone": "celebration", "event_origin": "czech_significant_day", "language_policy": "czech", "composition_type": "seasonal_symbolic_scene", "text_on_image": "Den slovanských věrozvěstů Cyrila a Metoděje", "text_on_image_cs": "Den slovanských věrozvěstů Cyrila a Metoděje", "text_on_image_en": "", "image_prompt": "Create a premium cinematic social media campaign poster 
+[2026-06-22T14:08:25.408Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-06-22T14:08:25.409Z] [INFO] Prompts created_at set by script: 2026-06-22T14:08:25.408Z
+[2026-06-22T14:08:25.410Z] [INFO] Created image prompts: output/2026-W27/prompts.json
+[2026-06-22T14:08:25.411Z] [INFO] Generate image prompts finished successfully
+[2026-06-22T14:08:25.475Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-22T14:08:25.573Z] [INFO] Generate images started
+[2026-06-22T14:08:25.577Z] [INFO] Reading image prompts: output/2026-W27/prompts.json
+[2026-06-22T14:08:25.579Z] [INFO] Image generation controls: generate_images=true, max_images=1, target_slug=(none), selected=1
+[2026-06-22T14:08:25.580Z] [INFO] Generating image for Den slovanských věrozvěstů Cyrila a Metoděje
+[2026-06-22T14:08:59.712Z] [INFO] Generated image: output/2026-W27/images/den-slovanskych-verozvestu-cyrila-a-metodeje-2026.png
+[2026-06-22T14:08:59.712Z] [INFO] Skipping image for Den upálení mistra Jana Husa because it was not selected by TARGET_SLUG/MAX_IMAGES controls.
+[2026-06-22T14:08:59.713Z] [INFO] Skipping image for British Grand Prix 2026 because it was not selected by TARGET_SLUG/MAX_IMAGES controls.
+[2026-06-22T14:08:59.713Z] [INFO] Skipping image for FIFA World Cup 2026 | Čtvrtfinále because it was not selected by TARGET_SLUG/MAX_IMAGES controls.
+[2026-06-22T14:08:59.714Z] [INFO] Created image manifest: output/2026-W27/images.json
+[2026-06-22T14:08:59.714Z] [INFO] Generate images finished successfully
+[2026-06-22T14:08:59.720Z] [INFO] Weekly agent finished successfully
