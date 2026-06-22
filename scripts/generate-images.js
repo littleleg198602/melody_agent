@@ -108,7 +108,14 @@ async function main() {
           continue;
         }
         await logger.info(`Generating image for ${item.event_title}`);
-        const result = await client.images.generate({ model: process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1', prompt: item.image_prompt, size: '1024x1536' });
+        const imageModel = process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1';
+        const imageQuality = process.env.OPENAI_IMAGE_QUALITY || (imageModel === 'gpt-image-1' ? 'medium' : undefined);
+        const result = await client.images.generate({
+          model: imageModel,
+          prompt: item.image_prompt,
+          size: '1024x1536',
+          ...(imageQuality ? { quality: imageQuality } : {})
+        });
         const imageBase64 = result.data?.[0]?.b64_json;
         if (!imageBase64) throw new Error(`No image data returned for ${item.event_title}`);
         await writeBinaryFile(file, Buffer.from(imageBase64, 'base64'));

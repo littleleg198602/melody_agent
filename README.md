@@ -56,6 +56,11 @@ target_slug=fifa-world-cup-2026-czechia-vs-mexico
 
 The scripts also support these environment variables locally: `GENERATE_IMAGES`, `MAX_IMAGES`, and `TARGET_SLUG`. If `TARGET_SLUG` is provided and no prompt item matches, the image step fails clearly. Generated images must be reviewed before publishing. The v1 agent does not publish to TikTok, Instagram, Facebook, Google Sheets, Backblaze B2, Cloudflare R2, or any external storage.
 
+
+## Melody4U visual style
+
+Generated prompts target a premium cinematic vertical social poster style, not a flat illustration. The desired look is a high-impact Facebook / TikTok / Instagram Reels campaign poster with neon purple, magenta and blue Melody4U energy, dramatic lighting, layered depth, bold mobile-readable typography, visible smartphone product/action anchor, and glowing music notes or sound waves. Prompts must avoid official logos, badges, real athlete faces, celebrity likenesses, exact trademarked identities, fake official branding, excessive text, and generic flat orange/vector poster styling.
+
 ## Output folders
 
 - `data/weekly/YYYY-Www.json` contains weekly overview data.

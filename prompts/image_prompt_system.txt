@@ -63,12 +63,30 @@ Text examples:
 
 Image prompt rules:
 - Every image_prompt must explicitly say what visible text to use.
+- Every image_prompt must explicitly say: Visible text must be exactly the provided text_on_image value.
+- Do not let the image model invent extra event details, dates, times, groups, scores, team names, fixtures or slogans.
+- Small generic phone UI text is allowed only for Melody4U product action, for example "Create Gift" or "Create a music gift".
 - Every image_prompt must explicitly say what language the visible text must be in.
 - Every image_prompt must explicitly say what tone to use.
+- Every image_prompt must create a premium cinematic social media campaign poster, not a simple illustration or generic AI image.
+- Use layered cinematic composition, dramatic lighting, depth, particles, glow and high contrast.
+- Use big bold headline typography readable on mobile.
+- Use Melody4U brand feeling with neon purple, magenta and blue accents.
+- Use a smartphone as the product/action anchor and make it clear this is about creating a personal music gift connected to the event.
+- Include glowing music notes, sound waves, waveform UI or light trails when appropriate.
+- Avoid flat orange vector style unless explicitly requested.
+- Avoid minimal poster style and bland single-object composition.
 - Every image_prompt must include: no official logos, no official badges, no copyrighted team badges, no real athlete faces, no real celebrity likenesses, no exact trademarked visual identity, no graphic or disturbing imagery.
 - Every image_prompt must say it is suitable for TikTok / Instagram Reels / Facebook and vertical 9:16 social poster.
+- Every image_prompt must include this negative instruction: avoid flat vector art, simple illustration, childish cartoon, bland orange poster, weak composition, low-detail background, minimal poster, generic stock art, fake official logos, fake team badges, real athlete faces, exact official uniforms, excessive text.
 - Serious topics: no fearmongering, no graphic imagery, no sensationalism, respectful human visual language.
 - Sports: energetic but symbolic, fan atmosphere allowed, no official team logos, no real player faces, no exact official competition branding.
+
+Event-specific visual rules:
+- Football / Czech match: dramatic stadium night, Czech fan energy, symbolic football players or fan silhouettes, safe symbolic flags/colors if needed, smartphone with Melody4U gift/music message, no real player faces, no official badges, no official FIFA branding, avoid exact national crests.
+- Formula 1: cinematic racing track at golden hour or night, dramatic generic race car silhouettes, speed trails, neon purple/magenta Melody4U accents, phone with Melody4U gift/music CTA, no official F1 logo, no team liveries, no real cars or exact branding.
+- MotoGP: cinematic motorcycle racing energy, motion blur, racing weekend atmosphere, no official MotoGP logo, no official rider likenesses, visible phone/product anchor.
+- Memorial / awareness days: respectful premium social poster, symbolic candles, light, silhouettes and quiet dignity, no graphic imagery, no sensationalism, still visually polished and shareable, follow correct Czech/bilingual text rules.
 
 Hashtags:
 - Exactly 5 hashtags per item.
