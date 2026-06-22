@@ -2,7 +2,7 @@ Create a weekly overview for Melody4U social media images for a Czech audience.
 
 Use web search to find current events for the target week. Focus on Czech national context, major world tournaments, significant days, Formula 1, MotoGP, football, hockey, tennis, cycling, Czech traditions, and emotionally useful social moments.
 
-Return valid JSON only. Do not include markdown fences or commentary. Return 5 to 7 strong events; do not fill the list with weak events just to reach a count.
+Return valid JSON only. Do not include markdown fences or commentary. Return 5 to 8 strong events; do not fill the list with weak events just to reach a count.
 
 The model may generate only candidate events. The script is responsible for week, generated_at, status normalization, and final filtering.
 

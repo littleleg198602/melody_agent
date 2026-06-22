@@ -356,3 +356,478 @@
 [2026-06-21T17:50:43.863Z] [INFO] Created image manifest: output/2026-W26/images.json
 [2026-06-21T17:50:43.864Z] [INFO] Generate images finished successfully
 [2026-06-21T17:50:43.868Z] [INFO] Weekly agent finished successfully
+[2026-06-21T19:06:22.444Z] [INFO] Create weekly overview started
+[2026-06-21T19:06:22.451Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:06:22.452Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:06:22.453Z] [INFO] Overview generated_at set by script: 2026-06-21T19:06:22.453Z
+[2026-06-21T19:06:22.455Z] [INFO] Raw events returned: 7
+[2026-06-21T19:06:22.466Z] [INFO] Events after filtering: 7
+[2026-06-21T19:06:22.467Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 4. MotoGP Dutch TT Assen | 5. Wimbledon qualification | 6. St. John’s Day / Jan / midsummer mood
+[2026-06-21T19:06:22.468Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype | St. John’s Day / Jan / midsummer mood: celebration
+[2026-06-21T19:06:22.469Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english | St. John’s Day / Jan / midsummer mood: czech
+[2026-06-21T19:06:22.470Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:06:22.471Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:06:22.914Z] [INFO] Generate image prompts started
+[2026-06-21T19:06:22.922Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:06:22.923Z] [INFO] Found 7 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:06:22.924Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:06:22.927Z] [INFO] Prompt count after validation: 7
+[2026-06-21T19:06:22.928Z] [INFO] Prompts created_at set by script: 2026-06-21T19:06:22.927Z
+[2026-06-21T19:06:22.930Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:06:22.931Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:06:23.373Z] [INFO] Generate images started
+[2026-06-21T19:06:23.392Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:06:23.401Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:06:23.402Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:06:23.404Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:06:23.406Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:06:23.406Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:06:23.407Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:06:23.408Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:06:23.408Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:06:23.410Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:06:23.410Z] [INFO] Generate images finished successfully
+[2026-06-21T19:11:09.773Z] [INFO] Create weekly overview started
+[2026-06-21T19:11:09.781Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:11:09.782Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:11:09.783Z] [INFO] Overview generated_at set by script: 2026-06-21T19:11:09.783Z
+[2026-06-21T19:11:09.786Z] [INFO] Raw events returned: 7
+[2026-06-21T19:11:09.796Z] [INFO] Events after filtering: 7
+[2026-06-21T19:11:09.797Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 3. MotoGP Dutch TT Assen | 5. Wimbledon qualification | 6. St. John’s Day / Jan / midsummer mood
+[2026-06-21T19:11:09.798Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype | St. John’s Day / Jan / midsummer mood: celebration
+[2026-06-21T19:11:09.799Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english | St. John’s Day / Jan / midsummer mood: czech
+[2026-06-21T19:11:09.801Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:11:09.802Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:11:10.258Z] [INFO] Generate image prompts started
+[2026-06-21T19:11:10.266Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:11:10.267Z] [INFO] Found 7 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:11:10.269Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:11:10.271Z] [INFO] Prompt count after validation: 7
+[2026-06-21T19:11:10.272Z] [INFO] Prompts created_at set by script: 2026-06-21T19:11:10.271Z
+[2026-06-21T19:11:10.273Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:11:10.274Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:11:10.729Z] [INFO] Generate images started
+[2026-06-21T19:11:10.739Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:11:10.741Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:11:10.741Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:11:10.742Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:11:10.743Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:11:10.744Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:11:10.746Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:11:10.747Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:11:10.747Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:11:10.749Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:11:10.749Z] [INFO] Generate images finished successfully
+[2026-06-21T19:11:27.886Z] [INFO] Create weekly overview started
+[2026-06-21T19:11:27.892Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:11:27.893Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:11:27.894Z] [INFO] Overview generated_at set by script: 2026-06-21T19:11:27.893Z
+[2026-06-21T19:11:27.896Z] [INFO] Raw events returned: 7
+[2026-06-21T19:11:27.905Z] [INFO] Events after filtering: 7
+[2026-06-21T19:11:27.905Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 4. MotoGP Dutch TT Assen | 5. Wimbledon qualification | 6. St. John’s Day / Jan / midsummer mood
+[2026-06-21T19:11:27.906Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype | St. John’s Day / Jan / midsummer mood: celebration
+[2026-06-21T19:11:27.906Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english | St. John’s Day / Jan / midsummer mood: czech
+[2026-06-21T19:11:27.907Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:11:27.907Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:11:37.571Z] [INFO] Generate image prompts started
+[2026-06-21T19:11:37.578Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:11:37.579Z] [INFO] Found 7 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:11:37.580Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:11:37.583Z] [INFO] Prompt count after validation: 7
+[2026-06-21T19:11:37.584Z] [INFO] Prompts created_at set by script: 2026-06-21T19:11:37.583Z
+[2026-06-21T19:11:37.585Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:11:37.586Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:11:38.002Z] [INFO] Generate images started
+[2026-06-21T19:11:38.009Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:11:38.010Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:11:38.011Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:11:38.011Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:11:38.011Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:11:38.012Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:11:38.012Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:11:38.013Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:11:38.013Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:11:38.014Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:11:38.014Z] [INFO] Generate images finished successfully
+[2026-06-21T19:20:35.742Z] [INFO] Create weekly overview started
+[2026-06-21T19:20:35.751Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:20:35.752Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:20:35.753Z] [INFO] Overview generated_at set by script: 2026-06-21T19:20:35.753Z
+[2026-06-21T19:20:35.755Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:20:35.757Z] [INFO] Raw events returned: 7
+[2026-06-21T19:20:35.768Z] [INFO] Events after filtering: 7
+[2026-06-21T19:20:35.768Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 4. MotoGP Dutch TT Assen | 5. Wimbledon qualification | 6. St. John’s Day / Jan / midsummer mood
+[2026-06-21T19:20:35.769Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype | St. John’s Day / Jan / midsummer mood: celebration
+[2026-06-21T19:20:35.770Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english | St. John’s Day / Jan / midsummer mood: czech
+[2026-06-21T19:20:35.772Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:20:35.772Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:20:36.203Z] [INFO] Generate image prompts started
+[2026-06-21T19:20:36.210Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:20:36.211Z] [INFO] Found 7 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:20:36.211Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:20:36.213Z] [INFO] Prompt count after validation: 7
+[2026-06-21T19:20:36.214Z] [INFO] Prompts created_at set by script: 2026-06-21T19:20:36.213Z
+[2026-06-21T19:20:36.215Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:20:36.215Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:20:36.662Z] [INFO] Generate images started
+[2026-06-21T19:20:36.669Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:20:36.670Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:20:36.670Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:20:36.671Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:20:36.671Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:20:36.671Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:20:36.672Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:20:36.672Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:20:36.673Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:20:36.674Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:20:36.674Z] [INFO] Generate images finished successfully
+[2026-06-21T19:21:43.176Z] [INFO] Create weekly overview started
+[2026-06-21T19:21:43.182Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:21:43.183Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:21:43.184Z] [INFO] Overview generated_at set by script: 2026-06-21T19:21:43.184Z
+[2026-06-21T19:21:43.185Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:21:43.187Z] [INFO] Raw events returned: 7
+[2026-06-21T19:21:43.200Z] [INFO] Events after filtering: 7
+[2026-06-21T19:21:43.201Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 4. MotoGP Dutch TT Assen | 5. Wimbledon qualification | 6. St. John’s Day / Jan / midsummer mood
+[2026-06-21T19:21:43.202Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype | St. John’s Day / Jan / midsummer mood: celebration
+[2026-06-21T19:21:43.203Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english | St. John’s Day / Jan / midsummer mood: czech
+[2026-06-21T19:21:43.205Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:21:43.206Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:21:43.636Z] [INFO] Generate image prompts started
+[2026-06-21T19:21:43.643Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:21:43.645Z] [INFO] Found 7 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:21:43.645Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:21:43.648Z] [INFO] Prompt count after validation: 7
+[2026-06-21T19:21:43.649Z] [INFO] Prompts created_at set by script: 2026-06-21T19:21:43.648Z
+[2026-06-21T19:21:43.650Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:21:43.651Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:21:44.097Z] [INFO] Generate images started
+[2026-06-21T19:21:44.104Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:21:44.105Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:21:44.105Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:21:44.106Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:21:44.106Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:21:44.106Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:21:44.107Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:21:44.107Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:21:44.107Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:21:44.108Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:21:44.109Z] [INFO] Generate images finished successfully
+[2026-06-21T19:29:54.727Z] [INFO] Create weekly overview started
+[2026-06-21T19:29:54.734Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:29:54.735Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:29:54.736Z] [INFO] Overview generated_at set by script: 2026-06-21T19:29:54.736Z
+[2026-06-21T19:29:54.737Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T19:29:54.739Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:29:54.741Z] [INFO] Raw events returned: 7
+[2026-06-21T19:29:54.751Z] [INFO] Events after filtering: 7
+[2026-06-21T19:29:54.752Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 4. MotoGP Dutch TT Assen | 5. Wimbledon qualification | 6. St. John’s Day / Jan / midsummer mood
+[2026-06-21T19:29:54.753Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype | St. John’s Day / Jan / midsummer mood: celebration
+[2026-06-21T19:29:54.753Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english | St. John’s Day / Jan / midsummer mood: czech
+[2026-06-21T19:29:54.755Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:29:54.755Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:29:55.176Z] [INFO] Generate image prompts started
+[2026-06-21T19:29:55.182Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:29:55.183Z] [INFO] Found 7 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:29:55.184Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:29:55.186Z] [INFO] Prompt count after validation: 7
+[2026-06-21T19:29:55.187Z] [INFO] Prompts created_at set by script: 2026-06-21T19:29:55.186Z
+[2026-06-21T19:29:55.187Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:29:55.188Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:29:55.661Z] [INFO] Generate images started
+[2026-06-21T19:29:55.669Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:29:55.671Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:29:55.671Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:29:55.672Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:29:55.673Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:29:55.673Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:29:55.674Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:29:55.675Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:29:55.676Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:29:55.677Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:29:55.678Z] [INFO] Generate images finished successfully
+[2026-06-21T19:41:07.547Z] [INFO] Create weekly overview started
+[2026-06-21T19:41:07.552Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:41:07.553Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:41:07.553Z] [INFO] Overview generated_at set by script: 2026-06-21T19:41:07.553Z
+[2026-06-21T19:41:07.554Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T19:41:07.555Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen | Začátek léta – letní slunovrat
+[2026-06-21T19:41:07.556Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:41:07.559Z] [INFO] Raw events returned: 9
+[2026-06-21T19:41:07.568Z] [INFO] Events after filtering: 8
+[2026-06-21T19:41:07.569Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 4. MotoGP Dutch TT Assen | 5. Wimbledon qualification | 6. St. John’s Day / Jan / midsummer mood | 6. MotoGP Velká cena České republiky – Brno
+[2026-06-21T19:41:07.569Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype | St. John’s Day / Jan / midsummer mood: celebration | MotoGP Velká cena České republiky – Brno: fan_hype
+[2026-06-21T19:41:07.570Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english | St. John’s Day / Jan / midsummer mood: czech | MotoGP Velká cena České republiky – Brno: english
+[2026-06-21T19:41:07.571Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:41:07.571Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:41:07.987Z] [INFO] Generate image prompts started
+[2026-06-21T19:41:07.993Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:41:07.995Z] [INFO] Found 8 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:41:07.996Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:41:07.998Z] [INFO] Prompt count after validation: 8
+[2026-06-21T19:41:07.999Z] [INFO] Prompts created_at set by script: 2026-06-21T19:41:07.998Z
+[2026-06-21T19:41:08.000Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:41:08.001Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:41:08.448Z] [INFO] Generate images started
+[2026-06-21T19:41:08.455Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:41:08.456Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:41:08.456Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:41:08.456Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:41:08.457Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:41:08.457Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:41:08.458Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:41:08.458Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:41:08.459Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:41:08.459Z] [INFO] Dry run: would generate image for MotoGP Velká cena České republiky – Brno at output/2026-W26/images/motogp-velka-cena-ceske-republiky-brno.png
+[2026-06-21T19:41:08.460Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:41:08.461Z] [INFO] Generate images finished successfully
+[2026-06-21T19:41:58.849Z] [INFO] Create weekly overview started
+[2026-06-21T19:41:58.854Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:41:58.856Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:41:58.857Z] [INFO] Overview generated_at set by script: 2026-06-21T19:41:58.857Z
+[2026-06-21T19:41:58.859Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T19:41:58.860Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen | Začátek léta – letní slunovrat
+[2026-06-21T19:41:58.862Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:41:58.864Z] [INFO] Raw events returned: 9
+[2026-06-21T19:41:58.874Z] [INFO] Events after filtering: 8
+[2026-06-21T19:41:58.875Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 7. Začátek léta – letní slunovrat | 8. MotoGP Velká cena České republiky – Brno | 8. MotoGP Dutch TT Assen | 9. Wimbledon qualification
+[2026-06-21T19:41:58.876Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | Začátek léta – letní slunovrat: celebration | MotoGP Velká cena České republiky – Brno: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype
+[2026-06-21T19:41:58.877Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | Začátek léta – letní slunovrat: czech | MotoGP Velká cena České republiky – Brno: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english
+[2026-06-21T19:41:58.878Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:41:58.879Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:41:59.287Z] [INFO] Generate image prompts started
+[2026-06-21T19:41:59.295Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:41:59.296Z] [INFO] Found 8 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:41:59.297Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:41:59.299Z] [INFO] Prompt count after validation: 8
+[2026-06-21T19:41:59.300Z] [INFO] Prompts created_at set by script: 2026-06-21T19:41:59.299Z
+[2026-06-21T19:41:59.301Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:41:59.302Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:41:59.732Z] [INFO] Generate images started
+[2026-06-21T19:41:59.739Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:41:59.740Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:41:59.740Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:41:59.741Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:41:59.741Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:41:59.741Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:41:59.741Z] [INFO] Dry run: would generate image for Začátek léta – letní slunovrat at output/2026-W26/images/zacatek-leta-letni-slunovrat.png
+[2026-06-21T19:41:59.742Z] [INFO] Dry run: would generate image for MotoGP Velká cena České republiky – Brno at output/2026-W26/images/motogp-velka-cena-ceske-republiky-brno.png
+[2026-06-21T19:41:59.742Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:41:59.743Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T19:41:59.743Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:41:59.744Z] [INFO] Generate images finished successfully
+[2026-06-21T19:42:30.570Z] [INFO] Create weekly overview started
+[2026-06-21T19:42:30.576Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:42:30.577Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:42:30.577Z] [INFO] Overview generated_at set by script: 2026-06-21T19:42:30.577Z
+[2026-06-21T19:42:30.578Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T19:42:30.579Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen | Začátek léta – letní slunovrat
+[2026-06-21T19:42:30.580Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:42:30.582Z] [INFO] Raw events returned: 9
+[2026-06-21T19:42:30.593Z] [INFO] Events after filtering: 8
+[2026-06-21T19:42:30.593Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 6. St. John’s Day / Jan / midsummer mood | 7. Začátek léta – letní slunovrat | 8. MotoGP Velká cena České republiky – Brno | 8. MotoGP Dutch TT Assen
+[2026-06-21T19:42:30.594Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | St. John’s Day / Jan / midsummer mood: celebration | Začátek léta – letní slunovrat: celebration | MotoGP Velká cena České republiky – Brno: fan_hype | MotoGP Dutch TT Assen: fan_hype
+[2026-06-21T19:42:30.594Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | St. John’s Day / Jan / midsummer mood: czech | Začátek léta – letní slunovrat: czech | MotoGP Velká cena České republiky – Brno: english | MotoGP Dutch TT Assen: english
+[2026-06-21T19:42:30.595Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:42:30.595Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:42:41.632Z] [INFO] Generate image prompts started
+[2026-06-21T19:42:41.642Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:42:41.644Z] [INFO] Found 8 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:42:41.645Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:42:41.648Z] [INFO] Prompt count after validation: 8
+[2026-06-21T19:42:41.648Z] [INFO] Prompts created_at set by script: 2026-06-21T19:42:41.647Z
+[2026-06-21T19:42:41.650Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:42:41.651Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:42:42.165Z] [INFO] Generate images started
+[2026-06-21T19:42:42.173Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:42:42.175Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:42:42.176Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:42:42.176Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:42:42.177Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:42:42.178Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:42:42.179Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:42:42.180Z] [INFO] Dry run: would generate image for Začátek léta – letní slunovrat at output/2026-W26/images/zacatek-leta-letni-slunovrat.png
+[2026-06-21T19:42:42.181Z] [INFO] Dry run: would generate image for MotoGP Velká cena České republiky – Brno at output/2026-W26/images/motogp-velka-cena-ceske-republiky-brno.png
+[2026-06-21T19:42:42.182Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:42:42.183Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:42:42.184Z] [INFO] Generate images finished successfully
+[2026-06-21T19:53:48.102Z] [INFO] Create weekly overview started
+[2026-06-21T19:53:48.108Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:53:48.109Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:53:48.110Z] [INFO] Overview generated_at set by script: 2026-06-21T19:53:48.110Z
+[2026-06-21T19:53:48.111Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T19:53:48.112Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen | Začátek léta – letní slunovrat
+[2026-06-21T19:53:48.113Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:53:48.116Z] [INFO] Raw events returned: 9
+[2026-06-21T19:53:48.125Z] [INFO] Events after filtering: 8
+[2026-06-21T19:53:48.126Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 6. St. John’s Day / Jan / midsummer mood | 7. Začátek léta – letní slunovrat | 8. MotoGP Velká cena České republiky – Brno | 8. MotoGP Dutch TT Assen
+[2026-06-21T19:53:48.127Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | St. John’s Day / Jan / midsummer mood: celebration | Začátek léta – letní slunovrat: celebration | MotoGP Velká cena České republiky – Brno: fan_hype | MotoGP Dutch TT Assen: fan_hype
+[2026-06-21T19:53:48.127Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | St. John’s Day / Jan / midsummer mood: czech | Začátek léta – letní slunovrat: czech | MotoGP Velká cena České republiky – Brno: english | MotoGP Dutch TT Assen: english
+[2026-06-21T19:53:48.129Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:53:48.129Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:53:48.559Z] [INFO] Generate image prompts started
+[2026-06-21T19:53:48.566Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:53:48.568Z] [INFO] Found 8 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:53:48.569Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:53:48.571Z] [INFO] Prompt count after validation: 8
+[2026-06-21T19:53:48.572Z] [INFO] Prompts created_at set by script: 2026-06-21T19:53:48.571Z
+[2026-06-21T19:53:48.573Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:53:48.574Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:53:49.024Z] [INFO] Generate images started
+[2026-06-21T19:53:49.032Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:53:49.034Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:53:49.034Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:53:49.035Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:53:49.035Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:53:49.036Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:53:49.037Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:53:49.038Z] [INFO] Dry run: would generate image for Začátek léta – letní slunovrat at output/2026-W26/images/zacatek-leta-letni-slunovrat.png
+[2026-06-21T19:53:49.039Z] [INFO] Dry run: would generate image for MotoGP Velká cena České republiky – Brno at output/2026-W26/images/motogp-velka-cena-ceske-republiky-brno.png
+[2026-06-21T19:53:49.040Z] [INFO] Dry run: would generate image for MotoGP Dutch TT Assen at output/2026-W26/images/motogp-dutch-tt-assen.png
+[2026-06-21T19:53:49.041Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:53:49.042Z] [INFO] Generate images finished successfully
+[2026-06-21T19:59:49.408Z] [INFO] Create weekly overview started
+[2026-06-21T19:59:49.415Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T19:59:49.416Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T19:59:49.416Z] [INFO] Overview generated_at set by script: 2026-06-21T19:59:49.416Z
+[2026-06-21T19:59:49.418Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T19:59:49.419Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen | Začátek léta – letní slunovrat
+[2026-06-21T19:59:49.421Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T19:59:49.424Z] [INFO] Raw events returned: 9
+[2026-06-21T19:59:49.434Z] [INFO] Events after filtering: 8
+[2026-06-21T19:59:49.435Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 6. St. John’s Day / Jan / midsummer mood | 7. Začátek léta – letní slunovrat | 8. MotoGP Velká cena České republiky – Brno | 8. MotoGP Dutch TT Assen
+[2026-06-21T19:59:49.435Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | St. John’s Day / Jan / midsummer mood: celebration | Začátek léta – letní slunovrat: celebration | MotoGP Velká cena České republiky – Brno: fan_hype | MotoGP Dutch TT Assen: fan_hype
+[2026-06-21T19:59:49.436Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | St. John’s Day / Jan / midsummer mood: czech | Začátek léta – letní slunovrat: czech | MotoGP Velká cena České republiky – Brno: english | MotoGP Dutch TT Assen: english
+[2026-06-21T19:59:49.438Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:59:49.439Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T19:59:49.863Z] [INFO] Generate image prompts started
+[2026-06-21T19:59:49.870Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T19:59:49.871Z] [INFO] Found 6 waiting events with generate_image=true for 2026-W26
+[2026-06-21T19:59:49.873Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T19:59:49.875Z] [INFO] Prompt count after validation: 6
+[2026-06-21T19:59:49.876Z] [INFO] Prompts created_at set by script: 2026-06-21T19:59:49.875Z
+[2026-06-21T19:59:49.877Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:59:49.878Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T19:59:50.336Z] [INFO] Generate images started
+[2026-06-21T19:59:50.344Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T19:59:50.347Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T19:59:50.347Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T19:59:50.348Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T19:59:50.348Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T19:59:50.349Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T19:59:50.350Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T19:59:50.350Z] [INFO] Dry run: would generate image for Začátek léta – letní slunovrat at output/2026-W26/images/zacatek-leta-letni-slunovrat.png
+[2026-06-21T19:59:50.351Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T19:59:50.352Z] [INFO] Generate images finished successfully
+[2026-06-21T20:09:15.740Z] [INFO] Create weekly overview started
+[2026-06-21T20:09:15.746Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T20:09:15.747Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T20:09:15.748Z] [INFO] Overview generated_at set by script: 2026-06-21T20:09:15.748Z
+[2026-06-21T20:09:15.750Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T20:09:15.751Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen
+[2026-06-21T20:09:15.753Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T20:09:15.756Z] [INFO] Raw events returned: 8
+[2026-06-21T20:09:15.767Z] [INFO] Events after filtering: 8
+[2026-06-21T20:09:15.768Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 6. St. John’s Day / Jan / midsummer mood | 8. MotoGP Velká cena České republiky – Brno | 8. MotoGP Dutch TT Assen | 9. Wimbledon qualification
+[2026-06-21T20:09:15.769Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | St. John’s Day / Jan / midsummer mood: celebration | MotoGP Velká cena České republiky – Brno: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype
+[2026-06-21T20:09:15.769Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | St. John’s Day / Jan / midsummer mood: czech | MotoGP Velká cena České republiky – Brno: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english
+[2026-06-21T20:09:15.771Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:09:15.771Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T20:09:16.188Z] [INFO] Generate image prompts started
+[2026-06-21T20:09:16.194Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:09:16.196Z] [INFO] Found 6 waiting events with generate_image=true for 2026-W26
+[2026-06-21T20:09:16.197Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T20:09:16.200Z] [INFO] Prompt count after validation and image-topic filtering: 6
+[2026-06-21T20:09:16.200Z] [INFO] Prompts created_at set by script: 2026-06-21T20:09:16.200Z
+[2026-06-21T20:09:16.202Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:09:16.202Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T20:09:16.665Z] [INFO] Generate images started
+[2026-06-21T20:09:16.678Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:09:16.680Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T20:09:16.681Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T20:09:16.681Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T20:09:16.682Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T20:09:16.683Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T20:09:16.683Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T20:09:16.684Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T20:09:16.685Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T20:09:16.686Z] [INFO] Generate images finished successfully
+[2026-06-21T20:27:05.074Z] [INFO] Create weekly overview started
+[2026-06-21T20:27:05.080Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T20:27:05.081Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T20:27:05.082Z] [INFO] Overview generated_at set by script: 2026-06-21T20:27:05.082Z
+[2026-06-21T20:27:05.084Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T20:27:05.085Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen
+[2026-06-21T20:27:05.087Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T20:27:05.090Z] [INFO] Raw events returned: 8
+[2026-06-21T20:27:05.100Z] [INFO] Events after filtering: 8
+[2026-06-21T20:27:05.102Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 + Czech Republic vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 6. St. John’s Day / Jan / midsummer mood | 8. MotoGP Velká cena České republiky – Brno | 8. MotoGP Dutch TT Assen | 9. Wimbledon qualification
+[2026-06-21T20:27:05.102Z] [INFO] Final selected tone values: FIFA World Cup 2026 + Czech Republic vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | St. John’s Day / Jan / midsummer mood: celebration | MotoGP Velká cena České republiky – Brno: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype
+[2026-06-21T20:27:05.103Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 + Czech Republic vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | St. John’s Day / Jan / midsummer mood: czech | MotoGP Velká cena České republiky – Brno: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english
+[2026-06-21T20:27:05.105Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:27:05.105Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T20:27:05.515Z] [INFO] Generate image prompts started
+[2026-06-21T20:27:05.522Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:27:05.524Z] [INFO] Found 6 waiting events with generate_image=true for 2026-W26
+[2026-06-21T20:27:05.524Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T20:27:05.527Z] [INFO] Prompt count after validation and image-topic filtering: 6
+[2026-06-21T20:27:05.527Z] [INFO] Prompts created_at set by script: 2026-06-21T20:27:05.526Z
+[2026-06-21T20:27:05.528Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:27:05.529Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T20:27:05.953Z] [INFO] Generate images started
+[2026-06-21T20:27:05.961Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:27:05.963Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T20:27:05.963Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 + Czech Republic vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czech-republic-vs-mexico.png
+[2026-06-21T20:27:05.964Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T20:27:05.965Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T20:27:05.966Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T20:27:05.967Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T20:27:05.969Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T20:27:05.970Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T20:27:05.971Z] [INFO] Generate images finished successfully
+[2026-06-21T20:46:50.811Z] [INFO] Create weekly overview started
+[2026-06-21T20:46:50.819Z] [INFO] Calculated target week: 2026-W26, from 2026-06-22 to 2026-06-28
+[2026-06-21T20:46:50.820Z] [WARN] Selected source mode: deterministic local fallback because OPENAI_API_KEY is missing.
+[2026-06-21T20:46:50.821Z] [INFO] Overview generated_at set by script: 2026-06-21T20:46:50.821Z
+[2026-06-21T20:46:50.823Z] [INFO] Calendar Czech national-team fixture candidates for 2026-W26: FIFA World Cup 2026: Czechia vs Mexico
+[2026-06-21T20:46:50.825Z] [INFO] Calendar priority-event candidates for 2026-W26: F1 Velká cena Rakouska – Spielberg | MotoGP Velká cena České republiky – Brno | MotoGP Velká cena Nizozemska – Assen
+[2026-06-21T20:46:50.826Z] [INFO] Calendar significant-day candidates for 2026-W26: St. John’s Day / Jan / midsummer mood | International Day Against Drug Abuse and Illicit Trafficking | Memorial Day for Victims of the Communist Regime / Political Prisoners
+[2026-06-21T20:46:50.831Z] [INFO] Raw events returned: 8
+[2026-06-21T20:46:50.844Z] [INFO] Events after filtering: 8
+[2026-06-21T20:46:50.845Z] [INFO] Final selected event order: 1. FIFA World Cup 2026: Czechia vs Mexico | 2. International Day Against Drug Abuse and Illicit Trafficking | 2. Memorial Day for Victims of the Communist Regime / Political Prisoners | 3. Formula 1 Austrian Grand Prix | 6. St. John’s Day / Jan / midsummer mood | 8. MotoGP Velká cena České republiky – Brno | 8. MotoGP Dutch TT Assen | 9. Wimbledon qualification
+[2026-06-21T20:46:50.846Z] [INFO] Final selected tone values: FIFA World Cup 2026: Czechia vs Mexico: fan_hype | International Day Against Drug Abuse and Illicit Trafficking: awareness | Memorial Day for Victims of the Communist Regime / Political Prisoners: respectful_memorial | Formula 1 Austrian Grand Prix: fan_hype | St. John’s Day / Jan / midsummer mood: celebration | MotoGP Velká cena České republiky – Brno: fan_hype | MotoGP Dutch TT Assen: fan_hype | Wimbledon qualification: fan_hype
+[2026-06-21T20:46:50.847Z] [INFO] Final selected language_policy values: FIFA World Cup 2026: Czechia vs Mexico: english | International Day Against Drug Abuse and Illicit Trafficking: bilingual_cs_en | Memorial Day for Victims of the Communist Regime / Political Prisoners: czech | Formula 1 Austrian Grand Prix: english | St. John’s Day / Jan / midsummer mood: czech | MotoGP Velká cena České republiky – Brno: english | MotoGP Dutch TT Assen: english | Wimbledon qualification: english
+[2026-06-21T20:46:50.848Z] [INFO] Created weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:46:50.849Z] [INFO] Create weekly overview finished successfully
+[2026-06-21T20:46:51.470Z] [INFO] Generate image prompts started
+[2026-06-21T20:46:51.481Z] [INFO] Reading weekly overview: data/weekly/2026-W26.json
+[2026-06-21T20:46:51.484Z] [INFO] Found 6 waiting events with generate_image=true for 2026-W26
+[2026-06-21T20:46:51.485Z] [WARN] OPENAI_API_KEY is missing; using deterministic local fallback image prompts for testing.
+[2026-06-21T20:46:51.489Z] [INFO] Prompt count after validation and image-topic filtering: 6
+[2026-06-21T20:46:51.490Z] [INFO] Prompts created_at set by script: 2026-06-21T20:46:51.488Z
+[2026-06-21T20:46:51.491Z] [INFO] Created image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:46:51.492Z] [INFO] Generate image prompts finished successfully
+[2026-06-21T20:46:52.099Z] [INFO] Generate images started
+[2026-06-21T20:46:52.108Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:46:52.111Z] [INFO] Image generation controls: generate_images=false, max_images=unlimited, target_slug=(none), selected=6
+[2026-06-21T20:46:52.112Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T20:46:52.113Z] [INFO] Dry run: would generate image for FIFA World Cup 2026: Czechia vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czechia-vs-mexico.png
+[2026-06-21T20:46:52.114Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T20:46:52.115Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T20:46:52.115Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T20:46:52.116Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T20:46:52.117Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T20:46:52.118Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T20:46:52.119Z] [INFO] Generate images finished successfully
+[2026-06-21T20:47:12.634Z] [INFO] Generate images started
+[2026-06-21T20:47:12.644Z] [INFO] Reading image prompts: output/2026-W26/prompts.json
+[2026-06-21T20:47:12.647Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=fifa-world-cup-2026-czechia-vs-mexico, selected=1
+[2026-06-21T20:47:12.648Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-21T20:47:12.649Z] [INFO] Dry run: would generate image for FIFA World Cup 2026: Czechia vs Mexico at output/2026-W26/images/fifa-world-cup-2026-czechia-vs-mexico.png
+[2026-06-21T20:47:12.650Z] [INFO] Dry run: would generate image for International Day Against Drug Abuse and Illicit Trafficking at output/2026-W26/images/international-day-against-drug-abuse-and-illicit-trafficking.png
+[2026-06-21T20:47:12.651Z] [INFO] Dry run: would generate image for Memorial Day for Victims of the Communist Regime / Political Prisoners at output/2026-W26/images/memorial-day-for-victims-of-the-communist-regime-political-prisoners.png
+[2026-06-21T20:47:12.652Z] [INFO] Dry run: would generate image for Formula 1 Austrian Grand Prix at output/2026-W26/images/formula-1-austrian-grand-prix.png
+[2026-06-21T20:47:12.653Z] [INFO] Dry run: would generate image for St. John’s Day / Jan / midsummer mood at output/2026-W26/images/st-john-s-day-jan-midsummer-mood.png
+[2026-06-21T20:47:12.654Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
+[2026-06-21T20:47:12.655Z] [INFO] Created image manifest: output/2026-W26/images.json
+[2026-06-21T20:47:12.656Z] [INFO] Generate images finished successfully
