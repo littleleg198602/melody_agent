@@ -44,6 +44,35 @@ function filterManifestPromptItems(items, target) {
   });
 }
 
+
+function parseGenerateImages() {
+  return String(process.env.GENERATE_IMAGES ?? '').toLowerCase() === 'true';
+}
+
+function parseMaxImages(generateImages) {
+  const parsed = Number.parseInt(process.env.MAX_IMAGES ?? '', 10);
+  if (Number.isInteger(parsed) && parsed > 0) return parsed;
+  return generateImages ? 1 : Number.POSITIVE_INFINITY;
+}
+
+function applyGenerationControls(items, { generateImages, maxImages, targetSlug }) {
+  if (targetSlug) {
+    const match = items.find((item) => item.slug === targetSlug);
+    if (!match) throw new Error(`TARGET_SLUG was provided but no prompt item matched: ${targetSlug}`);
+  }
+
+  const selected = [];
+  const selectedSlugs = new Set();
+  for (const item of items) {
+    if (targetSlug && item.slug !== targetSlug) continue;
+    if (generateImages && selected.length >= maxImages) continue;
+    selected.push(item);
+    selectedSlugs.add(item.slug);
+  }
+
+  return { selected, selectedSlugs };
+}
+
 async function main() {
   await logger.info('Generate images started');
   try {
@@ -52,10 +81,16 @@ async function main() {
     await logger.info(`Reading image prompts: ${promptsFile}`);
     const prompts = await readJsonFile(promptsFile);
     prompts.items = filterManifestPromptItems(Array.isArray(prompts.items) ? prompts.items : [], target);
+    const generateImages = parseGenerateImages();
+    const maxImages = parseMaxImages(generateImages);
+    const targetSlug = String(process.env.TARGET_SLUG ?? '').trim();
+    const { selected, selectedSlugs } = applyGenerationControls(prompts.items, { generateImages, maxImages, targetSlug });
+    await logger.info(`Image generation controls: generate_images=${generateImages}, max_images=${Number.isFinite(maxImages) ? maxImages : 'unlimited'}, target_slug=${targetSlug || '(none)'}, selected=${selected.length}`);
+
     const imagesDir = `output/${target.week}/images`;
     await ensureDir(imagesDir);
     const manifest = { week: target.week, created_at: new Date().toISOString(), images: [] };
-    if (process.env.GENERATE_IMAGES !== 'true') {
+    if (!generateImages) {
       await logger.info('Image generation disabled because GENERATE_IMAGES is not true');
       for (const item of prompts.items) {
         const file = `${imagesDir}/${item.slug}.png`;
@@ -67,6 +102,11 @@ async function main() {
       const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
       for (const item of prompts.items) {
         const file = `${imagesDir}/${item.slug}.png`;
+        if (!selectedSlugs.has(item.slug)) {
+          await logger.info(`Skipping image for ${item.event_title} because it was not selected by TARGET_SLUG/MAX_IMAGES controls.`);
+          manifest.images.push({ event_title: item.event_title, slug: item.slug, file, status: 'skipped' });
+          continue;
+        }
         await logger.info(`Generating image for ${item.event_title}`);
         const result = await client.images.generate({ model: process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1', prompt: item.image_prompt, size: '1024x1792' });
         const imageBase64 = result.data?.[0]?.b64_json;

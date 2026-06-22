@@ -2,6 +2,19 @@ name: Melody4U Weekly Agent
 
 on:
   workflow_dispatch:
+    inputs:
+      generate_images:
+        description: "Generate paid PNG images"
+        required: false
+        default: "false"
+      max_images:
+        description: "Maximum number of images to generate"
+        required: false
+        default: "1"
+      target_slug:
+        description: "Optional prompt slug to generate"
+        required: false
+        default: ""
   schedule:
     - cron: "15 6 * * 0"
 
@@ -13,7 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      GENERATE_IMAGES: "false"
+      GENERATE_IMAGES: ${{ inputs.generate_images || 'false' }}
+      MAX_IMAGES: ${{ inputs.max_images || '1' }}
+      TARGET_SLUG: ${{ inputs.target_slug || '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -21,6 +36,20 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run weekly
+      - name: Resolve artifact week
+        id: artifact-week
+        run: |
+          node --input-type=module - <<'NODE' >> "$GITHUB_OUTPUT"
+          import { resolveTargetWeek } from './scripts/utils/dates.js';
+          console.log(`week=${resolveTargetWeek().week}`);
+          NODE
+      - name: Upload generated image artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: melody4u-images-${{ steps.artifact-week.outputs.week }}
+          path: output/**/images/*.png
+          retention-days: 7
+          if-no-files-found: ignore
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
