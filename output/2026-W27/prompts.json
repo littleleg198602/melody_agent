@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "event_title": "Formula 1 British Grand Prix",
+      "date": "2026-07-02",
+      "category": "motorsport",
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "composition_type": "motorsport_track",
+      "text_on_image": "Race Weekend Energy",
+      "text_on_image_cs": "",
+      "text_on_image_en": "Race Weekend Energy",
+      "image_prompt": "A dynamic and energetic vertical 9:16 social media poster showing a symbolic motorsport track scene with a smartphone in the foreground displaying the text 'Race Weekend Energy' in English. The tone is fan hype with warm modern atmosphere, subtle glowing music notes and sound waves around the phone. No official logos, badges, real athlete faces or trademarked visuals. Suitable for TikTok, Instagram Reels, and Facebook.",
+      "reels_text": "Feel the thrill of the British Grand Prix at Silverstone! #RaceWeekendEnergy #Melody4U #MusicGift #PersonalWish #GiftIdea #ForTheFans",
+      "hashtags": [
+        "#Melody4U",
+        "#RaceWeekend",
+        "#MusicGift",
+        "#PersonalWish",
+        "#ForTheFans"
+      ],
+      "slug": "formula-1-british-grand-prix-2026"
+    },
+    {
+      "event_title": "Wimbledon 2026 Begins",
+      "date": "2026-06-29",
+      "category": "sport",
+      "tone": "fan_hype",
+      "event_origin": "sport",
+      "language_policy": "english",
+      "composition_type": "fan_with_phone",
+      "text_on_image": "Summer Sport Vibes",
+      "text_on_image_cs": "",
+      "text_on_image_en": "Summer Sport Vibes",
+      "image_prompt": "A warm and modern vertical 9:16 social media poster depicting a symbolic tennis scene with a smartphone showing the text 'Summer Sport Vibes' in English. The tone is fan hype with subtle glowing music notes and sound waves, no official logos or real player faces. Suitable for TikTok, Instagram Reels, and Facebook.",
+      "reels_text": "Celebrate the start of Wimbledon 2026 with style and passion! #SummerSportVibes #Melody4U #MusicGift #PersonalWish #GiftIdea #ForTheFans",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#PersonalWish",
+        "#GiftIdea",
+        "#ForTheFans"
+      ],
+      "slug": "wimbledon-2026-begins"
+    },
+    {
+      "event_title": "FIFA World Cup 2026 Round of 32",
+      "date": "2026-06-29",
+      "category": "sport",
+      "tone": "fan_hype",
+      "event_origin": "sport",
+      "language_policy": "english",
+      "composition_type": "stadium_atmosphere",
+      "text_on_image": "World Football Night",
+      "text_on_image_cs": "",
+      "text_on_image_en": "World Football Night",
+      "image_prompt": "An energetic and symbolic vertical 9:16 social media poster showing a stadium atmosphere with fans and a smartphone displaying the text 'World Football Night' in English. The tone is fan hype with subtle glowing music notes and sound waves, no official logos, badges, or real player faces. Suitable for TikTok, Instagram Reels, and Facebook.",
+      "reels_text": "Experience the thrill of the FIFA World Cup Round of 32! #WorldFootballNight #Melody4U #MusicGift #PersonalWish #GiftIdea #GameNight",
+      "hashtags": [
+        "#Melody4U",
+        "#MusicGift",
+        "#PersonalWish",
+        "#GiftIdea",
+        "#GameNight"
+      ],
+      "slug": "fifa-world-cup-2026-round-of-32"
+    },
+    {
+      "event_title": "Independence Day Celebrations",
+      "date": "2026-07-04",
+      "category": "seasonal",
+      "tone": "celebration",
+      "event_origin": "seasonal",
+      "language_policy": "english",
+      "composition_type": "seasonal_symbolic_scene",
+      "text_on_image": "Celebrate Freedom",
+      "text_on_image_cs": "",
+      "text_on_image_en": "Celebrate Freedom",
+      "image_prompt": "A warm and festive vertical 9:16 social media poster showing a symbolic Independence Day scene with fireworks and a smartphone displaying the text 'Celebrate Freedom' in English. The tone is celebratory with subtle glowing music notes and sound waves, no official logos or graphic imagery. Suitable for TikTok, Instagram Reels, and Facebook.",
+      "reels_text": "Join the 250th Independence Day celebrations with joy and pride! #CelebrateFreedom #Melody4U #FamilyMoment #ThoughtfulMoment #MusicGift #PersonalWish",
+      "hashtags": [
+        "#Melody4U",
+        "#FamilyMoment",
+        "#ThoughtfulMoment",
+        "#MusicGift",
+        "#PersonalWish"
+      ],
+      "slug": "independence-day-celebrations-2026"
+    }
+  ],
+  "week": "2026-W27",
+  "created_at": "2026-06-22T08:53:58.125Z"
+}

@@ -1,0 +1,30 @@
+{
+  "week": "2026-W27",
+  "created_at": "2026-06-22T08:53:58.297Z",
+  "images": [
+    {
+      "event_title": "Formula 1 British Grand Prix",
+      "slug": "formula-1-british-grand-prix-2026",
+      "file": "output/2026-W27/images/formula-1-british-grand-prix-2026.png",
+      "status": "generated"
+    },
+    {
+      "event_title": "Wimbledon 2026 Begins",
+      "slug": "wimbledon-2026-begins",
+      "file": "output/2026-W27/images/wimbledon-2026-begins.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "FIFA World Cup 2026 Round of 32",
+      "slug": "fifa-world-cup-2026-round-of-32",
+      "file": "output/2026-W27/images/fifa-world-cup-2026-round-of-32.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Independence Day Celebrations",
+      "slug": "independence-day-celebrations-2026",
+      "file": "output/2026-W27/images/independence-day-celebrations-2026.png",
+      "status": "skipped"
+    }
+  ]
+}

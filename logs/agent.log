@@ -843,3 +843,37 @@
 [2026-06-22T08:05:10.196Z] [INFO] Dry run: would generate image for Wimbledon qualification at output/2026-W26/images/wimbledon-qualification.png
 [2026-06-22T08:05:10.203Z] [INFO] Created image manifest: output/2026-W26/images.json
 [2026-06-22T08:05:10.206Z] [INFO] Generate images finished successfully
+[2026-06-22T08:53:31.566Z] [INFO] Weekly agent started
+[2026-06-22T08:53:31.569Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-22T08:53:31.675Z] [INFO] Create weekly overview started
+[2026-06-22T08:53:31.679Z] [INFO] Calculated target week: 2026-W27, from 2026-06-29 to 2026-07-05
+[2026-06-22T08:53:31.680Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-06-22T08:53:40.188Z] [INFO] Overview generated_at set by script: 2026-06-22T08:53:40.188Z
+[2026-06-22T08:53:40.192Z] [INFO] Raw events returned: 4
+[2026-06-22T08:53:40.200Z] [INFO] Events after filtering: 4
+[2026-06-22T08:53:40.200Z] [INFO] Final selected event order: 3. Formula 1 British Grand Prix | 9. Wimbledon 2026 Begins | 9. FIFA World Cup 2026 Round of 32 | 9. Independence Day Celebrations
+[2026-06-22T08:53:40.201Z] [INFO] Final selected tone values: Formula 1 British Grand Prix: fan_hype | Wimbledon 2026 Begins: fan_hype | FIFA World Cup 2026 Round of 32: fan_hype | Independence Day Celebrations: celebration
+[2026-06-22T08:53:40.201Z] [INFO] Final selected language_policy values: Formula 1 British Grand Prix: english | Wimbledon 2026 Begins: english | FIFA World Cup 2026 Round of 32: english | Independence Day Celebrations: english
+[2026-06-22T08:53:40.202Z] [INFO] Created weekly overview: data/weekly/2026-W27.json
+[2026-06-22T08:53:40.202Z] [INFO] Create weekly overview finished successfully
+[2026-06-22T08:53:40.265Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-22T08:53:40.362Z] [INFO] Generate image prompts started
+[2026-06-22T08:53:40.367Z] [INFO] Reading weekly overview: data/weekly/2026-W27.json
+[2026-06-22T08:53:40.369Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W27
+[2026-06-22T08:53:58.123Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1 British Grand Prix", "date": "2026-07-02", "category": "motorsport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "A dynamic and energetic vertical 9:16 social media poster showing a symbolic motorsport track scene with a smartphone in the foreground displaying
+[2026-06-22T08:53:58.125Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-06-22T08:53:58.126Z] [INFO] Prompts created_at set by script: 2026-06-22T08:53:58.125Z
+[2026-06-22T08:53:58.126Z] [INFO] Created image prompts: output/2026-W27/prompts.json
+[2026-06-22T08:53:58.127Z] [INFO] Generate image prompts finished successfully
+[2026-06-22T08:53:58.194Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-22T08:53:58.291Z] [INFO] Generate images started
+[2026-06-22T08:53:58.296Z] [INFO] Reading image prompts: output/2026-W27/prompts.json
+[2026-06-22T08:53:58.297Z] [INFO] Image generation controls: generate_images=true, max_images=1, target_slug=(none), selected=1
+[2026-06-22T08:53:58.298Z] [INFO] Generating image for Formula 1 British Grand Prix
+[2026-06-22T08:54:52.615Z] [INFO] Generated image: output/2026-W27/images/formula-1-british-grand-prix-2026.png
+[2026-06-22T08:54:52.616Z] [INFO] Skipping image for Wimbledon 2026 Begins because it was not selected by TARGET_SLUG/MAX_IMAGES controls.
+[2026-06-22T08:54:52.616Z] [INFO] Skipping image for FIFA World Cup 2026 Round of 32 because it was not selected by TARGET_SLUG/MAX_IMAGES controls.
+[2026-06-22T08:54:52.616Z] [INFO] Skipping image for Independence Day Celebrations because it was not selected by TARGET_SLUG/MAX_IMAGES controls.
+[2026-06-22T08:54:52.617Z] [INFO] Created image manifest: output/2026-W27/images.json
+[2026-06-22T08:54:52.617Z] [INFO] Generate images finished successfully
+[2026-06-22T08:54:52.623Z] [INFO] Weekly agent finished successfully
