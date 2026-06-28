@@ -916,3 +916,38 @@
 [2026-06-22T14:08:59.714Z] [INFO] Created image manifest: output/2026-W27/images.json
 [2026-06-22T14:08:59.714Z] [INFO] Generate images finished successfully
 [2026-06-22T14:08:59.720Z] [INFO] Weekly agent finished successfully
+[2026-06-28T09:32:53.689Z] [INFO] Weekly agent started
+[2026-06-28T09:32:53.693Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-06-28T09:32:53.797Z] [INFO] Create weekly overview started
+[2026-06-28T09:32:53.801Z] [INFO] Calculated target week: 2026-W27, from 2026-06-29 to 2026-07-05
+[2026-06-28T09:32:53.802Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-06-28T09:33:07.017Z] [INFO] Overview generated_at set by script: 2026-06-28T09:33:07.017Z
+[2026-06-28T09:33:07.022Z] [INFO] Raw events returned: 5
+[2026-06-28T09:33:07.030Z] [INFO] Events after filtering: 5
+[2026-06-28T09:33:07.030Z] [INFO] Final selected event order: 3. Formula 1 British Grand Prix 2026 | 9. FIFA World Cup 2026 Round of 32 | 9. Wimbledon 2026 Begins | 9. Independence Day Celebrations in the USA | 9. FIFA World Cup 2026 Round of 16
+[2026-06-28T09:33:07.031Z] [INFO] Final selected tone values: Formula 1 British Grand Prix 2026: fan_hype | FIFA World Cup 2026 Round of 32: fan_hype | Wimbledon 2026 Begins: fan_hype | Independence Day Celebrations in the USA: celebration | FIFA World Cup 2026 Round of 16: fan_hype
+[2026-06-28T09:33:07.031Z] [INFO] Final selected language_policy values: Formula 1 British Grand Prix 2026: english | FIFA World Cup 2026 Round of 32: english | Wimbledon 2026 Begins: english | Independence Day Celebrations in the USA: bilingual_cs_en | FIFA World Cup 2026 Round of 16: english
+[2026-06-28T09:33:07.032Z] [INFO] Created weekly overview: data/weekly/2026-W27.json
+[2026-06-28T09:33:07.033Z] [INFO] Create weekly overview finished successfully
+[2026-06-28T09:33:07.091Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-06-28T09:33:07.196Z] [INFO] Generate image prompts started
+[2026-06-28T09:33:07.201Z] [INFO] Reading weekly overview: data/weekly/2026-W27.json
+[2026-06-28T09:33:07.203Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W27
+[2026-06-28T09:33:22.506Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1 British Grand Prix 2026", "date": "2026-07-03", "category": "motorsport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 British Grand Prix 2026. The scene shows a cinematic racing track a
+[2026-06-28T09:33:22.510Z] [INFO] Prompt count after validation and image-topic filtering: 5
+[2026-06-28T09:33:22.511Z] [INFO] Prompts created_at set by script: 2026-06-28T09:33:22.510Z
+[2026-06-28T09:33:22.512Z] [INFO] Created image prompts: output/2026-W27/prompts.json
+[2026-06-28T09:33:22.513Z] [INFO] Generate image prompts finished successfully
+[2026-06-28T09:33:22.580Z] [INFO] Running step: scripts/generate-images.js
+[2026-06-28T09:33:22.682Z] [INFO] Generate images started
+[2026-06-28T09:33:22.686Z] [INFO] Reading image prompts: output/2026-W27/prompts.json
+[2026-06-28T09:33:22.688Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=5
+[2026-06-28T09:33:22.689Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-06-28T09:33:22.689Z] [INFO] Dry run: would generate image for Formula 1 British Grand Prix 2026 at output/2026-W27/images/formula1-british-grand-prix-2026.png
+[2026-06-28T09:33:22.689Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 Round of 32 at output/2026-W27/images/fifa-world-cup-2026-round-of-32.png
+[2026-06-28T09:33:22.690Z] [INFO] Dry run: would generate image for Wimbledon 2026 Begins at output/2026-W27/images/wimbledon-2026-begins.png
+[2026-06-28T09:33:22.690Z] [INFO] Dry run: would generate image for Independence Day Celebrations in the USA at output/2026-W27/images/independence-day-usa-2026.png
+[2026-06-28T09:33:22.690Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 Round of 16 at output/2026-W27/images/fifa-world-cup-2026-round-of-16.png
+[2026-06-28T09:33:22.691Z] [INFO] Created image manifest: output/2026-W27/images.json
+[2026-06-28T09:33:22.692Z] [INFO] Generate images finished successfully
+[2026-06-28T09:33:22.695Z] [INFO] Weekly agent finished successfully
