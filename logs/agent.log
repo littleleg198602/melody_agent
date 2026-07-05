@@ -951,3 +951,36 @@
 [2026-06-28T09:33:22.691Z] [INFO] Created image manifest: output/2026-W27/images.json
 [2026-06-28T09:33:22.692Z] [INFO] Generate images finished successfully
 [2026-06-28T09:33:22.695Z] [INFO] Weekly agent finished successfully
+[2026-07-05T09:22:35.248Z] [INFO] Weekly agent started
+[2026-07-05T09:22:35.251Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-07-05T09:22:35.349Z] [INFO] Create weekly overview started
+[2026-07-05T09:22:35.354Z] [INFO] Calculated target week: 2026-W28, from 2026-07-06 to 2026-07-12
+[2026-07-05T09:22:35.354Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-07-05T09:22:51.368Z] [INFO] Overview generated_at set by script: 2026-07-05T09:22:51.367Z
+[2026-07-05T09:22:51.372Z] [INFO] Raw events returned: 5
+[2026-07-05T09:22:51.380Z] [INFO] Events after filtering: 5
+[2026-07-05T09:22:51.380Z] [INFO] Final selected event order: 2. MotoGP German Grand Prix at Sachsenring | 2. MotoGP German Grand Prix Race Day | 9. FIFA World Cup 2026: Portugal vs Spain | 9. Wimbledon Championships 2026 | 9. Tour de France 2026 Grand Départ in Barcelona
+[2026-07-05T09:22:51.381Z] [INFO] Final selected tone values: MotoGP German Grand Prix at Sachsenring: fan_hype | MotoGP German Grand Prix Race Day: fan_hype | FIFA World Cup 2026: Portugal vs Spain: fan_hype | Wimbledon Championships 2026: fan_hype | Tour de France 2026 Grand Départ in Barcelona: fan_hype
+[2026-07-05T09:22:51.381Z] [INFO] Final selected language_policy values: MotoGP German Grand Prix at Sachsenring: english | MotoGP German Grand Prix Race Day: english | FIFA World Cup 2026: Portugal vs Spain: bilingual_cs_en | Wimbledon Championships 2026: english | Tour de France 2026 Grand Départ in Barcelona: english
+[2026-07-05T09:22:51.382Z] [INFO] Created weekly overview: data/weekly/2026-W28.json
+[2026-07-05T09:22:51.382Z] [INFO] Create weekly overview finished successfully
+[2026-07-05T09:22:51.388Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-07-05T09:22:51.487Z] [INFO] Generate image prompts started
+[2026-07-05T09:22:51.491Z] [INFO] Reading weekly overview: data/weekly/2026-W28.json
+[2026-07-05T09:22:51.493Z] [INFO] Found 3 waiting events with generate_image=true for 2026-W28
+[2026-07-05T09:23:03.107Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "FIFA World Cup 2026: Portugal vs Spain", "date": "2026-07-06", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "bilingual_cs_en", "composition_type": "stadium_atmosphere", "text_on_image": "World Football Night / Světový fotbalový večer", "text_on_image_cs": "Světový fotbalový večer", "text_on_image_en": "World Football Night", "image_prompt": "Create a premium cinematic social media campaign poster in vertical 9:16 format suita
+[2026-07-05T09:23:03.109Z] [INFO] Prompt count after validation and image-topic filtering: 3
+[2026-07-05T09:23:03.109Z] [INFO] Prompts created_at set by script: 2026-07-05T09:23:03.108Z
+[2026-07-05T09:23:03.110Z] [INFO] Created image prompts: output/2026-W28/prompts.json
+[2026-07-05T09:23:03.110Z] [INFO] Generate image prompts finished successfully
+[2026-07-05T09:23:03.182Z] [INFO] Running step: scripts/generate-images.js
+[2026-07-05T09:23:03.283Z] [INFO] Generate images started
+[2026-07-05T09:23:03.288Z] [INFO] Reading image prompts: output/2026-W28/prompts.json
+[2026-07-05T09:23:03.289Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=3
+[2026-07-05T09:23:03.289Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-07-05T09:23:03.290Z] [INFO] Dry run: would generate image for FIFA World Cup 2026: Portugal vs Spain at output/2026-W28/images/fifa-world-cup-2026-portugal-spain.png
+[2026-07-05T09:23:03.290Z] [INFO] Dry run: would generate image for Wimbledon Championships 2026 at output/2026-W28/images/wimbledon-championships-2026.png
+[2026-07-05T09:23:03.290Z] [INFO] Dry run: would generate image for Tour de France 2026 Grand Départ in Barcelona at output/2026-W28/images/tour-de-france-2026-grand-depart.png
+[2026-07-05T09:23:03.291Z] [INFO] Created image manifest: output/2026-W28/images.json
+[2026-07-05T09:23:03.291Z] [INFO] Generate images finished successfully
+[2026-07-05T09:23:03.296Z] [INFO] Weekly agent finished successfully
