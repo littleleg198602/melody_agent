@@ -984,3 +984,38 @@
 [2026-07-05T09:23:03.291Z] [INFO] Created image manifest: output/2026-W28/images.json
 [2026-07-05T09:23:03.291Z] [INFO] Generate images finished successfully
 [2026-07-05T09:23:03.296Z] [INFO] Weekly agent finished successfully
+[2026-07-12T08:31:36.290Z] [INFO] Weekly agent started
+[2026-07-12T08:31:36.294Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-07-12T08:31:36.404Z] [INFO] Create weekly overview started
+[2026-07-12T08:31:36.409Z] [INFO] Calculated target week: 2026-W29, from 2026-07-13 to 2026-07-19
+[2026-07-12T08:31:36.410Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-07-12T08:31:48.631Z] [INFO] Overview generated_at set by script: 2026-07-12T08:31:48.631Z
+[2026-07-12T08:31:48.636Z] [INFO] Raw events returned: 5
+[2026-07-12T08:31:48.644Z] [INFO] Events after filtering: 5
+[2026-07-12T08:31:48.645Z] [INFO] Final selected event order: 9. FIFA World Cup 2026 Final | 9. FIBA Under-20 EuroBasket Division B 2026 | 9. FIBA Under-17 Women's Basketball World Cup 2026 | 9. Tour de France 2026 Stage 8 | 9. FIFA World Cup 2026 Third Place Match
+[2026-07-12T08:31:48.646Z] [INFO] Final selected tone values: FIFA World Cup 2026 Final: fan_hype | FIBA Under-20 EuroBasket Division B 2026: fan_hype | FIBA Under-17 Women's Basketball World Cup 2026: fan_hype | Tour de France 2026 Stage 8: fan_hype | FIFA World Cup 2026 Third Place Match: fan_hype
+[2026-07-12T08:31:48.647Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 Final: english | FIBA Under-20 EuroBasket Division B 2026: english | FIBA Under-17 Women's Basketball World Cup 2026: english | Tour de France 2026 Stage 8: english | FIFA World Cup 2026 Third Place Match: english
+[2026-07-12T08:31:48.649Z] [INFO] Created weekly overview: data/weekly/2026-W29.json
+[2026-07-12T08:31:48.649Z] [INFO] Create weekly overview finished successfully
+[2026-07-12T08:31:48.711Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-07-12T08:31:48.821Z] [INFO] Generate image prompts started
+[2026-07-12T08:31:48.826Z] [INFO] Reading weekly overview: data/weekly/2026-W29.json
+[2026-07-12T08:31:48.828Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W29
+[2026-07-12T08:32:15.458Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "FIFA World Cup 2026 Final", "date": "2026-07-13", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "english", "composition_type": "stadium_atmosphere", "text_on_image": "World Football Night", "text_on_image_cs": "", "text_on_image_en": "World Football Night", "image_prompt": "Create a premium cinematic social media campaign poster for the FIFA World Cup 2026 Final. The scene is a dramatic stadium at night with Czech fan energy, 
+[2026-07-12T08:32:15.460Z] [INFO] Prompt count after validation and image-topic filtering: 5
+[2026-07-12T08:32:15.460Z] [INFO] Prompts created_at set by script: 2026-07-12T08:32:15.459Z
+[2026-07-12T08:32:15.461Z] [INFO] Created image prompts: output/2026-W29/prompts.json
+[2026-07-12T08:32:15.462Z] [INFO] Generate image prompts finished successfully
+[2026-07-12T08:32:15.531Z] [INFO] Running step: scripts/generate-images.js
+[2026-07-12T08:32:15.636Z] [INFO] Generate images started
+[2026-07-12T08:32:15.641Z] [INFO] Reading image prompts: output/2026-W29/prompts.json
+[2026-07-12T08:32:15.643Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=5
+[2026-07-12T08:32:15.643Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-07-12T08:32:15.644Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 Final at output/2026-W29/images/fifa-world-cup-2026-final.png
+[2026-07-12T08:32:15.645Z] [INFO] Dry run: would generate image for FIBA Under-20 EuroBasket Division B 2026 at output/2026-W29/images/fiba-under-20-eurobasket-division-b-2026.png
+[2026-07-12T08:32:15.645Z] [INFO] Dry run: would generate image for FIBA Under-17 Women's Basketball World Cup 2026 at output/2026-W29/images/fiba-under-17-womens-basketball-world-cup-2026.png
+[2026-07-12T08:32:15.645Z] [INFO] Dry run: would generate image for Tour de France 2026 Stage 8 at output/2026-W29/images/tour-de-france-2026-stage-8.png
+[2026-07-12T08:32:15.646Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 Third Place Match at output/2026-W29/images/fifa-world-cup-2026-third-place-match.png
+[2026-07-12T08:32:15.647Z] [INFO] Created image manifest: output/2026-W29/images.json
+[2026-07-12T08:32:15.647Z] [INFO] Generate images finished successfully
+[2026-07-12T08:32:15.653Z] [INFO] Weekly agent finished successfully

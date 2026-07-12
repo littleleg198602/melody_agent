@@ -1,0 +1,36 @@
+{
+  "week": "2026-W29",
+  "created_at": "2026-07-12T08:32:15.643Z",
+  "images": [
+    {
+      "event_title": "FIFA World Cup 2026 Final",
+      "slug": "fifa-world-cup-2026-final",
+      "file": "output/2026-W29/images/fifa-world-cup-2026-final.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "FIBA Under-20 EuroBasket Division B 2026",
+      "slug": "fiba-under-20-eurobasket-division-b-2026",
+      "file": "output/2026-W29/images/fiba-under-20-eurobasket-division-b-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "FIBA Under-17 Women's Basketball World Cup 2026",
+      "slug": "fiba-under-17-womens-basketball-world-cup-2026",
+      "file": "output/2026-W29/images/fiba-under-17-womens-basketball-world-cup-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Tour de France 2026 Stage 8",
+      "slug": "tour-de-france-2026-stage-8",
+      "file": "output/2026-W29/images/tour-de-france-2026-stage-8.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "FIFA World Cup 2026 Third Place Match",
+      "slug": "fifa-world-cup-2026-third-place-match",
+      "file": "output/2026-W29/images/fifa-world-cup-2026-third-place-match.png",
+      "status": "skipped"
+    }
+  ]
+}
