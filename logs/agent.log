@@ -1019,3 +1019,34 @@
 [2026-07-12T08:32:15.647Z] [INFO] Created image manifest: output/2026-W29/images.json
 [2026-07-12T08:32:15.647Z] [INFO] Generate images finished successfully
 [2026-07-12T08:32:15.653Z] [INFO] Weekly agent finished successfully
+[2026-07-19T08:32:40.614Z] [INFO] Weekly agent started
+[2026-07-19T08:32:40.618Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-07-19T08:32:40.737Z] [INFO] Create weekly overview started
+[2026-07-19T08:32:40.742Z] [INFO] Calculated target week: 2026-W30, from 2026-07-20 to 2026-07-26
+[2026-07-19T08:32:40.742Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-07-19T08:32:51.835Z] [INFO] Overview generated_at set by script: 2026-07-19T08:32:51.835Z
+[2026-07-19T08:32:51.841Z] [INFO] Raw events returned: 2
+[2026-07-19T08:32:51.842Z] [INFO] Events after filtering: 2
+[2026-07-19T08:32:51.842Z] [INFO] Final selected event order: 1. Formula 1: Hungarian Grand Prix | 9. Summer Solstice Celebrations
+[2026-07-19T08:32:51.843Z] [INFO] Final selected tone values: Formula 1: Hungarian Grand Prix: fan_hype | Summer Solstice Celebrations: celebration
+[2026-07-19T08:32:51.843Z] [INFO] Final selected language_policy values: Formula 1: Hungarian Grand Prix: english | Summer Solstice Celebrations: czech
+[2026-07-19T08:32:51.847Z] [INFO] Created weekly overview: data/weekly/2026-W30.json
+[2026-07-19T08:32:51.847Z] [INFO] Create weekly overview finished successfully
+[2026-07-19T08:32:51.911Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-07-19T08:32:52.014Z] [INFO] Generate image prompts started
+[2026-07-19T08:32:52.019Z] [INFO] Reading weekly overview: data/weekly/2026-W30.json
+[2026-07-19T08:32:52.020Z] [INFO] Found 1 waiting events with generate_image=true for 2026-W30
+[2026-07-19T08:32:58.883Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1: Hungarian Grand Prix", "date": "2026-07-20", "category": "motorsport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 Hungarian Grand Prix on 2026-07-20. The scene shows a dramatic racing
+[2026-07-19T08:32:58.885Z] [INFO] Prompt count after validation and image-topic filtering: 1
+[2026-07-19T08:32:58.885Z] [INFO] Prompts created_at set by script: 2026-07-19T08:32:58.885Z
+[2026-07-19T08:32:58.886Z] [INFO] Created image prompts: output/2026-W30/prompts.json
+[2026-07-19T08:32:58.887Z] [INFO] Generate image prompts finished successfully
+[2026-07-19T08:32:58.954Z] [INFO] Running step: scripts/generate-images.js
+[2026-07-19T08:32:59.062Z] [INFO] Generate images started
+[2026-07-19T08:32:59.067Z] [INFO] Reading image prompts: output/2026-W30/prompts.json
+[2026-07-19T08:32:59.069Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=1
+[2026-07-19T08:32:59.069Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-07-19T08:32:59.070Z] [INFO] Dry run: would generate image for Formula 1: Hungarian Grand Prix at output/2026-W30/images/formula1-hungarian-grand-prix-2026.png
+[2026-07-19T08:32:59.071Z] [INFO] Created image manifest: output/2026-W30/images.json
+[2026-07-19T08:32:59.071Z] [INFO] Generate images finished successfully
+[2026-07-19T08:32:59.075Z] [INFO] Weekly agent finished successfully

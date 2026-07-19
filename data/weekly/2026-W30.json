@@ -1,0 +1,44 @@
+{
+  "week": "2026-W30",
+  "date_from": "2026-07-20",
+  "date_to": "2026-07-26",
+  "generated_at": "2026-07-19T08:32:51.835Z",
+  "events": [
+    {
+      "date": "2026-07-20",
+      "category": "motorsport",
+      "title": "Formula 1: Hungarian Grand Prix",
+      "note": "The Hungarian Grand Prix is set to take place at the Hungaroring circuit, a technical track often dubbed as Monaco without the walls. This race is crucial for drivers aiming to gain points in the championship standings.",
+      "priority": 1,
+      "source_priority": 1,
+      "generate_image": true,
+      "status": "waiting",
+      "backup_only": false,
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "czech_relevance": "medium",
+      "melody4u_score": 5,
+      "marketing_angle": "Highlighting the excitement and technical challenges of the Hungarian Grand Prix, appealing to motorsport enthusiasts.",
+      "why_selected": "Formula 1 events are of high interest to Czech audiences, and the Hungarian Grand Prix is a significant race in the calendar."
+    },
+    {
+      "date": "2026-07-22",
+      "category": "seasonal",
+      "title": "Summer Solstice Celebrations",
+      "note": "The Summer Solstice marks the longest day of the year, celebrated with various cultural and traditional events across the Czech Republic, including music festivals, outdoor activities, and community gatherings.",
+      "priority": 2,
+      "source_priority": 9,
+      "generate_image": true,
+      "status": "waiting",
+      "backup_only": false,
+      "tone": "celebration",
+      "event_origin": "seasonal",
+      "language_policy": "czech",
+      "czech_relevance": "high",
+      "melody4u_score": 5,
+      "marketing_angle": "Emphasizing the vibrant cultural and community aspects of the Summer Solstice celebrations, encouraging participation and engagement.",
+      "why_selected": "The Summer Solstice is a significant cultural event in the Czech Republic, offering opportunities for community engagement and cultural expression."
+    }
+  ]
+}
