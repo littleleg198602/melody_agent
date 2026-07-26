@@ -1,0 +1,30 @@
+{
+  "week": "2026-W31",
+  "created_at": "2026-07-26T08:40:33.056Z",
+  "images": [
+    {
+      "event_title": "Commonwealth Games 2026",
+      "slug": "commonwealth-games-2026",
+      "file": "output/2026-W31/images/commonwealth-games-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "AIG Women’s Open 2026",
+      "slug": "aig-womens-open-2026",
+      "file": "output/2026-W31/images/aig-womens-open-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Tour de France Femmes 2026",
+      "slug": "tour-de-france-femmes-2026",
+      "file": "output/2026-W31/images/tour-de-france-femmes-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "National Bank Open 2026",
+      "slug": "national-bank-open-2026",
+      "file": "output/2026-W31/images/national-bank-open-2026.png",
+      "status": "skipped"
+    }
+  ]
+}

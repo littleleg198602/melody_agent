@@ -1050,3 +1050,37 @@
 [2026-07-19T08:32:59.071Z] [INFO] Created image manifest: output/2026-W30/images.json
 [2026-07-19T08:32:59.071Z] [INFO] Generate images finished successfully
 [2026-07-19T08:32:59.075Z] [INFO] Weekly agent finished successfully
+[2026-07-26T08:39:17.190Z] [INFO] Weekly agent started
+[2026-07-26T08:39:17.193Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-07-26T08:39:17.270Z] [INFO] Create weekly overview started
+[2026-07-26T08:39:17.273Z] [INFO] Calculated target week: 2026-W31, from 2026-07-27 to 2026-08-02
+[2026-07-26T08:39:17.274Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-07-26T08:39:28.186Z] [INFO] Overview generated_at set by script: 2026-07-26T08:39:28.186Z
+[2026-07-26T08:39:28.189Z] [INFO] Raw events returned: 4
+[2026-07-26T08:39:28.195Z] [INFO] Events after filtering: 4
+[2026-07-26T08:39:28.196Z] [INFO] Final selected event order: 9. Commonwealth Games 2026 | 9. AIG Women’s Open 2026 | 9. Tour de France Femmes 2026 | 9. National Bank Open 2026
+[2026-07-26T08:39:28.196Z] [INFO] Final selected tone values: Commonwealth Games 2026: fan_hype | AIG Women’s Open 2026: fan_hype | Tour de France Femmes 2026: fan_hype | National Bank Open 2026: fan_hype
+[2026-07-26T08:39:28.196Z] [INFO] Final selected language_policy values: Commonwealth Games 2026: bilingual_cs_en | AIG Women’s Open 2026: english | Tour de France Femmes 2026: english | National Bank Open 2026: english
+[2026-07-26T08:39:28.197Z] [INFO] Created weekly overview: data/weekly/2026-W31.json
+[2026-07-26T08:39:28.197Z] [INFO] Create weekly overview finished successfully
+[2026-07-26T08:39:28.243Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-07-26T08:39:28.322Z] [INFO] Generate image prompts started
+[2026-07-26T08:39:28.325Z] [INFO] Reading weekly overview: data/weekly/2026-W31.json
+[2026-07-26T08:39:28.326Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W31
+[2026-07-26T08:40:32.921Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Commonwealth Games 2026", "date": "2026-07-27", "category": "multi-sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "bilingual_cs_en", "composition_type": "stadium_atmosphere", "text_on_image": "Commonwealth Games 2026 / Commonwealth Games 2026", "text_on_image_cs": "Commonwealth Games 2026", "text_on_image_en": "Commonwealth Games 2026", "image_prompt": "Create a premium cinematic social media campaign poster for the Commonwealth Games 2026 
+[2026-07-26T08:40:32.923Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-07-26T08:40:32.923Z] [INFO] Prompts created_at set by script: 2026-07-26T08:40:32.923Z
+[2026-07-26T08:40:32.924Z] [INFO] Created image prompts: output/2026-W31/prompts.json
+[2026-07-26T08:40:32.925Z] [INFO] Generate image prompts finished successfully
+[2026-07-26T08:40:32.978Z] [INFO] Running step: scripts/generate-images.js
+[2026-07-26T08:40:33.051Z] [INFO] Generate images started
+[2026-07-26T08:40:33.055Z] [INFO] Reading image prompts: output/2026-W31/prompts.json
+[2026-07-26T08:40:33.056Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-07-26T08:40:33.056Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-07-26T08:40:33.057Z] [INFO] Dry run: would generate image for Commonwealth Games 2026 at output/2026-W31/images/commonwealth-games-2026.png
+[2026-07-26T08:40:33.057Z] [INFO] Dry run: would generate image for AIG Women’s Open 2026 at output/2026-W31/images/aig-womens-open-2026.png
+[2026-07-26T08:40:33.057Z] [INFO] Dry run: would generate image for Tour de France Femmes 2026 at output/2026-W31/images/tour-de-france-femmes-2026.png
+[2026-07-26T08:40:33.057Z] [INFO] Dry run: would generate image for National Bank Open 2026 at output/2026-W31/images/national-bank-open-2026.png
+[2026-07-26T08:40:33.058Z] [INFO] Created image manifest: output/2026-W31/images.json
+[2026-07-26T08:40:33.058Z] [INFO] Generate images finished successfully
+[2026-07-26T08:40:33.062Z] [INFO] Weekly agent finished successfully
