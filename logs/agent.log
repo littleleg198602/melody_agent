@@ -1084,3 +1084,37 @@
 [2026-07-26T08:40:33.058Z] [INFO] Created image manifest: output/2026-W31/images.json
 [2026-07-26T08:40:33.058Z] [INFO] Generate images finished successfully
 [2026-07-26T08:40:33.062Z] [INFO] Weekly agent finished successfully
+[2026-08-02T08:36:33.766Z] [INFO] Weekly agent started
+[2026-08-02T08:36:33.770Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-08-02T08:36:33.884Z] [INFO] Create weekly overview started
+[2026-08-02T08:36:33.888Z] [INFO] Calculated target week: 2026-W32, from 2026-08-03 to 2026-08-09
+[2026-08-02T08:36:33.889Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-08-02T08:36:44.075Z] [INFO] Overview generated_at set by script: 2026-08-02T08:36:44.075Z
+[2026-08-02T08:36:44.081Z] [INFO] Raw events returned: 5
+[2026-08-02T08:36:44.092Z] [INFO] Events after filtering: 5
+[2026-08-02T08:36:44.093Z] [INFO] Final selected event order: 1. Prague Pride 2026 | 3. MotoGP British Grand Prix 2026 | 5. International Beer Day 2026 | 9. Canadian Open 2026 | 9. XTERRA Czech Republic 2026
+[2026-08-02T08:36:44.093Z] [INFO] Final selected tone values: Prague Pride 2026: celebration | MotoGP British Grand Prix 2026: fan_hype | International Beer Day 2026: celebration | Canadian Open 2026: fan_hype | XTERRA Czech Republic 2026: fan_hype
+[2026-08-02T08:36:44.094Z] [INFO] Final selected language_policy values: Prague Pride 2026: bilingual_cs_en | MotoGP British Grand Prix 2026: english | International Beer Day 2026: bilingual_cs_en | Canadian Open 2026: english | XTERRA Czech Republic 2026: english
+[2026-08-02T08:36:44.098Z] [INFO] Created weekly overview: data/weekly/2026-W32.json
+[2026-08-02T08:36:44.098Z] [INFO] Create weekly overview finished successfully
+[2026-08-02T08:36:44.153Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-08-02T08:36:44.255Z] [INFO] Generate image prompts started
+[2026-08-02T08:36:44.259Z] [INFO] Reading weekly overview: data/weekly/2026-W32.json
+[2026-08-02T08:36:44.261Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W32
+[2026-08-02T08:37:03.753Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Prague Pride 2026", "date": "2026-08-03", "category": "significant_day", "tone": "celebration", "event_origin": "czech_significant_day", "language_policy": "bilingual_cs_en", "composition_type": "seasonal_symbolic_scene", "text_on_image": "Prague Pride 2026 / Pražská Pýcha 2026", "text_on_image_cs": "Pražská Pýcha 2026", "text_on_image_en": "Prague Pride 2026", "image_prompt": "Create a premium cinematic social media campaign poster for Prague Pride 2026 with bilin
+[2026-08-02T08:37:03.755Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-08-02T08:37:03.756Z] [INFO] Prompts created_at set by script: 2026-08-02T08:37:03.755Z
+[2026-08-02T08:37:03.757Z] [INFO] Created image prompts: output/2026-W32/prompts.json
+[2026-08-02T08:37:03.757Z] [INFO] Generate image prompts finished successfully
+[2026-08-02T08:37:03.824Z] [INFO] Running step: scripts/generate-images.js
+[2026-08-02T08:37:03.926Z] [INFO] Generate images started
+[2026-08-02T08:37:03.931Z] [INFO] Reading image prompts: output/2026-W32/prompts.json
+[2026-08-02T08:37:03.932Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-08-02T08:37:03.932Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-08-02T08:37:03.933Z] [INFO] Dry run: would generate image for Prague Pride 2026 at output/2026-W32/images/prague-pride-2026.png
+[2026-08-02T08:37:03.933Z] [INFO] Dry run: would generate image for International Beer Day 2026 at output/2026-W32/images/international-beer-day-2026.png
+[2026-08-02T08:37:03.933Z] [INFO] Dry run: would generate image for Canadian Open 2026 at output/2026-W32/images/canadian-open-2026.png
+[2026-08-02T08:37:03.934Z] [INFO] Dry run: would generate image for XTERRA Czech Republic 2026 at output/2026-W32/images/xterra-czech-republic-2026.png
+[2026-08-02T08:37:03.934Z] [INFO] Created image manifest: output/2026-W32/images.json
+[2026-08-02T08:37:03.935Z] [INFO] Generate images finished successfully
+[2026-08-02T08:37:03.939Z] [INFO] Weekly agent finished successfully
