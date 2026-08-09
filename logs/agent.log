@@ -1118,3 +1118,38 @@
 [2026-08-02T08:37:03.934Z] [INFO] Created image manifest: output/2026-W32/images.json
 [2026-08-02T08:37:03.935Z] [INFO] Generate images finished successfully
 [2026-08-02T08:37:03.939Z] [INFO] Weekly agent finished successfully
+[2026-08-09T07:15:19.557Z] [INFO] Weekly agent started
+[2026-08-09T07:15:19.560Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-08-09T07:15:19.648Z] [INFO] Create weekly overview started
+[2026-08-09T07:15:19.652Z] [INFO] Calculated target week: 2026-W33, from 2026-08-10 to 2026-08-16
+[2026-08-09T07:15:19.653Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-08-09T07:15:33.101Z] [INFO] Overview generated_at set by script: 2026-08-09T07:15:33.100Z
+[2026-08-09T07:15:33.105Z] [INFO] Raw events returned: 5
+[2026-08-09T07:15:33.113Z] [INFO] Events after filtering: 5
+[2026-08-09T07:15:33.114Z] [INFO] Final selected event order: 9. European Athletics Championships 2026 | 9. FEI World Equestrian Championships 2026 | 9. Men's and Women's Hockey World Cups 2026 | 9. Formula E London E-Prix 2026 | 9. Vuelta a España 2026
+[2026-08-09T07:15:33.114Z] [INFO] Final selected tone values: European Athletics Championships 2026: fan_hype | FEI World Equestrian Championships 2026: fan_hype | Men's and Women's Hockey World Cups 2026: fan_hype | Formula E London E-Prix 2026: fan_hype | Vuelta a España 2026: fan_hype
+[2026-08-09T07:15:33.115Z] [INFO] Final selected language_policy values: European Athletics Championships 2026: english | FEI World Equestrian Championships 2026: english | Men's and Women's Hockey World Cups 2026: english | Formula E London E-Prix 2026: english | Vuelta a España 2026: english
+[2026-08-09T07:15:33.116Z] [INFO] Created weekly overview: data/weekly/2026-W33.json
+[2026-08-09T07:15:33.116Z] [INFO] Create weekly overview finished successfully
+[2026-08-09T07:15:33.152Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-08-09T07:15:33.243Z] [INFO] Generate image prompts started
+[2026-08-09T07:15:33.248Z] [INFO] Reading weekly overview: data/weekly/2026-W33.json
+[2026-08-09T07:15:33.249Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W33
+[2026-08-09T07:16:04.796Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "European Athletics Championships 2026", "date": "2026-08-10", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "english", "composition_type": "stadium_atmosphere", "text_on_image": "European Athletics Energy", "text_on_image_cs": "", "text_on_image_en": "European Athletics Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the European Athletics Championships 2026 in Birmingham, UK. The scene sh
+[2026-08-09T07:16:04.798Z] [INFO] Prompt count after validation and image-topic filtering: 5
+[2026-08-09T07:16:04.798Z] [INFO] Prompts created_at set by script: 2026-08-09T07:16:04.797Z
+[2026-08-09T07:16:04.800Z] [INFO] Created image prompts: output/2026-W33/prompts.json
+[2026-08-09T07:16:04.801Z] [INFO] Generate image prompts finished successfully
+[2026-08-09T07:16:04.805Z] [INFO] Running step: scripts/generate-images.js
+[2026-08-09T07:16:04.893Z] [INFO] Generate images started
+[2026-08-09T07:16:04.897Z] [INFO] Reading image prompts: output/2026-W33/prompts.json
+[2026-08-09T07:16:04.899Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=5
+[2026-08-09T07:16:04.899Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-08-09T07:16:04.901Z] [INFO] Dry run: would generate image for European Athletics Championships 2026 at output/2026-W33/images/european-athletics-championships-2026.png
+[2026-08-09T07:16:04.901Z] [INFO] Dry run: would generate image for FEI World Equestrian Championships 2026 at output/2026-W33/images/fei-world-equestrian-championships-2026.png
+[2026-08-09T07:16:04.901Z] [INFO] Dry run: would generate image for Men's and Women's Hockey World Cups 2026 at output/2026-W33/images/mens-womens-hockey-world-cups-2026.png
+[2026-08-09T07:16:04.901Z] [INFO] Dry run: would generate image for Formula E London E-Prix 2026 at output/2026-W33/images/formula-e-london-e-prix-2026.png
+[2026-08-09T07:16:04.902Z] [INFO] Dry run: would generate image for Vuelta a España 2026 at output/2026-W33/images/vuelta-a-espana-2026.png
+[2026-08-09T07:16:04.903Z] [INFO] Created image manifest: output/2026-W33/images.json
+[2026-08-09T07:16:04.903Z] [INFO] Generate images finished successfully
+[2026-08-09T07:16:04.907Z] [INFO] Weekly agent finished successfully
