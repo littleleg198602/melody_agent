@@ -1153,3 +1153,38 @@
 [2026-08-09T07:16:04.903Z] [INFO] Created image manifest: output/2026-W33/images.json
 [2026-08-09T07:16:04.903Z] [INFO] Generate images finished successfully
 [2026-08-09T07:16:04.907Z] [INFO] Weekly agent finished successfully
+[2026-08-16T06:58:26.545Z] [INFO] Weekly agent started
+[2026-08-16T06:58:26.548Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-08-16T06:58:26.624Z] [INFO] Create weekly overview started
+[2026-08-16T06:58:26.627Z] [INFO] Calculated target week: 2026-W34, from 2026-08-17 to 2026-08-23
+[2026-08-16T06:58:26.628Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-08-16T06:58:37.958Z] [INFO] Overview generated_at set by script: 2026-08-16T06:58:37.957Z
+[2026-08-16T06:58:37.962Z] [INFO] Raw events returned: 5
+[2026-08-16T06:58:37.968Z] [INFO] Events after filtering: 5
+[2026-08-16T06:58:37.969Z] [INFO] Final selected event order: 9. Advantage Cars Prague Open 2026 | 9. FIH Hockey World Cup 2026 | 9. Men's Road Cycling UCI World Tour 2026 (Renewi Tour) | 9. Men's Artistic Gymnastics UEG European Championships 2026 | 9. Women's Road Cycling UCI World Tour 2026 (Lloyds Tour of Britain Women)
+[2026-08-16T06:58:37.970Z] [INFO] Final selected tone values: Advantage Cars Prague Open 2026: fan_hype | FIH Hockey World Cup 2026: fan_hype | Men's Road Cycling UCI World Tour 2026 (Renewi Tour): fan_hype | Men's Artistic Gymnastics UEG European Championships 2026: fan_hype | Women's Road Cycling UCI World Tour 2026 (Lloyds Tour of Britain Women): fan_hype
+[2026-08-16T06:58:37.971Z] [INFO] Final selected language_policy values: Advantage Cars Prague Open 2026: czech | FIH Hockey World Cup 2026: english | Men's Road Cycling UCI World Tour 2026 (Renewi Tour): english | Men's Artistic Gymnastics UEG European Championships 2026: english | Women's Road Cycling UCI World Tour 2026 (Lloyds Tour of Britain Women): english
+[2026-08-16T06:58:37.972Z] [INFO] Created weekly overview: data/weekly/2026-W34.json
+[2026-08-16T06:58:37.972Z] [INFO] Create weekly overview finished successfully
+[2026-08-16T06:58:37.998Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-08-16T06:58:38.076Z] [INFO] Generate image prompts started
+[2026-08-16T06:58:38.079Z] [INFO] Reading weekly overview: data/weekly/2026-W34.json
+[2026-08-16T06:58:38.080Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W34
+[2026-08-16T06:58:57.723Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Advantage Cars Prague Open 2026", "date": "2026-08-17", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "czech", "composition_type": "stadium_atmosphere", "text_on_image": "Advantage Cars Prague Open 2026\nPro české fanoušky tenisu", "text_on_image_cs": "Advantage Cars Prague Open 2026\nPro české fanoušky tenisu", "text_on_image_en": "", "image_prompt": "Create a premium cinematic social media campaign poster for the Advantage C
+[2026-08-16T06:58:57.725Z] [INFO] Prompt count after validation and image-topic filtering: 5
+[2026-08-16T06:58:57.725Z] [INFO] Prompts created_at set by script: 2026-08-16T06:58:57.725Z
+[2026-08-16T06:58:57.726Z] [INFO] Created image prompts: output/2026-W34/prompts.json
+[2026-08-16T06:58:57.726Z] [INFO] Generate image prompts finished successfully
+[2026-08-16T06:58:57.737Z] [INFO] Running step: scripts/generate-images.js
+[2026-08-16T06:58:57.812Z] [INFO] Generate images started
+[2026-08-16T06:58:57.815Z] [INFO] Reading image prompts: output/2026-W34/prompts.json
+[2026-08-16T06:58:57.816Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=5
+[2026-08-16T06:58:57.816Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-08-16T06:58:57.817Z] [INFO] Dry run: would generate image for Advantage Cars Prague Open 2026 at output/2026-W34/images/advantage-cars-prague-open-2026.png
+[2026-08-16T06:58:57.817Z] [INFO] Dry run: would generate image for FIH Hockey World Cup 2026 at output/2026-W34/images/fih-hockey-world-cup-2026.png
+[2026-08-16T06:58:57.817Z] [INFO] Dry run: would generate image for Men's Road Cycling UCI World Tour 2026 (Renewi Tour) at output/2026-W34/images/mens-road-cycling-renewi-tour-2026.png
+[2026-08-16T06:58:57.817Z] [INFO] Dry run: would generate image for Men's Artistic Gymnastics UEG European Championships 2026 at output/2026-W34/images/mens-artistic-gymnastics-ueg-european-championships-2026.png
+[2026-08-16T06:58:57.818Z] [INFO] Dry run: would generate image for Women's Road Cycling UCI World Tour 2026 (Lloyds Tour of Britain Women) at output/2026-W34/images/womens-road-cycling-lloyds-tour-of-britain-women-2026.png
+[2026-08-16T06:58:57.818Z] [INFO] Created image manifest: output/2026-W34/images.json
+[2026-08-16T06:58:57.819Z] [INFO] Generate images finished successfully
+[2026-08-16T06:58:57.822Z] [INFO] Weekly agent finished successfully

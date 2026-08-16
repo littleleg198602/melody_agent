@@ -1,0 +1,36 @@
+{
+  "week": "2026-W34",
+  "created_at": "2026-08-16T06:58:57.816Z",
+  "images": [
+    {
+      "event_title": "Advantage Cars Prague Open 2026",
+      "slug": "advantage-cars-prague-open-2026",
+      "file": "output/2026-W34/images/advantage-cars-prague-open-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "FIH Hockey World Cup 2026",
+      "slug": "fih-hockey-world-cup-2026",
+      "file": "output/2026-W34/images/fih-hockey-world-cup-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Men's Road Cycling UCI World Tour 2026 (Renewi Tour)",
+      "slug": "mens-road-cycling-renewi-tour-2026",
+      "file": "output/2026-W34/images/mens-road-cycling-renewi-tour-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Men's Artistic Gymnastics UEG European Championships 2026",
+      "slug": "mens-artistic-gymnastics-ueg-european-championships-2026",
+      "file": "output/2026-W34/images/mens-artistic-gymnastics-ueg-european-championships-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Women's Road Cycling UCI World Tour 2026 (Lloyds Tour of Britain Women)",
+      "slug": "womens-road-cycling-lloyds-tour-of-britain-women-2026",
+      "file": "output/2026-W34/images/womens-road-cycling-lloyds-tour-of-britain-women-2026.png",
+      "status": "skipped"
+    }
+  ]
+}
