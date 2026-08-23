@@ -1188,3 +1188,37 @@
 [2026-08-16T06:58:57.818Z] [INFO] Created image manifest: output/2026-W34/images.json
 [2026-08-16T06:58:57.819Z] [INFO] Generate images finished successfully
 [2026-08-16T06:58:57.822Z] [INFO] Weekly agent finished successfully
+[2026-08-23T07:00:45.829Z] [INFO] Weekly agent started
+[2026-08-23T07:00:45.832Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-08-23T07:00:45.944Z] [INFO] Create weekly overview started
+[2026-08-23T07:00:45.949Z] [INFO] Calculated target week: 2026-W35, from 2026-08-24 to 2026-08-30
+[2026-08-23T07:00:45.949Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-08-23T07:00:55.868Z] [INFO] Overview generated_at set by script: 2026-08-23T07:00:55.867Z
+[2026-08-23T07:00:55.873Z] [INFO] Raw events returned: 5
+[2026-08-23T07:00:55.881Z] [INFO] Events after filtering: 5
+[2026-08-23T07:00:55.882Z] [INFO] Final selected event order: 1. MotoGP: Aragon Grand Prix | 1. Formula 1: Dutch Grand Prix | 1. St. Wenceslas Day (Czech Statehood Day) | 9. Czech Tour: Final Stage | 9. Czech National Football Team Friendly Match
+[2026-08-23T07:00:55.882Z] [INFO] Final selected tone values: MotoGP: Aragon Grand Prix: fan_hype | Formula 1: Dutch Grand Prix: fan_hype | St. Wenceslas Day (Czech Statehood Day): celebration | Czech Tour: Final Stage: fan_hype | Czech National Football Team Friendly Match: fan_hype
+[2026-08-23T07:00:55.884Z] [INFO] Final selected language_policy values: MotoGP: Aragon Grand Prix: english | Formula 1: Dutch Grand Prix: english | St. Wenceslas Day (Czech Statehood Day): czech | Czech Tour: Final Stage: english | Czech National Football Team Friendly Match: english
+[2026-08-23T07:00:55.885Z] [INFO] Created weekly overview: data/weekly/2026-W35.json
+[2026-08-23T07:00:55.885Z] [INFO] Create weekly overview finished successfully
+[2026-08-23T07:00:55.920Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-08-23T07:00:56.028Z] [INFO] Generate image prompts started
+[2026-08-23T07:00:56.033Z] [INFO] Reading weekly overview: data/weekly/2026-W35.json
+[2026-08-23T07:00:56.034Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W35
+[2026-08-23T07:01:18.197Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1: Dutch Grand Prix", "date": "2026-08-28", "category": "motorsport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 Dutch Grand Prix on 2026-08-28. The scene shows a cinematic racing track 
+[2026-08-23T07:01:18.199Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-08-23T07:01:18.199Z] [INFO] Prompts created_at set by script: 2026-08-23T07:01:18.198Z
+[2026-08-23T07:01:18.200Z] [INFO] Created image prompts: output/2026-W35/prompts.json
+[2026-08-23T07:01:18.200Z] [INFO] Generate image prompts finished successfully
+[2026-08-23T07:01:18.250Z] [INFO] Running step: scripts/generate-images.js
+[2026-08-23T07:01:18.358Z] [INFO] Generate images started
+[2026-08-23T07:01:18.363Z] [INFO] Reading image prompts: output/2026-W35/prompts.json
+[2026-08-23T07:01:18.365Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-08-23T07:01:18.365Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-08-23T07:01:18.366Z] [INFO] Dry run: would generate image for Formula 1: Dutch Grand Prix at output/2026-W35/images/formula1-dutch-grand-prix-2026-08-28.png
+[2026-08-23T07:01:18.366Z] [INFO] Dry run: would generate image for St. Wenceslas Day (Czech Statehood Day) at output/2026-W35/images/st-wenceslas-day-2026-08-28.png
+[2026-08-23T07:01:18.367Z] [INFO] Dry run: would generate image for Czech Tour: Final Stage at output/2026-W35/images/czech-tour-final-stage-2026-08-28.png
+[2026-08-23T07:01:18.367Z] [INFO] Dry run: would generate image for Czech National Football Team Friendly Match at output/2026-W35/images/czech-national-football-friendly-2026-08-28.png
+[2026-08-23T07:01:18.368Z] [INFO] Created image manifest: output/2026-W35/images.json
+[2026-08-23T07:01:18.368Z] [INFO] Generate images finished successfully
+[2026-08-23T07:01:18.373Z] [INFO] Weekly agent finished successfully
