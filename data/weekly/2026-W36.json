@@ -1,0 +1,26 @@
+{
+  "week": "2026-W36",
+  "date_from": "2026-08-31",
+  "date_to": "2026-09-06",
+  "generated_at": "2026-08-30T11:54:31.905Z",
+  "events": [
+    {
+      "date": "2026-09-04",
+      "category": "motorsport",
+      "title": "Formula 1: Italian Grand Prix",
+      "note": "The Italian Grand Prix at Monza marks the return of Formula 1 after the summer break, featuring high-speed racing on one of the sport's most iconic circuits.",
+      "priority": 1,
+      "source_priority": 1,
+      "generate_image": true,
+      "status": "waiting",
+      "backup_only": false,
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "czech_relevance": "medium",
+      "melody4u_score": 5,
+      "marketing_angle": "Experience the thrill of Monza's high-speed racing action.",
+      "why_selected": "The Italian Grand Prix is a premier motorsport event, attracting global attention and offering exciting racing action."
+    }
+  ]
+}

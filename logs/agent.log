@@ -1222,3 +1222,34 @@
 [2026-08-23T07:01:18.368Z] [INFO] Created image manifest: output/2026-W35/images.json
 [2026-08-23T07:01:18.368Z] [INFO] Generate images finished successfully
 [2026-08-23T07:01:18.373Z] [INFO] Weekly agent finished successfully
+[2026-08-30T11:54:21.638Z] [INFO] Weekly agent started
+[2026-08-30T11:54:21.641Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-08-30T11:54:21.753Z] [INFO] Create weekly overview started
+[2026-08-30T11:54:21.758Z] [INFO] Calculated target week: 2026-W36, from 2026-08-31 to 2026-09-06
+[2026-08-30T11:54:21.759Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-08-30T11:54:31.905Z] [INFO] Overview generated_at set by script: 2026-08-30T11:54:31.905Z
+[2026-08-30T11:54:31.913Z] [INFO] Raw events returned: 1
+[2026-08-30T11:54:31.913Z] [INFO] Events after filtering: 1
+[2026-08-30T11:54:31.914Z] [INFO] Final selected event order: 1. Formula 1: Italian Grand Prix
+[2026-08-30T11:54:31.915Z] [INFO] Final selected tone values: Formula 1: Italian Grand Prix: fan_hype
+[2026-08-30T11:54:31.915Z] [INFO] Final selected language_policy values: Formula 1: Italian Grand Prix: english
+[2026-08-30T11:54:31.916Z] [INFO] Created weekly overview: data/weekly/2026-W36.json
+[2026-08-30T11:54:31.916Z] [INFO] Create weekly overview finished successfully
+[2026-08-30T11:54:31.942Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-08-30T11:54:32.045Z] [INFO] Generate image prompts started
+[2026-08-30T11:54:32.049Z] [INFO] Reading weekly overview: data/weekly/2026-W36.json
+[2026-08-30T11:54:32.050Z] [INFO] Found 1 waiting events with generate_image=true for 2026-W36
+[2026-08-30T11:54:37.880Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1: Italian Grand Prix", "date": "2026-09-04", "category": "motorsport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 Italian Grand Prix on 2026-09-04. The visible text must be exactly 'Rac
+[2026-08-30T11:54:37.882Z] [INFO] Prompt count after validation and image-topic filtering: 1
+[2026-08-30T11:54:37.882Z] [INFO] Prompts created_at set by script: 2026-08-30T11:54:37.882Z
+[2026-08-30T11:54:37.883Z] [INFO] Created image prompts: output/2026-W36/prompts.json
+[2026-08-30T11:54:37.884Z] [INFO] Generate image prompts finished successfully
+[2026-08-30T11:54:37.924Z] [INFO] Running step: scripts/generate-images.js
+[2026-08-30T11:54:38.024Z] [INFO] Generate images started
+[2026-08-30T11:54:38.029Z] [INFO] Reading image prompts: output/2026-W36/prompts.json
+[2026-08-30T11:54:38.031Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=1
+[2026-08-30T11:54:38.031Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-08-30T11:54:38.032Z] [INFO] Dry run: would generate image for Formula 1: Italian Grand Prix at output/2026-W36/images/formula1-italian-grand-prix-2026.png
+[2026-08-30T11:54:38.032Z] [INFO] Created image manifest: output/2026-W36/images.json
+[2026-08-30T11:54:38.033Z] [INFO] Generate images finished successfully
+[2026-08-30T11:54:38.036Z] [INFO] Weekly agent finished successfully
