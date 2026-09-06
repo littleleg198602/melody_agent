@@ -1253,3 +1253,37 @@
 [2026-08-30T11:54:38.032Z] [INFO] Created image manifest: output/2026-W36/images.json
 [2026-08-30T11:54:38.033Z] [INFO] Generate images finished successfully
 [2026-08-30T11:54:38.036Z] [INFO] Weekly agent finished successfully
+[2026-09-06T10:55:58.366Z] [INFO] Weekly agent started
+[2026-09-06T10:55:58.369Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-09-06T10:55:58.480Z] [INFO] Create weekly overview started
+[2026-09-06T10:55:58.484Z] [INFO] Calculated target week: 2026-W37, from 2026-09-07 to 2026-09-13
+[2026-09-06T10:55:58.485Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-09-06T10:56:08.484Z] [INFO] Overview generated_at set by script: 2026-09-06T10:56:08.483Z
+[2026-09-06T10:56:08.491Z] [INFO] Raw events returned: 5
+[2026-09-06T10:56:08.491Z] [INFO] Skipped image generation for weak event: Taekwondo WT Nations Cup 2026 — low Czech relevance and low Melody4U score.
+[2026-09-06T10:56:08.504Z] [INFO] Events after filtering: 5
+[2026-09-06T10:56:08.504Z] [INFO] Final selected event order: 1. Formula 1 Spanish Grand Prix | 2. MotoGP San Marino Grand Prix | 3. FIM Grand Prix 2026 (San Marino Grand Prix) | 9. Taekwondo WT Nations Cup 2026 | 9. UCI Road World Championships - GP de Montréal
+[2026-09-06T10:56:08.505Z] [INFO] Final selected tone values: Formula 1 Spanish Grand Prix: fan_hype | MotoGP San Marino Grand Prix: fan_hype | FIM Grand Prix 2026 (San Marino Grand Prix): fan_hype | Taekwondo WT Nations Cup 2026: fan_hype | UCI Road World Championships - GP de Montréal: fan_hype
+[2026-09-06T10:56:08.505Z] [INFO] Final selected language_policy values: Formula 1 Spanish Grand Prix: english | MotoGP San Marino Grand Prix: english | FIM Grand Prix 2026 (San Marino Grand Prix): english | Taekwondo WT Nations Cup 2026: english | UCI Road World Championships - GP de Montréal: english
+[2026-09-06T10:56:08.506Z] [INFO] Created weekly overview: data/weekly/2026-W37.json
+[2026-09-06T10:56:08.507Z] [INFO] Create weekly overview finished successfully
+[2026-09-06T10:56:08.539Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-09-06T10:56:08.640Z] [INFO] Generate image prompts started
+[2026-09-06T10:56:08.644Z] [INFO] Reading weekly overview: data/weekly/2026-W37.json
+[2026-09-06T10:56:08.646Z] [INFO] Found 3 waiting events with generate_image=true for 2026-W37
+[2026-09-06T10:56:20.679Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1 Spanish Grand Prix", "date": "2026-09-11", "category": "motorsport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 Spanish Grand Prix on September 11, 2026. The visible text must be exact
+[2026-09-06T10:56:20.684Z] [INFO] Prompt count after validation and image-topic filtering: 3
+[2026-09-06T10:56:20.685Z] [INFO] Prompts created_at set by script: 2026-09-06T10:56:20.684Z
+[2026-09-06T10:56:20.688Z] [INFO] Created image prompts: output/2026-W37/prompts.json
+[2026-09-06T10:56:20.688Z] [INFO] Generate image prompts finished successfully
+[2026-09-06T10:56:20.736Z] [INFO] Running step: scripts/generate-images.js
+[2026-09-06T10:56:20.838Z] [INFO] Generate images started
+[2026-09-06T10:56:20.842Z] [INFO] Reading image prompts: output/2026-W37/prompts.json
+[2026-09-06T10:56:20.844Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=3
+[2026-09-06T10:56:20.844Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-09-06T10:56:20.844Z] [INFO] Dry run: would generate image for Formula 1 Spanish Grand Prix at output/2026-W37/images/formula-1-spanish-grand-prix-2026.png
+[2026-09-06T10:56:20.845Z] [INFO] Dry run: would generate image for FIM Grand Prix 2026 (San Marino Grand Prix) at output/2026-W37/images/fim-grand-prix-2026-san-marino.png
+[2026-09-06T10:56:20.845Z] [INFO] Dry run: would generate image for UCI Road World Championships - GP de Montréal at output/2026-W37/images/uci-road-world-championships-gp-de-montreal-2026.png
+[2026-09-06T10:56:20.846Z] [INFO] Created image manifest: output/2026-W37/images.json
+[2026-09-06T10:56:20.846Z] [INFO] Generate images finished successfully
+[2026-09-06T10:56:20.850Z] [INFO] Weekly agent finished successfully

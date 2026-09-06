@@ -1,0 +1,24 @@
+{
+  "week": "2026-W37",
+  "created_at": "2026-09-06T10:56:20.844Z",
+  "images": [
+    {
+      "event_title": "Formula 1 Spanish Grand Prix",
+      "slug": "formula-1-spanish-grand-prix-2026",
+      "file": "output/2026-W37/images/formula-1-spanish-grand-prix-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "FIM Grand Prix 2026 (San Marino Grand Prix)",
+      "slug": "fim-grand-prix-2026-san-marino",
+      "file": "output/2026-W37/images/fim-grand-prix-2026-san-marino.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "UCI Road World Championships - GP de Montréal",
+      "slug": "uci-road-world-championships-gp-de-montreal-2026",
+      "file": "output/2026-W37/images/uci-road-world-championships-gp-de-montreal-2026.png",
+      "status": "skipped"
+    }
+  ]
+}
