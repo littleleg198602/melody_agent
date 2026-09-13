@@ -1,0 +1,62 @@
+{
+  "week": "2026-W38",
+  "date_from": "2026-09-14",
+  "date_to": "2026-09-20",
+  "generated_at": "2026-09-13T11:51:41.334Z",
+  "events": [
+    {
+      "date": "2026-09-18",
+      "category": "motorsport",
+      "title": "MotoGP: Austrian Grand Prix at Red Bull Ring",
+      "note": "The MotoGP season continues with the Austrian Grand Prix at the Red Bull Ring in Spielberg, Austria, featuring high-speed racing action just a short drive from Prague.",
+      "priority": 1,
+      "source_priority": 1,
+      "generate_image": true,
+      "status": "waiting",
+      "backup_only": false,
+      "tone": "fan_hype",
+      "event_origin": "motorsport",
+      "language_policy": "english",
+      "czech_relevance": "high",
+      "melody4u_score": 5,
+      "marketing_angle": "Highlighting the proximity of the Austrian Grand Prix to Czech fans, emphasizing the excitement of live MotoGP racing.",
+      "why_selected": "The Austrian Grand Prix is a major event in the MotoGP calendar, and its location near Prague makes it highly relevant to the Czech audience."
+    },
+    {
+      "date": "2026-09-19",
+      "category": "sport",
+      "title": "FIFA Women's U-20 World Cup: Poland vs. Czech Republic",
+      "note": "The Czech Republic's U-20 women's football team faces Poland in a crucial match at the FIFA Women's U-20 World Cup, showcasing the rising talent in Czech women's football.",
+      "priority": 5,
+      "source_priority": 1,
+      "generate_image": true,
+      "status": "waiting",
+      "backup_only": false,
+      "tone": "fan_hype",
+      "event_origin": "sport",
+      "language_policy": "english",
+      "czech_relevance": "high",
+      "melody4u_score": 5,
+      "marketing_angle": "Emphasizing the importance of supporting the Czech national team in international competitions, highlighting the growth of women's football in the country.",
+      "why_selected": "The match between the Czech Republic and Poland is significant for Czech football fans, especially in the context of international tournaments."
+    },
+    {
+      "date": "2026-09-20",
+      "category": "sport",
+      "title": "FIFA Women's U-20 World Cup: Czech Republic vs. South Korea",
+      "note": "The Czech Republic's U-20 women's football team takes on South Korea in a pivotal match at the FIFA Women's U-20 World Cup, aiming to advance further in the tournament.",
+      "priority": 5,
+      "source_priority": 1,
+      "generate_image": true,
+      "status": "waiting",
+      "backup_only": false,
+      "tone": "fan_hype",
+      "event_origin": "sport",
+      "language_policy": "english",
+      "czech_relevance": "high",
+      "melody4u_score": 5,
+      "marketing_angle": "Highlighting the Czech team's journey in the World Cup, encouraging fans to rally behind the national team in their quest for success.",
+      "why_selected": "The match against South Korea is crucial for the Czech team, and its timing makes it a focal point for Czech football enthusiasts."
+    }
+  ]
+}

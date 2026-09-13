@@ -1,0 +1,18 @@
+{
+  "week": "2026-W38",
+  "created_at": "2026-09-13T11:51:49.467Z",
+  "images": [
+    {
+      "event_title": "FIFA Women's U-20 World Cup: Poland vs. Czech Republic",
+      "slug": "fifa-womens-u20-poland-vs-czech-2026-09-19",
+      "file": "output/2026-W38/images/fifa-womens-u20-poland-vs-czech-2026-09-19.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "FIFA Women's U-20 World Cup: Czech Republic vs. South Korea",
+      "slug": "fifa-womens-u20-czech-vs-south-korea-2026-09-20",
+      "file": "output/2026-W38/images/fifa-womens-u20-czech-vs-south-korea-2026-09-20.png",
+      "status": "skipped"
+    }
+  ]
+}

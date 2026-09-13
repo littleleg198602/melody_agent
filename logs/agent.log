@@ -1287,3 +1287,35 @@
 [2026-09-06T10:56:20.846Z] [INFO] Created image manifest: output/2026-W37/images.json
 [2026-09-06T10:56:20.846Z] [INFO] Generate images finished successfully
 [2026-09-06T10:56:20.850Z] [INFO] Weekly agent finished successfully
+[2026-09-13T11:51:31.571Z] [INFO] Weekly agent started
+[2026-09-13T11:51:31.574Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-09-13T11:51:31.651Z] [INFO] Create weekly overview started
+[2026-09-13T11:51:31.655Z] [INFO] Calculated target week: 2026-W38, from 2026-09-14 to 2026-09-20
+[2026-09-13T11:51:31.656Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-09-13T11:51:41.335Z] [INFO] Overview generated_at set by script: 2026-09-13T11:51:41.334Z
+[2026-09-13T11:51:41.339Z] [INFO] Raw events returned: 3
+[2026-09-13T11:51:41.346Z] [INFO] Events after filtering: 3
+[2026-09-13T11:51:41.346Z] [INFO] Final selected event order: 1. MotoGP: Austrian Grand Prix at Red Bull Ring | 1. FIFA Women's U-20 World Cup: Poland vs. Czech Republic | 1. FIFA Women's U-20 World Cup: Czech Republic vs. South Korea
+[2026-09-13T11:51:41.347Z] [INFO] Final selected tone values: MotoGP: Austrian Grand Prix at Red Bull Ring: fan_hype | FIFA Women's U-20 World Cup: Poland vs. Czech Republic: fan_hype | FIFA Women's U-20 World Cup: Czech Republic vs. South Korea: fan_hype
+[2026-09-13T11:51:41.347Z] [INFO] Final selected language_policy values: MotoGP: Austrian Grand Prix at Red Bull Ring: english | FIFA Women's U-20 World Cup: Poland vs. Czech Republic: english | FIFA Women's U-20 World Cup: Czech Republic vs. South Korea: english
+[2026-09-13T11:51:41.348Z] [INFO] Created weekly overview: data/weekly/2026-W38.json
+[2026-09-13T11:51:41.348Z] [INFO] Create weekly overview finished successfully
+[2026-09-13T11:51:41.352Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-09-13T11:51:41.431Z] [INFO] Generate image prompts started
+[2026-09-13T11:51:41.435Z] [INFO] Reading weekly overview: data/weekly/2026-W38.json
+[2026-09-13T11:51:41.435Z] [INFO] Found 2 waiting events with generate_image=true for 2026-W38
+[2026-09-13T11:51:49.341Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "FIFA Women's U-20 World Cup: Poland vs. Czech Republic", "date": "2026-09-19", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "english", "composition_type": "stadium_atmosphere", "text_on_image": "Game Night Feeling", "text_on_image_cs": "", "text_on_image_en": "Game Night Feeling", "image_prompt": "Create a premium cinematic social media campaign poster in vertical 9:16 format suitable for TikTok, Instagram Reels, and Facebook
+[2026-09-13T11:51:49.343Z] [INFO] Prompt count after validation and image-topic filtering: 2
+[2026-09-13T11:51:49.344Z] [INFO] Prompts created_at set by script: 2026-09-13T11:51:49.342Z
+[2026-09-13T11:51:49.345Z] [INFO] Created image prompts: output/2026-W38/prompts.json
+[2026-09-13T11:51:49.345Z] [INFO] Generate image prompts finished successfully
+[2026-09-13T11:51:49.386Z] [INFO] Running step: scripts/generate-images.js
+[2026-09-13T11:51:49.462Z] [INFO] Generate images started
+[2026-09-13T11:51:49.466Z] [INFO] Reading image prompts: output/2026-W38/prompts.json
+[2026-09-13T11:51:49.467Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=2
+[2026-09-13T11:51:49.467Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-09-13T11:51:49.467Z] [INFO] Dry run: would generate image for FIFA Women's U-20 World Cup: Poland vs. Czech Republic at output/2026-W38/images/fifa-womens-u20-poland-vs-czech-2026-09-19.png
+[2026-09-13T11:51:49.468Z] [INFO] Dry run: would generate image for FIFA Women's U-20 World Cup: Czech Republic vs. South Korea at output/2026-W38/images/fifa-womens-u20-czech-vs-south-korea-2026-09-20.png
+[2026-09-13T11:51:49.468Z] [INFO] Created image manifest: output/2026-W38/images.json
+[2026-09-13T11:51:49.468Z] [INFO] Generate images finished successfully
+[2026-09-13T11:51:49.472Z] [INFO] Weekly agent finished successfully
