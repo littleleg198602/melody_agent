@@ -1,0 +1,36 @@
+{
+  "week": "2026-W39",
+  "created_at": "2026-09-20T11:23:31.351Z",
+  "images": [
+    {
+      "event_title": "World Car-Free Day",
+      "slug": "world-car-free-day-2026",
+      "file": "output/2026-W39/images/world-car-free-day-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Czech Statehood Day",
+      "slug": "czech-statehood-day-2026",
+      "file": "output/2026-W39/images/czech-statehood-day-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Formula 1: Singapore Grand Prix",
+      "slug": "formula-1-singapore-grand-prix-2026",
+      "file": "output/2026-W39/images/formula-1-singapore-grand-prix-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Start of the New Hockey Season: Czech Republic vs Sweden",
+      "slug": "start-new-hockey-season-czech-vs-sweden-2026",
+      "file": "output/2026-W39/images/start-new-hockey-season-czech-vs-sweden-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "UEFA Nations League: Czech Republic vs Croatia",
+      "slug": "uefa-nations-league-czech-vs-croatia-2026",
+      "file": "output/2026-W39/images/uefa-nations-league-czech-vs-croatia-2026.png",
+      "status": "skipped"
+    }
+  ]
+}

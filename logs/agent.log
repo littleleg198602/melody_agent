@@ -1319,3 +1319,38 @@
 [2026-09-13T11:51:49.468Z] [INFO] Created image manifest: output/2026-W38/images.json
 [2026-09-13T11:51:49.468Z] [INFO] Generate images finished successfully
 [2026-09-13T11:51:49.472Z] [INFO] Weekly agent finished successfully
+[2026-09-20T11:23:08.265Z] [INFO] Weekly agent started
+[2026-09-20T11:23:08.268Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-09-20T11:23:08.370Z] [INFO] Create weekly overview started
+[2026-09-20T11:23:08.375Z] [INFO] Calculated target week: 2026-W39, from 2026-09-21 to 2026-09-27
+[2026-09-20T11:23:08.376Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-09-20T11:23:18.896Z] [INFO] Overview generated_at set by script: 2026-09-20T11:23:18.895Z
+[2026-09-20T11:23:18.902Z] [INFO] Raw events returned: 5
+[2026-09-20T11:23:18.910Z] [INFO] Events after filtering: 5
+[2026-09-20T11:23:18.911Z] [INFO] Final selected event order: 2. World Car-Free Day | 3. Czech Statehood Day | 3. Formula 1: Singapore Grand Prix | 9. Start of the New Hockey Season: Czech Republic vs Sweden | 9. UEFA Nations League: Czech Republic vs Croatia
+[2026-09-20T11:23:18.911Z] [INFO] Final selected tone values: World Car-Free Day: awareness | Czech Statehood Day: celebration | Formula 1: Singapore Grand Prix: fan_hype | Start of the New Hockey Season: Czech Republic vs Sweden: fan_hype | UEFA Nations League: Czech Republic vs Croatia: fan_hype
+[2026-09-20T11:23:18.912Z] [INFO] Final selected language_policy values: World Car-Free Day: bilingual_cs_en | Czech Statehood Day: czech | Formula 1: Singapore Grand Prix: english | Start of the New Hockey Season: Czech Republic vs Sweden: english | UEFA Nations League: Czech Republic vs Croatia: english
+[2026-09-20T11:23:18.913Z] [INFO] Created weekly overview: data/weekly/2026-W39.json
+[2026-09-20T11:23:18.913Z] [INFO] Create weekly overview finished successfully
+[2026-09-20T11:23:18.953Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-09-20T11:23:19.052Z] [INFO] Generate image prompts started
+[2026-09-20T11:23:19.056Z] [INFO] Reading weekly overview: data/weekly/2026-W39.json
+[2026-09-20T11:23:19.058Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W39
+[2026-09-20T11:23:31.189Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "World Car-Free Day", "date": "2026-09-22", "category": "international_significant_day", "tone": "awareness", "event_origin": "international_significant_day", "language_policy": "bilingual_cs_en", "composition_type": "awareness_symbolic_scene", "text_on_image": "Choose Hope / Volíme naději", "text_on_image_cs": "Volíme naději", "text_on_image_en": "Choose Hope", "image_prompt": "Create a premium cinematic social media campaign poster for World Car-Free Day with bili
+[2026-09-20T11:23:31.192Z] [INFO] Prompt count after validation and image-topic filtering: 5
+[2026-09-20T11:23:31.193Z] [INFO] Prompts created_at set by script: 2026-09-20T11:23:31.192Z
+[2026-09-20T11:23:31.194Z] [INFO] Created image prompts: output/2026-W39/prompts.json
+[2026-09-20T11:23:31.194Z] [INFO] Generate image prompts finished successfully
+[2026-09-20T11:23:31.245Z] [INFO] Running step: scripts/generate-images.js
+[2026-09-20T11:23:31.345Z] [INFO] Generate images started
+[2026-09-20T11:23:31.349Z] [INFO] Reading image prompts: output/2026-W39/prompts.json
+[2026-09-20T11:23:31.351Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=5
+[2026-09-20T11:23:31.351Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-09-20T11:23:31.351Z] [INFO] Dry run: would generate image for World Car-Free Day at output/2026-W39/images/world-car-free-day-2026.png
+[2026-09-20T11:23:31.352Z] [INFO] Dry run: would generate image for Czech Statehood Day at output/2026-W39/images/czech-statehood-day-2026.png
+[2026-09-20T11:23:31.352Z] [INFO] Dry run: would generate image for Formula 1: Singapore Grand Prix at output/2026-W39/images/formula-1-singapore-grand-prix-2026.png
+[2026-09-20T11:23:31.352Z] [INFO] Dry run: would generate image for Start of the New Hockey Season: Czech Republic vs Sweden at output/2026-W39/images/start-new-hockey-season-czech-vs-sweden-2026.png
+[2026-09-20T11:23:31.353Z] [INFO] Dry run: would generate image for UEFA Nations League: Czech Republic vs Croatia at output/2026-W39/images/uefa-nations-league-czech-vs-croatia-2026.png
+[2026-09-20T11:23:31.354Z] [INFO] Created image manifest: output/2026-W39/images.json
+[2026-09-20T11:23:31.354Z] [INFO] Generate images finished successfully
+[2026-09-20T11:23:31.358Z] [INFO] Weekly agent finished successfully
