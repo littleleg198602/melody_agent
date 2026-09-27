@@ -1354,3 +1354,37 @@
 [2026-09-20T11:23:31.354Z] [INFO] Created image manifest: output/2026-W39/images.json
 [2026-09-20T11:23:31.354Z] [INFO] Generate images finished successfully
 [2026-09-20T11:23:31.358Z] [INFO] Weekly agent finished successfully
+[2026-09-27T12:01:51.501Z] [INFO] Weekly agent started
+[2026-09-27T12:01:51.504Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-09-27T12:01:51.610Z] [INFO] Create weekly overview started
+[2026-09-27T12:01:51.614Z] [INFO] Calculated target week: 2026-W40, from 2026-09-28 to 2026-10-04
+[2026-09-27T12:01:51.615Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-09-27T12:02:00.588Z] [INFO] Overview generated_at set by script: 2026-09-27T12:02:00.587Z
+[2026-09-27T12:02:00.592Z] [INFO] Raw events returned: 5
+[2026-09-27T12:02:00.600Z] [INFO] Events after filtering: 5
+[2026-09-27T12:02:00.601Z] [INFO] Final selected event order: 1. Den české státnosti (St. Wenceslas Day) | 3. Formula 1 Japanese Grand Prix | 3. MotoGP Australian Grand Prix | 9. HC Sparta Praha vs. HC Energie Karlovy Vary | 9. HC Sparta Praha vs. Motor České Budějovice
+[2026-09-27T12:02:00.601Z] [INFO] Final selected tone values: Den české státnosti (St. Wenceslas Day): celebration | Formula 1 Japanese Grand Prix: fan_hype | MotoGP Australian Grand Prix: fan_hype | HC Sparta Praha vs. HC Energie Karlovy Vary: fan_hype | HC Sparta Praha vs. Motor České Budějovice: fan_hype
+[2026-09-27T12:02:00.601Z] [INFO] Final selected language_policy values: Den české státnosti (St. Wenceslas Day): czech | Formula 1 Japanese Grand Prix: english | MotoGP Australian Grand Prix: english | HC Sparta Praha vs. HC Energie Karlovy Vary: english | HC Sparta Praha vs. Motor České Budějovice: english
+[2026-09-27T12:02:00.602Z] [INFO] Created weekly overview: data/weekly/2026-W40.json
+[2026-09-27T12:02:00.603Z] [INFO] Create weekly overview finished successfully
+[2026-09-27T12:02:00.643Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-09-27T12:02:00.748Z] [INFO] Generate image prompts started
+[2026-09-27T12:02:00.753Z] [INFO] Reading weekly overview: data/weekly/2026-W40.json
+[2026-09-27T12:02:00.754Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W40
+[2026-09-27T12:02:12.985Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Den české státnosti (St. Wenceslas Day)", "date": "2026-09-28", "category": "significant_day", "tone": "celebration", "event_origin": "czech_significant_day", "language_policy": "czech", "composition_type": "seasonal_symbolic_scene", "text_on_image": "Den české státnosti", "text_on_image_cs": "Den české státnosti", "text_on_image_en": "", "image_prompt": "Create a premium cinematic social media campaign poster for Den české státnosti in Czech language. Use a respec
+[2026-09-27T12:02:12.989Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-09-27T12:02:12.989Z] [INFO] Prompts created_at set by script: 2026-09-27T12:02:12.988Z
+[2026-09-27T12:02:12.990Z] [INFO] Created image prompts: output/2026-W40/prompts.json
+[2026-09-27T12:02:12.991Z] [INFO] Generate image prompts finished successfully
+[2026-09-27T12:02:13.059Z] [INFO] Running step: scripts/generate-images.js
+[2026-09-27T12:02:13.164Z] [INFO] Generate images started
+[2026-09-27T12:02:13.168Z] [INFO] Reading image prompts: output/2026-W40/prompts.json
+[2026-09-27T12:02:13.170Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-09-27T12:02:13.171Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-09-27T12:02:13.171Z] [INFO] Dry run: would generate image for Den české státnosti (St. Wenceslas Day) at output/2026-W40/images/den-ceske-statnosti-2026.png
+[2026-09-27T12:02:13.171Z] [INFO] Dry run: would generate image for Formula 1 Japanese Grand Prix at output/2026-W40/images/formula1-japanese-grand-prix-2026.png
+[2026-09-27T12:02:13.172Z] [INFO] Dry run: would generate image for HC Sparta Praha vs. HC Energie Karlovy Vary at output/2026-W40/images/hc-sparta-praha-vs-hc-energie-karlovy-vary-2026.png
+[2026-09-27T12:02:13.172Z] [INFO] Dry run: would generate image for HC Sparta Praha vs. Motor České Budějovice at output/2026-W40/images/hc-sparta-praha-vs-motor-ceske-budejovice-2026.png
+[2026-09-27T12:02:13.173Z] [INFO] Created image manifest: output/2026-W40/images.json
+[2026-09-27T12:02:13.174Z] [INFO] Generate images finished successfully
+[2026-09-27T12:02:13.178Z] [INFO] Weekly agent finished successfully
