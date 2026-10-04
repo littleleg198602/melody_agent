@@ -1388,3 +1388,38 @@
 [2026-09-27T12:02:13.173Z] [INFO] Created image manifest: output/2026-W40/images.json
 [2026-09-27T12:02:13.174Z] [INFO] Generate images finished successfully
 [2026-09-27T12:02:13.178Z] [INFO] Weekly agent finished successfully
+[2026-10-04T12:21:02.051Z] [INFO] Weekly agent started
+[2026-10-04T12:21:02.054Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-10-04T12:21:02.160Z] [INFO] Create weekly overview started
+[2026-10-04T12:21:02.164Z] [INFO] Calculated target week: 2026-W41, from 2026-10-05 to 2026-10-11
+[2026-10-04T12:21:02.165Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-10-04T12:21:10.426Z] [INFO] Overview generated_at set by script: 2026-10-04T12:21:10.425Z
+[2026-10-04T12:21:10.429Z] [INFO] Raw events returned: 5
+[2026-10-04T12:21:10.439Z] [INFO] Events after filtering: 5
+[2026-10-04T12:21:10.440Z] [INFO] Final selected event order: 1. Formula 1 Singapore Grand Prix 2026 | 9. Premier League Mornings Live Fan Festival in Denver | 9. Il Lombardia 2026 | 9. NFL International Series: Philadelphia Eagles vs. Jacksonville Jaguars | 9. Chicago Marathon 2026
+[2026-10-04T12:21:10.440Z] [INFO] Final selected tone values: Formula 1 Singapore Grand Prix 2026: fan_hype | Premier League Mornings Live Fan Festival in Denver: fan_hype | Il Lombardia 2026: fan_hype | NFL International Series: Philadelphia Eagles vs. Jacksonville Jaguars: fan_hype | Chicago Marathon 2026: fan_hype
+[2026-10-04T12:21:10.440Z] [INFO] Final selected language_policy values: Formula 1 Singapore Grand Prix 2026: english | Premier League Mornings Live Fan Festival in Denver: english | Il Lombardia 2026: english | NFL International Series: Philadelphia Eagles vs. Jacksonville Jaguars: english | Chicago Marathon 2026: english
+[2026-10-04T12:21:10.441Z] [INFO] Created weekly overview: data/weekly/2026-W41.json
+[2026-10-04T12:21:10.441Z] [INFO] Create weekly overview finished successfully
+[2026-10-04T12:21:10.465Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-10-04T12:21:10.560Z] [INFO] Generate image prompts started
+[2026-10-04T12:21:10.565Z] [INFO] Reading weekly overview: data/weekly/2026-W41.json
+[2026-10-04T12:21:10.566Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W41
+[2026-10-04T12:21:28.697Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1 Singapore Grand Prix 2026", "date": "2026-10-09", "category": "sport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 Singapore Grand Prix 2026. The scene shows a dramatic night racing tra
+[2026-10-04T12:21:28.701Z] [INFO] Prompt count after validation and image-topic filtering: 5
+[2026-10-04T12:21:28.701Z] [INFO] Prompts created_at set by script: 2026-10-04T12:21:28.700Z
+[2026-10-04T12:21:28.702Z] [INFO] Created image prompts: output/2026-W41/prompts.json
+[2026-10-04T12:21:28.702Z] [INFO] Generate image prompts finished successfully
+[2026-10-04T12:21:28.733Z] [INFO] Running step: scripts/generate-images.js
+[2026-10-04T12:21:28.822Z] [INFO] Generate images started
+[2026-10-04T12:21:28.827Z] [INFO] Reading image prompts: output/2026-W41/prompts.json
+[2026-10-04T12:21:28.828Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=5
+[2026-10-04T12:21:28.829Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-10-04T12:21:28.829Z] [INFO] Dry run: would generate image for Formula 1 Singapore Grand Prix 2026 at output/2026-W41/images/formula-1-singapore-grand-prix-2026.png
+[2026-10-04T12:21:28.830Z] [INFO] Dry run: would generate image for Premier League Mornings Live Fan Festival in Denver at output/2026-W41/images/premier-league-mornings-live-fan-festival-denver.png
+[2026-10-04T12:21:28.830Z] [INFO] Dry run: would generate image for Il Lombardia 2026 at output/2026-W41/images/il-lombardia-2026.png
+[2026-10-04T12:21:28.830Z] [INFO] Dry run: would generate image for NFL International Series: Philadelphia Eagles vs. Jacksonville Jaguars at output/2026-W41/images/nfl-international-series-eagles-vs-jaguars-2026.png
+[2026-10-04T12:21:28.831Z] [INFO] Dry run: would generate image for Chicago Marathon 2026 at output/2026-W41/images/chicago-marathon-2026.png
+[2026-10-04T12:21:28.831Z] [INFO] Created image manifest: output/2026-W41/images.json
+[2026-10-04T12:21:28.832Z] [INFO] Generate images finished successfully
+[2026-10-04T12:21:28.836Z] [INFO] Weekly agent finished successfully

@@ -1,0 +1,36 @@
+{
+  "week": "2026-W41",
+  "created_at": "2026-10-04T12:21:28.829Z",
+  "images": [
+    {
+      "event_title": "Formula 1 Singapore Grand Prix 2026",
+      "slug": "formula-1-singapore-grand-prix-2026",
+      "file": "output/2026-W41/images/formula-1-singapore-grand-prix-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Premier League Mornings Live Fan Festival in Denver",
+      "slug": "premier-league-mornings-live-fan-festival-denver",
+      "file": "output/2026-W41/images/premier-league-mornings-live-fan-festival-denver.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Il Lombardia 2026",
+      "slug": "il-lombardia-2026",
+      "file": "output/2026-W41/images/il-lombardia-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "NFL International Series: Philadelphia Eagles vs. Jacksonville Jaguars",
+      "slug": "nfl-international-series-eagles-vs-jaguars-2026",
+      "file": "output/2026-W41/images/nfl-international-series-eagles-vs-jaguars-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Chicago Marathon 2026",
+      "slug": "chicago-marathon-2026",
+      "file": "output/2026-W41/images/chicago-marathon-2026.png",
+      "status": "skipped"
+    }
+  ]
+}
