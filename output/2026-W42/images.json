@@ -1,0 +1,30 @@
+{
+  "week": "2026-W42",
+  "created_at": "2026-10-11T12:49:36.795Z",
+  "images": [
+    {
+      "event_title": "FIFA World Cup Qualifier: Czech Republic vs. Poland",
+      "slug": "fifa-world-cup-qualifier-czech-vs-poland-2026-10-12",
+      "file": "output/2026-W42/images/fifa-world-cup-qualifier-czech-vs-poland-2026-10-12.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Czech Statehood Day",
+      "slug": "czech-statehood-day-2026-10-14",
+      "file": "output/2026-W42/images/czech-statehood-day-2026-10-14.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Formula 1: United States Grand Prix",
+      "slug": "formula-1-united-states-grand-prix-2026-10-15",
+      "file": "output/2026-W42/images/formula-1-united-states-grand-prix-2026-10-15.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "ATP Shanghai Masters Final",
+      "slug": "atp-shanghai-masters-final-2026-10-17",
+      "file": "output/2026-W42/images/atp-shanghai-masters-final-2026-10-17.png",
+      "status": "skipped"
+    }
+  ]
+}

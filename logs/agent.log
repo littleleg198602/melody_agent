@@ -1423,3 +1423,37 @@
 [2026-10-04T12:21:28.831Z] [INFO] Created image manifest: output/2026-W41/images.json
 [2026-10-04T12:21:28.832Z] [INFO] Generate images finished successfully
 [2026-10-04T12:21:28.836Z] [INFO] Weekly agent finished successfully
+[2026-10-11T12:49:18.044Z] [INFO] Weekly agent started
+[2026-10-11T12:49:18.046Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-10-11T12:49:18.111Z] [INFO] Create weekly overview started
+[2026-10-11T12:49:18.114Z] [INFO] Calculated target week: 2026-W42, from 2026-10-12 to 2026-10-18
+[2026-10-11T12:49:18.114Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-10-11T12:49:25.785Z] [INFO] Overview generated_at set by script: 2026-10-11T12:49:25.784Z
+[2026-10-11T12:49:25.788Z] [INFO] Raw events returned: 4
+[2026-10-11T12:49:25.788Z] [INFO] Events after filtering: 4
+[2026-10-11T12:49:25.790Z] [INFO] Final selected event order: 1. FIFA World Cup Qualifier: Czech Republic vs. Poland | 2. Czech Statehood Day | 3. Formula 1: United States Grand Prix | 9. ATP Shanghai Masters Final
+[2026-10-11T12:49:25.790Z] [INFO] Final selected tone values: FIFA World Cup Qualifier: Czech Republic vs. Poland: fan_hype | Czech Statehood Day: celebration | Formula 1: United States Grand Prix: fan_hype | ATP Shanghai Masters Final: fan_hype
+[2026-10-11T12:49:25.790Z] [INFO] Final selected language_policy values: FIFA World Cup Qualifier: Czech Republic vs. Poland: english | Czech Statehood Day: czech | Formula 1: United States Grand Prix: english | ATP Shanghai Masters Final: english
+[2026-10-11T12:49:25.791Z] [INFO] Created weekly overview: data/weekly/2026-W42.json
+[2026-10-11T12:49:25.791Z] [INFO] Create weekly overview finished successfully
+[2026-10-11T12:49:25.806Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-10-11T12:49:25.868Z] [INFO] Generate image prompts started
+[2026-10-11T12:49:25.871Z] [INFO] Reading weekly overview: data/weekly/2026-W42.json
+[2026-10-11T12:49:25.872Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W42
+[2026-10-11T12:49:36.654Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "FIFA World Cup Qualifier: Czech Republic vs. Poland", "date": "2026-10-12", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "english", "composition_type": "stadium_atmosphere", "text_on_image": "World Football Night", "text_on_image_cs": "", "text_on_image_en": "World Football Night", "image_prompt": "Create a premium cinematic social media campaign poster in vertical 9:16 format suitable for TikTok, Instagram Reels, and Faceboo
+[2026-10-11T12:49:36.656Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-10-11T12:49:36.656Z] [INFO] Prompts created_at set by script: 2026-10-11T12:49:36.655Z
+[2026-10-11T12:49:36.657Z] [INFO] Created image prompts: output/2026-W42/prompts.json
+[2026-10-11T12:49:36.660Z] [INFO] Generate image prompts finished successfully
+[2026-10-11T12:49:36.725Z] [INFO] Running step: scripts/generate-images.js
+[2026-10-11T12:49:36.790Z] [INFO] Generate images started
+[2026-10-11T12:49:36.793Z] [INFO] Reading image prompts: output/2026-W42/prompts.json
+[2026-10-11T12:49:36.794Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-10-11T12:49:36.795Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-10-11T12:49:36.795Z] [INFO] Dry run: would generate image for FIFA World Cup Qualifier: Czech Republic vs. Poland at output/2026-W42/images/fifa-world-cup-qualifier-czech-vs-poland-2026-10-12.png
+[2026-10-11T12:49:36.795Z] [INFO] Dry run: would generate image for Czech Statehood Day at output/2026-W42/images/czech-statehood-day-2026-10-14.png
+[2026-10-11T12:49:36.795Z] [INFO] Dry run: would generate image for Formula 1: United States Grand Prix at output/2026-W42/images/formula-1-united-states-grand-prix-2026-10-15.png
+[2026-10-11T12:49:36.796Z] [INFO] Dry run: would generate image for ATP Shanghai Masters Final at output/2026-W42/images/atp-shanghai-masters-final-2026-10-17.png
+[2026-10-11T12:49:36.796Z] [INFO] Created image manifest: output/2026-W42/images.json
+[2026-10-11T12:49:36.796Z] [INFO] Generate images finished successfully
+[2026-10-11T12:49:36.800Z] [INFO] Weekly agent finished successfully
