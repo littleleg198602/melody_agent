@@ -1457,3 +1457,37 @@
 [2026-10-11T12:49:36.796Z] [INFO] Created image manifest: output/2026-W42/images.json
 [2026-10-11T12:49:36.796Z] [INFO] Generate images finished successfully
 [2026-10-11T12:49:36.800Z] [INFO] Weekly agent finished successfully
+[2026-10-18T11:03:45.671Z] [INFO] Weekly agent started
+[2026-10-18T11:03:45.675Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-10-18T11:03:45.783Z] [INFO] Create weekly overview started
+[2026-10-18T11:03:45.788Z] [INFO] Calculated target week: 2026-W43, from 2026-10-19 to 2026-10-25
+[2026-10-18T11:03:45.789Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-10-18T11:03:54.790Z] [INFO] Overview generated_at set by script: 2026-10-18T11:03:54.789Z
+[2026-10-18T11:03:54.795Z] [INFO] Raw events returned: 5
+[2026-10-18T11:03:54.805Z] [INFO] Events after filtering: 5
+[2026-10-18T11:03:54.806Z] [INFO] Final selected event order: 2. Formula 1 Japanese Grand Prix 2026 | 3. Czech Statehood Day | 3. MotoGP Australian Grand Prix 2026 | 9. Artistic Gymnastics World Championships 2026 | 9. UEFA Champions League Matchday 3
+[2026-10-18T11:03:54.806Z] [INFO] Final selected tone values: Formula 1 Japanese Grand Prix 2026: fan_hype | Czech Statehood Day: celebration | MotoGP Australian Grand Prix 2026: fan_hype | Artistic Gymnastics World Championships 2026: fan_hype | UEFA Champions League Matchday 3: fan_hype
+[2026-10-18T11:03:54.807Z] [INFO] Final selected language_policy values: Formula 1 Japanese Grand Prix 2026: english | Czech Statehood Day: czech | MotoGP Australian Grand Prix 2026: english | Artistic Gymnastics World Championships 2026: english | UEFA Champions League Matchday 3: english
+[2026-10-18T11:03:54.808Z] [INFO] Created weekly overview: data/weekly/2026-W43.json
+[2026-10-18T11:03:54.808Z] [INFO] Create weekly overview finished successfully
+[2026-10-18T11:03:54.850Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-10-18T11:03:54.952Z] [INFO] Generate image prompts started
+[2026-10-18T11:03:54.956Z] [INFO] Reading weekly overview: data/weekly/2026-W43.json
+[2026-10-18T11:03:54.957Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W43
+[2026-10-18T11:04:05.431Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1 Japanese Grand Prix 2026", "date": "2026-10-20", "category": "sport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 Japanese Grand Prix 2026. The scene shows a cinematic racing track at g
+[2026-10-18T11:04:05.433Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-10-18T11:04:05.435Z] [INFO] Prompts created_at set by script: 2026-10-18T11:04:05.433Z
+[2026-10-18T11:04:05.436Z] [INFO] Created image prompts: output/2026-W43/prompts.json
+[2026-10-18T11:04:05.436Z] [INFO] Generate image prompts finished successfully
+[2026-10-18T11:04:05.481Z] [INFO] Running step: scripts/generate-images.js
+[2026-10-18T11:04:05.580Z] [INFO] Generate images started
+[2026-10-18T11:04:05.585Z] [INFO] Reading image prompts: output/2026-W43/prompts.json
+[2026-10-18T11:04:05.586Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-10-18T11:04:05.587Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-10-18T11:04:05.587Z] [INFO] Dry run: would generate image for Formula 1 Japanese Grand Prix 2026 at output/2026-W43/images/formula-1-japanese-grand-prix-2026.png
+[2026-10-18T11:04:05.588Z] [INFO] Dry run: would generate image for Czech Statehood Day at output/2026-W43/images/czech-statehood-day-2026.png
+[2026-10-18T11:04:05.588Z] [INFO] Dry run: would generate image for Artistic Gymnastics World Championships 2026 at output/2026-W43/images/artistic-gymnastics-world-championships-2026.png
+[2026-10-18T11:04:05.588Z] [INFO] Dry run: would generate image for UEFA Champions League Matchday 3 at output/2026-W43/images/uefa-champions-league-matchday-3-2026.png
+[2026-10-18T11:04:05.589Z] [INFO] Created image manifest: output/2026-W43/images.json
+[2026-10-18T11:04:05.590Z] [INFO] Generate images finished successfully
+[2026-10-18T11:04:05.593Z] [INFO] Weekly agent finished successfully

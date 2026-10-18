@@ -1,0 +1,30 @@
+{
+  "week": "2026-W43",
+  "created_at": "2026-10-18T11:04:05.587Z",
+  "images": [
+    {
+      "event_title": "Formula 1 Japanese Grand Prix 2026",
+      "slug": "formula-1-japanese-grand-prix-2026",
+      "file": "output/2026-W43/images/formula-1-japanese-grand-prix-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Czech Statehood Day",
+      "slug": "czech-statehood-day-2026",
+      "file": "output/2026-W43/images/czech-statehood-day-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Artistic Gymnastics World Championships 2026",
+      "slug": "artistic-gymnastics-world-championships-2026",
+      "file": "output/2026-W43/images/artistic-gymnastics-world-championships-2026.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "UEFA Champions League Matchday 3",
+      "slug": "uefa-champions-league-matchday-3-2026",
+      "file": "output/2026-W43/images/uefa-champions-league-matchday-3-2026.png",
+      "status": "skipped"
+    }
+  ]
+}
