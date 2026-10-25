@@ -1,0 +1,30 @@
+{
+  "week": "2026-W44",
+  "created_at": "2026-10-25T11:28:13.953Z",
+  "images": [
+    {
+      "event_title": "Den vzniku samostatného československého státu",
+      "slug": "den-vzniku-samostatneho-ceskoslovenskeho-statu-2026-10-28",
+      "file": "output/2026-W44/images/den-vzniku-samostatneho-ceskoslovenskeho-statu-2026-10-28.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Grand Prix Malajsie 2026",
+      "slug": "grand-prix-malajsie-2026-2026-10-30",
+      "file": "output/2026-W44/images/grand-prix-malajsie-2026-2026-10-30.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Grand Prix Mexika 2026",
+      "slug": "grand-prix-mexika-2026-2026-10-30",
+      "file": "output/2026-W44/images/grand-prix-mexika-2026-2026-10-30.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Mistrovství Evropy v curlingu 2026",
+      "slug": "mistrovstvi-evropy-v-curlingu-2026-2026-10-27",
+      "file": "output/2026-W44/images/mistrovstvi-evropy-v-curlingu-2026-2026-10-27.png",
+      "status": "skipped"
+    }
+  ]
+}

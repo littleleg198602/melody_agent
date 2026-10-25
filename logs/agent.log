@@ -1491,3 +1491,38 @@
 [2026-10-18T11:04:05.589Z] [INFO] Created image manifest: output/2026-W43/images.json
 [2026-10-18T11:04:05.590Z] [INFO] Generate images finished successfully
 [2026-10-18T11:04:05.593Z] [INFO] Weekly agent finished successfully
+[2026-10-25T11:27:55.240Z] [INFO] Weekly agent started
+[2026-10-25T11:27:55.242Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-10-25T11:27:55.318Z] [INFO] Create weekly overview started
+[2026-10-25T11:27:55.322Z] [INFO] Calculated target week: 2026-W44, from 2026-10-26 to 2026-11-01
+[2026-10-25T11:27:55.322Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-10-25T11:28:02.950Z] [INFO] Overview generated_at set by script: 2026-10-25T11:28:02.950Z
+[2026-10-25T11:28:02.953Z] [INFO] Raw events returned: 5
+[2026-10-25T11:28:02.954Z] [INFO] Skipped image generation for weak event: Superclásico: Boca Juniors vs. River Plate — low Czech relevance and low Melody4U score.
+[2026-10-25T11:28:02.960Z] [INFO] Events after filtering: 5
+[2026-10-25T11:28:02.960Z] [INFO] Final selected event order: 1. Den vzniku samostatného československého státu | 3. Grand Prix Malajsie 2026 | 3. Grand Prix Mexika 2026 | 9. Mistrovství Evropy v curlingu 2026 | 9. Superclásico: Boca Juniors vs. River Plate
+[2026-10-25T11:28:02.961Z] [INFO] Final selected tone values: Den vzniku samostatného československého státu: celebration | Grand Prix Malajsie 2026: fan_hype | Grand Prix Mexika 2026: fan_hype | Mistrovství Evropy v curlingu 2026: fan_hype | Superclásico: Boca Juniors vs. River Plate: fan_hype
+[2026-10-25T11:28:02.961Z] [INFO] Final selected language_policy values: Den vzniku samostatného československého státu: czech | Grand Prix Malajsie 2026: english | Grand Prix Mexika 2026: english | Mistrovství Evropy v curlingu 2026: english | Superclásico: Boca Juniors vs. River Plate: english
+[2026-10-25T11:28:02.961Z] [INFO] Created weekly overview: data/weekly/2026-W44.json
+[2026-10-25T11:28:02.962Z] [INFO] Create weekly overview finished successfully
+[2026-10-25T11:28:03.007Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-10-25T11:28:03.082Z] [INFO] Generate image prompts started
+[2026-10-25T11:28:03.086Z] [INFO] Reading weekly overview: data/weekly/2026-W44.json
+[2026-10-25T11:28:03.087Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W44
+[2026-10-25T11:28:13.815Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Den vzniku samostatného československého státu", "date": "2026-10-28", "category": "czech_significant_day", "tone": "celebration", "event_origin": "czech_significant_day", "language_policy": "czech", "composition_type": "seasonal_symbolic_scene", "text_on_image": "Den vzniku samostatného československého státu", "text_on_image_cs": "Den vzniku samostatného československého státu", "text_on_image_en": "", "image_prompt": "Create a premium cinematic social media camp
+[2026-10-25T11:28:13.817Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-10-25T11:28:13.817Z] [INFO] Prompts created_at set by script: 2026-10-25T11:28:13.817Z
+[2026-10-25T11:28:13.818Z] [INFO] Created image prompts: output/2026-W44/prompts.json
+[2026-10-25T11:28:13.819Z] [INFO] Generate image prompts finished successfully
+[2026-10-25T11:28:13.873Z] [INFO] Running step: scripts/generate-images.js
+[2026-10-25T11:28:13.948Z] [INFO] Generate images started
+[2026-10-25T11:28:13.952Z] [INFO] Reading image prompts: output/2026-W44/prompts.json
+[2026-10-25T11:28:13.953Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-10-25T11:28:13.953Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-10-25T11:28:13.953Z] [INFO] Dry run: would generate image for Den vzniku samostatného československého státu at output/2026-W44/images/den-vzniku-samostatneho-ceskoslovenskeho-statu-2026-10-28.png
+[2026-10-25T11:28:13.953Z] [INFO] Dry run: would generate image for Grand Prix Malajsie 2026 at output/2026-W44/images/grand-prix-malajsie-2026-2026-10-30.png
+[2026-10-25T11:28:13.954Z] [INFO] Dry run: would generate image for Grand Prix Mexika 2026 at output/2026-W44/images/grand-prix-mexika-2026-2026-10-30.png
+[2026-10-25T11:28:13.954Z] [INFO] Dry run: would generate image for Mistrovství Evropy v curlingu 2026 at output/2026-W44/images/mistrovstvi-evropy-v-curlingu-2026-2026-10-27.png
+[2026-10-25T11:28:13.955Z] [INFO] Created image manifest: output/2026-W44/images.json
+[2026-10-25T11:28:13.955Z] [INFO] Generate images finished successfully
+[2026-10-25T11:28:13.959Z] [INFO] Weekly agent finished successfully
