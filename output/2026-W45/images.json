@@ -1,0 +1,30 @@
+{
+  "week": "2026-W45",
+  "created_at": "2026-11-01T13:23:36.261Z",
+  "images": [
+    {
+      "event_title": "FIFA World Cup 2026 Qualifier: Czech Republic vs. Slovakia",
+      "slug": "fifa-world-cup-2026-qualifier-czech-vs-slovakia",
+      "file": "output/2026-W45/images/fifa-world-cup-2026-qualifier-czech-vs-slovakia.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Formula 1 Grand Prix: Czech Republic's Home Race",
+      "slug": "formula-1-grand-prix-czech-home-race",
+      "file": "output/2026-W45/images/formula-1-grand-prix-czech-home-race.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "St. Charles Borromeo's Day (Svátek svatého Karla Boromejského)",
+      "slug": "st-charles-borromeo-day",
+      "file": "output/2026-W45/images/st-charles-borromeo-day.png",
+      "status": "skipped"
+    },
+    {
+      "event_title": "Czech Ice Hockey League: HC Sparta Prague vs. HC Kometa Brno",
+      "slug": "czech-ice-hockey-league-sparta-vs-kometa",
+      "file": "output/2026-W45/images/czech-ice-hockey-league-sparta-vs-kometa.png",
+      "status": "skipped"
+    }
+  ]
+}

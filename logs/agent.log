@@ -1526,3 +1526,37 @@
 [2026-10-25T11:28:13.955Z] [INFO] Created image manifest: output/2026-W44/images.json
 [2026-10-25T11:28:13.955Z] [INFO] Generate images finished successfully
 [2026-10-25T11:28:13.959Z] [INFO] Weekly agent finished successfully
+[2026-11-01T13:23:17.149Z] [INFO] Weekly agent started
+[2026-11-01T13:23:17.152Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-11-01T13:23:17.264Z] [INFO] Create weekly overview started
+[2026-11-01T13:23:17.269Z] [INFO] Calculated target week: 2026-W45, from 2026-11-02 to 2026-11-08
+[2026-11-01T13:23:17.270Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-11-01T13:23:24.545Z] [INFO] Overview generated_at set by script: 2026-11-01T13:23:24.545Z
+[2026-11-01T13:23:24.550Z] [INFO] Raw events returned: 5
+[2026-11-01T13:23:24.557Z] [INFO] Events after filtering: 5
+[2026-11-01T13:23:24.558Z] [INFO] Final selected event order: 1. FIFA World Cup 2026 Qualifier: Czech Republic vs. Slovakia | 2. Formula 1 Grand Prix: Czech Republic's Home Race | 3. St. Charles Borromeo's Day (Svátek svatého Karla Boromejského) | 3. MotoGP Czech Grand Prix | 9. Czech Ice Hockey League: HC Sparta Prague vs. HC Kometa Brno
+[2026-11-01T13:23:24.559Z] [INFO] Final selected tone values: FIFA World Cup 2026 Qualifier: Czech Republic vs. Slovakia: fan_hype | Formula 1 Grand Prix: Czech Republic's Home Race: fan_hype | St. Charles Borromeo's Day (Svátek svatého Karla Boromejského): celebration | MotoGP Czech Grand Prix: fan_hype | Czech Ice Hockey League: HC Sparta Prague vs. HC Kometa Brno: fan_hype
+[2026-11-01T13:23:24.559Z] [INFO] Final selected language_policy values: FIFA World Cup 2026 Qualifier: Czech Republic vs. Slovakia: english | Formula 1 Grand Prix: Czech Republic's Home Race: english | St. Charles Borromeo's Day (Svátek svatého Karla Boromejského): czech | MotoGP Czech Grand Prix: english | Czech Ice Hockey League: HC Sparta Prague vs. HC Kometa Brno: english
+[2026-11-01T13:23:24.560Z] [INFO] Created weekly overview: data/weekly/2026-W45.json
+[2026-11-01T13:23:24.561Z] [INFO] Create weekly overview finished successfully
+[2026-11-01T13:23:24.619Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-11-01T13:23:24.726Z] [INFO] Generate image prompts started
+[2026-11-01T13:23:24.731Z] [INFO] Reading weekly overview: data/weekly/2026-W45.json
+[2026-11-01T13:23:24.732Z] [INFO] Found 4 waiting events with generate_image=true for 2026-W45
+[2026-11-01T13:23:36.074Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "FIFA World Cup 2026 Qualifier: Czech Republic vs. Slovakia", "date": "2026-11-02", "category": "sport", "tone": "fan_hype", "event_origin": "sport", "language_policy": "english", "composition_type": "stadium_atmosphere", "text_on_image": "World Football Night", "text_on_image_cs": "", "text_on_image_en": "World Football Night", "image_prompt": "Create a premium cinematic social media campaign poster for a FIFA World Cup 2026 Qualifier football match between Czech R
+[2026-11-01T13:23:36.076Z] [INFO] Prompt count after validation and image-topic filtering: 4
+[2026-11-01T13:23:36.077Z] [INFO] Prompts created_at set by script: 2026-11-01T13:23:36.076Z
+[2026-11-01T13:23:36.078Z] [INFO] Created image prompts: output/2026-W45/prompts.json
+[2026-11-01T13:23:36.078Z] [INFO] Generate image prompts finished successfully
+[2026-11-01T13:23:36.150Z] [INFO] Running step: scripts/generate-images.js
+[2026-11-01T13:23:36.254Z] [INFO] Generate images started
+[2026-11-01T13:23:36.259Z] [INFO] Reading image prompts: output/2026-W45/prompts.json
+[2026-11-01T13:23:36.261Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=4
+[2026-11-01T13:23:36.261Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-11-01T13:23:36.262Z] [INFO] Dry run: would generate image for FIFA World Cup 2026 Qualifier: Czech Republic vs. Slovakia at output/2026-W45/images/fifa-world-cup-2026-qualifier-czech-vs-slovakia.png
+[2026-11-01T13:23:36.262Z] [INFO] Dry run: would generate image for Formula 1 Grand Prix: Czech Republic's Home Race at output/2026-W45/images/formula-1-grand-prix-czech-home-race.png
+[2026-11-01T13:23:36.262Z] [INFO] Dry run: would generate image for St. Charles Borromeo's Day (Svátek svatého Karla Boromejského) at output/2026-W45/images/st-charles-borromeo-day.png
+[2026-11-01T13:23:36.263Z] [INFO] Dry run: would generate image for Czech Ice Hockey League: HC Sparta Prague vs. HC Kometa Brno at output/2026-W45/images/czech-ice-hockey-league-sparta-vs-kometa.png
+[2026-11-01T13:23:36.264Z] [INFO] Created image manifest: output/2026-W45/images.json
+[2026-11-01T13:23:36.264Z] [INFO] Generate images finished successfully
+[2026-11-01T13:23:36.269Z] [INFO] Weekly agent finished successfully
