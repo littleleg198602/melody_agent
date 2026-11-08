@@ -1560,3 +1560,38 @@
 [2026-11-01T13:23:36.264Z] [INFO] Created image manifest: output/2026-W45/images.json
 [2026-11-01T13:23:36.264Z] [INFO] Generate images finished successfully
 [2026-11-01T13:23:36.269Z] [INFO] Weekly agent finished successfully
+[2026-11-08T13:23:35.814Z] [INFO] Weekly agent started
+[2026-11-08T13:23:35.818Z] [INFO] Running step: scripts/create-weekly-overview.js
+[2026-11-08T13:23:35.923Z] [INFO] Create weekly overview started
+[2026-11-08T13:23:35.928Z] [INFO] Calculated target week: 2026-W46, from 2026-11-09 to 2026-11-15
+[2026-11-08T13:23:35.929Z] [INFO] Selected source mode: OpenAI Responses API with web search.
+[2026-11-08T13:23:43.914Z] [INFO] Overview generated_at set by script: 2026-11-08T13:23:43.914Z
+[2026-11-08T13:23:43.920Z] [INFO] Raw events returned: 5
+[2026-11-08T13:23:43.933Z] [INFO] Events after filtering: 5
+[2026-11-08T13:23:43.933Z] [INFO] Final selected event order: 1. Formula 1 Las Vegas Grand Prix | 9. 113th Grey Cup in Calgary | 9. Premier League: Featured Sunday Match | 9. NCAA Women's Basketball: Early Season Invitational | 9. MLS Cup Playoffs: Conference Semifinals
+[2026-11-08T13:23:43.934Z] [INFO] Final selected tone values: Formula 1 Las Vegas Grand Prix: fan_hype | 113th Grey Cup in Calgary: fan_hype | Premier League: Featured Sunday Match: fan_hype | NCAA Women's Basketball: Early Season Invitational: fan_hype | MLS Cup Playoffs: Conference Semifinals: fan_hype
+[2026-11-08T13:23:43.934Z] [INFO] Final selected language_policy values: Formula 1 Las Vegas Grand Prix: english | 113th Grey Cup in Calgary: english | Premier League: Featured Sunday Match: english | NCAA Women's Basketball: Early Season Invitational: english | MLS Cup Playoffs: Conference Semifinals: english
+[2026-11-08T13:23:43.935Z] [INFO] Created weekly overview: data/weekly/2026-W46.json
+[2026-11-08T13:23:43.935Z] [INFO] Create weekly overview finished successfully
+[2026-11-08T13:23:43.997Z] [INFO] Running step: scripts/generate-image-prompts.js
+[2026-11-08T13:23:44.104Z] [INFO] Generate image prompts started
+[2026-11-08T13:23:44.109Z] [INFO] Reading weekly overview: data/weekly/2026-W46.json
+[2026-11-08T13:23:44.110Z] [INFO] Found 5 waiting events with generate_image=true for 2026-W46
+[2026-11-08T13:23:59.716Z] [INFO] Raw OpenAI prompt response preview: { "items": [ { "event_title": "Formula 1 Las Vegas Grand Prix", "date": "2026-11-15", "category": "sport", "tone": "fan_hype", "event_origin": "motorsport", "language_policy": "english", "composition_type": "motorsport_track", "text_on_image": "Race Weekend Energy", "text_on_image_cs": "", "text_on_image_en": "Race Weekend Energy", "image_prompt": "Create a premium cinematic social media campaign poster for the Formula 1 Las Vegas Grand Prix on November 15, 2026. The scene shows a cinematic raci
+[2026-11-08T13:23:59.719Z] [INFO] Prompt count after validation and image-topic filtering: 5
+[2026-11-08T13:23:59.719Z] [INFO] Prompts created_at set by script: 2026-11-08T13:23:59.718Z
+[2026-11-08T13:23:59.720Z] [INFO] Created image prompts: output/2026-W46/prompts.json
+[2026-11-08T13:23:59.720Z] [INFO] Generate image prompts finished successfully
+[2026-11-08T13:23:59.792Z] [INFO] Running step: scripts/generate-images.js
+[2026-11-08T13:23:59.897Z] [INFO] Generate images started
+[2026-11-08T13:23:59.902Z] [INFO] Reading image prompts: output/2026-W46/prompts.json
+[2026-11-08T13:23:59.903Z] [INFO] Image generation controls: generate_images=false, max_images=1, target_slug=(none), selected=5
+[2026-11-08T13:23:59.904Z] [INFO] Image generation disabled because GENERATE_IMAGES is not true
+[2026-11-08T13:23:59.904Z] [INFO] Dry run: would generate image for Formula 1 Las Vegas Grand Prix at output/2026-W46/images/formula1-las-vegas-grand-prix-2026.png
+[2026-11-08T13:23:59.905Z] [INFO] Dry run: would generate image for 113th Grey Cup in Calgary at output/2026-W46/images/113th-grey-cup-calgary-2026.png
+[2026-11-08T13:23:59.905Z] [INFO] Dry run: would generate image for Premier League: Featured Sunday Match at output/2026-W46/images/premier-league-featured-match-2026.png
+[2026-11-08T13:23:59.905Z] [INFO] Dry run: would generate image for NCAA Women's Basketball: Early Season Invitational at output/2026-W46/images/ncaa-womens-basketball-invitational-2026.png
+[2026-11-08T13:23:59.905Z] [INFO] Dry run: would generate image for MLS Cup Playoffs: Conference Semifinals at output/2026-W46/images/mls-cup-playoffs-conference-semifinals-2026.png
+[2026-11-08T13:23:59.906Z] [INFO] Created image manifest: output/2026-W46/images.json
+[2026-11-08T13:23:59.907Z] [INFO] Generate images finished successfully
+[2026-11-08T13:23:59.911Z] [INFO] Weekly agent finished successfully
